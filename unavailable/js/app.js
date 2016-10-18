@@ -5,7 +5,8 @@ if(e&&1===a.nodeType)while(c=e[d++])a.removeAttribute(c)}}),hb={set:function(a,b
 
 $(function() {
 
-	var month = 0;
+	var month = 0,
+		monthLimit = 2;
 
 	$('.unknown').on('click', function(){
 		if($(this).hasClass('available')){
@@ -27,11 +28,68 @@ $(function() {
 		$(this).siblings().removeClass('active');
 		$($(this).attr('href')).show();
 		$(this).addClass('active');
-		$('#cal-name').text($(this).data('name'));
+		if($(this).data('name')==='October'){
+			month = 0;
+		}else if($(this).data('name')==='November'){
+			month = 1;
+		}else{
+			month = 0;
+		}
+		updateMonth(month);
 	});
 
-	function updateMonth() {
+	$('#next-month').on('click', function(e){
+		if($(this).hasClass('end-of-line')){
+			return;
+		}
+		e.preventDefault();
+		$('table').hide();
+		if($('#cal-name').text()==='October'){
+			month = 1;
+			$('#cal-november').show();
+		}else{
+			month = 2;
+			$('#cal-december').show();
+		}
+		updateMonth(month);
+	});
 
+	$('#prev-month').on('click', function(e){
+		if($(this).hasClass('end-of-line')){
+			return;
+		}
+		e.preventDefault();
+		$('table').hide();
+		if($('#cal-name').text()==='November'){
+			month = 0;
+			$('#cal-october').show();
+		}else{
+			month = 1;
+			$('#cal-november').show();
+		}
+		updateMonth(month);
+	});
+
+	function updateMonth(month) {
+		if(month===0){
+			$('#cal-name').text('October');
+			$('#prev-month').addClass('end-of-line');
+			$('#next-month').removeClass('end-of-line');
+			$('a', '#nav-links').removeClass('active');
+			$('a:first', '#nav-links').addClass('active');
+		}else if(month===1){
+			$('#cal-name').text('November');
+			$('#prev-month').removeClass('end-of-line');
+			$('#next-month').removeClass('end-of-line');
+			$('a', '#nav-links').removeClass('active');
+			$('a:nth-of-type(2)', '#nav-links').addClass('active');
+		}else{
+			$('#cal-name').text('December');
+			$('#prev-month').removeClass('end-of-line');
+			$('#next-month').addClass('end-of-line');
+			$('a', '#nav-links').removeClass('active');
+			$('a:last', '#nav-links').addClass('active');
+		}
 	}
 
 });

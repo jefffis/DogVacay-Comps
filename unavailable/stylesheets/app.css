@@ -14,10 +14,7 @@ html {
 	overflow-x: hidden;
 	font: normal 100%/1.5 sans-serif;
 }
-/*body {
-	max-width: 980px;
-	margin: auto;
-}*/
+
 header {
 	height: var(--header-height);
 	background: url(../images/header.png) no-repeat top center;
@@ -111,6 +108,7 @@ h1 .active {
 	display: block;
 	position: absolute;
 	top: .75rem;
+	z-index: 3;
 	height: 1.25rem;
 	width: 1.25rem;
 	background: #333 url(../images/arrow.png) no-repeat center;
@@ -125,6 +123,13 @@ h1 .active {
 }
 #calendar nav a:nth-of-type(2) {
 	right: .75rem;
+}
+#calendar nav a:active {
+	opacity: .65;
+}
+#calendar nav .end-of-line {
+	opacity: .25;
+	cursor: default;
 }
 table {
 	width: 100%;
