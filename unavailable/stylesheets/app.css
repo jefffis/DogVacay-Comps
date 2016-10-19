@@ -60,15 +60,25 @@ header:after {
 	line-height: 1.3;
 }
 #calendar-alert p {
-	max-width: 70%;
+	max-width: 80%;
 	margin-bottom: 0;
+}
+#calendar-alert a {
+	color: #69bbc0;
 }
 #calendar-alert button {
 	position: absolute;
 	top: 50%;
-	right: 1rem;
+	right: 1.25rem;
 	height: 1rem;
-	margin-top: -.5rem;
+	background: none;
+	margin-top: -.125rem;
+}
+#calendar-alert button:after {
+	color: rgba(0, 0, 0, 0.25);
+	content: "\2715";
+	font-size: 25px;
+	line-height: 0;
 }
 
 h1 {
@@ -283,13 +293,15 @@ td:after {
 	margin-top: 1rem;
 	text-align: right;
 }
-.legend span {
+.legend span,
+.ukn {
 	display: inline-block;
 	position: relative;
 	margin-left: 3rem;
 	font-size: 13px;
 }
-.legend span:before {
+.legend span:before,
+.ukn:before {
 	display: inline-block;
 	position: absolute;
 	top: 50%;
@@ -298,6 +310,19 @@ td:after {
 	width: 1rem;
 	margin-top: -.55rem;
 	content: "";
+}
+#calendar-alert .ukn {
+	width: 1rem;
+	margin: 0 .1rem;
+}
+#calendar-alert .ukn:before {
+	top: 0;
+	left: 0;
+	background: white;
+	margin-top: -.85rem;
+}
+.v3 #calendar-alert .ukn:before {
+	background: #ccc;
 }
 .av:before {
 	background: #CCECF0;
@@ -320,4 +345,95 @@ td:after {
 #info p {
 	margin-bottom: 1.5rem;
 	line-height: 1.3;
+}
+#modal-wrap {
+	display: table;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+#modal-wrapper {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+#modal-content {
+	max-width: 580px;
+	background: white;
+	margin: auto;
+	padding: 2rem;
+	border-radius: 5px;
+	text-align: left
+}
+#modal-content h3 {
+	margin-bottom: 1.75rem;
+	color: #2a494b;
+	font-size: 25px;
+	text-align: center;
+}
+#modal-content p,
+#modal-content ul {
+	max-width: 450px;
+	margin: auto;
+	font-size: 16px;
+}
+#modal-content p {
+	margin-bottom: 1.75rem;
+}
+#modal-content li {
+	position: relative;
+	padding-left: 1.5rem;
+	list-style: none;
+	counter-increment: step;
+}
+#modal-content li:before {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #999;
+	content: counter(step);
+	font-size: 1.25rem;
+	font-weight: bold;
+	line-height: 1.25;
+}
+#modal-content li + li {
+	margin-top: 1rem;
+}
+#modal-content .cta {
+	margin: 2rem -2rem 0;
+	padding-top: 1.75rem;
+	border-top: 1px solid #ddd;
+	text-align: center;
+}
+#modal-content button {
+	background: #ec6350;
+	outline: none;
+	padding: .75rem 1.5rem;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 20px;
+	font-weight: bold;
+}
+#modal-content button:active {
+	opacity: .65;
+}
+#modal-back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	height: 100%;
+	width: 100%;
+	background: rgba(68, 68, 68, 0.5);
+}
+#modal-wrap.hide,
+#modal-back.hide {
+	display: none;
 }

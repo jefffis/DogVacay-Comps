@@ -10,7 +10,7 @@
 	<div id="content">
 		<main>
 			<div id="calendar-alert">
-				<p>Days marked as <span class="ukn"></span> are set to <strong>Unknown</strong>. Until you mark days as Available, your profile will not appear in search results. <a href="###">More Info</a></p>
+				<p>Days marked as <span class="ukn"></span> are set to Unavailable. Until you mark days as Available,  <strong>your profile will not appear in search results</strong>. <a href="###">More Info</a></p>
 				<button type="button"></button>
 			</div>
 			<h1>
@@ -234,13 +234,8 @@
 			<div class="legend">
 				<span class="av">Available Day</span>
 				<span class="unav">Unavailable Day</span>
-				<span class="ukn">Unknown Day</span>
 			</div>
 			<div id="info">
-				<h3>What is an Unknown day?</h3>
-				<p>
-					An Unknown Day is a day that hasn’t been marked as Available or Unavailable yet. Hosts that regularly update their Calendar get X% more bookings.
-				</p>
 				<h3>What is an Unavailable day?</h3>
 				<p>
 					An Unknown Day is a day that hasn’t been marked as Available or Unavailable yet. Hosts that regularly update their Calendar get X% more bookings.
@@ -253,6 +248,27 @@
 		</main>
 		<aside></aside>
 	</div>
+	<div id="modal-wrap" class="hide">
+		<div id="modal-wrapper">
+			<div id="modal-content">
+				<h3>Please Update Your Calendar</h3>
+				<p>
+					Please tell us which days you are Available and Unavailable. Until you have done so, your profile will not be shown in search. This will help us better match you with potential guests.
+				</p>
+				<ul>
+					<li>First, click on days to mark them as <strong>Available</strong> or <strong>Unavailable</strong> for the month of October.</li>
+					<li>Then, do the same for November.</li>
+					<li>That&rsquo;s it! Sit back and get ready to host your next pup!</li>
+				</ul>
+				<div class="cta">
+					<button type="button" id="hide-modal">
+						Update My Calendar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="modal-back" class="hide"></div>
 	<script async src="js/app.js"></script>
 </body>
 </html>
