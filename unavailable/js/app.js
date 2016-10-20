@@ -6,7 +6,9 @@ if(e&&1===a.nodeType)while(c=e[d++])a.removeAttribute(c)}}),hb={set:function(a,b
 $(function() {
 
 	var month = 0,
-	hideModal = 'hide-modal';
+		hideAlert = 'hide-alert',
+		hideModal = 'hide-modal',
+		availableDays = 0;
 
 	$('.unknown').on('click', function(){
 		if($(this).hasClass('available')){
@@ -17,13 +19,14 @@ $(function() {
 			$(this).removeClass('unavailable');
 		}
 		$(this).removeClass('unknown');
+		countAvailableDays($('.available'));
 	});
 
 	$('a', '#nav-links').on('click', function(e){
+		e.preventDefault();
 		if($(this).hasClass('active')){
 			return;
 		}
-		e.preventDefault();
 		$('table').hide();
 		$(this).siblings().removeClass('active');
 		$($(this).attr('href')).show();
@@ -39,10 +42,10 @@ $(function() {
 	});
 
 	$('#next-month').on('click', function(e){
+		e.preventDefault();
 		if($(this).hasClass('end-of-line')){
 			return;
 		}
-		e.preventDefault();
 		$('table').hide();
 		if($('#cal-name').text()==='October'){
 			month = 1;
@@ -55,10 +58,10 @@ $(function() {
 	});
 
 	$('#prev-month').on('click', function(e){
+		e.preventDefault();
 		if($(this).hasClass('end-of-line')){
 			return;
 		}
-		e.preventDefault();
 		$('table').hide();
 		if($('#cal-name').text()==='November'){
 			month = 0;
@@ -74,6 +77,11 @@ $(function() {
 		$('#modal-wrap').remove();
 		$('#modal-back').remove();
 		createCookie(hideModal, 1);
+	});
+
+	$('#calendar-alert-hide').on('click', function(){
+		$('#calendar-alert').remove();
+		createCookie(hideAlert, 1);
 	});
 
 	function updateMonth(month) {
@@ -98,6 +106,12 @@ $(function() {
 		}
 	}
 
+	function countAvailableDays(el) {
+		if(el.length > 9){
+			showModal(el.length);
+		}
+	}
+
 	function createCookie(name,value) {
 		var expires = "";
 		document.cookie = name+"="+value+expires+"; path=/";
@@ -114,9 +128,20 @@ $(function() {
 	    return null;
 	}
 
-	if(!readCookie(hideModal)){
+	function showModal(ctx) {
 		$('#modal-wrap').removeClass('hide');
 		$('#modal-back').removeClass('hide');
+		if(ctx){
+			$('#available-days').text(ctx);
+		}
+	}
+
+	if(!readCookie(hideModal)){
+		showModal();
+	}
+
+	if(!readCookie(hideAlert)){
+		$('#calendar-alert').removeClass('hide');
 	}
 
 });
