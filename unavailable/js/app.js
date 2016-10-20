@@ -6,7 +6,7 @@ if(e&&1===a.nodeType)while(c=e[d++])a.removeAttribute(c)}}),hb={set:function(a,b
 $(function() {
 
 	var month = 0,
-		monthLimit = 2;
+	hideModal = 'hide-modal';
 
 	$('.unknown').on('click', function(){
 		if($(this).hasClass('available')){
@@ -33,7 +33,7 @@ $(function() {
 		}else if($(this).data('name')==='November'){
 			month = 1;
 		}else{
-			month = 0;
+			month = 2;
 		}
 		updateMonth(month);
 	});
@@ -70,6 +70,12 @@ $(function() {
 		updateMonth(month);
 	});
 
+	$('#hide-modal').on('click', function(){
+		$('#modal-wrap').remove();
+		$('#modal-back').remove();
+		createCookie(hideModal, 1);
+	});
+
 	function updateMonth(month) {
 		if(month===0){
 			$('#cal-name').text('October');
@@ -90,6 +96,27 @@ $(function() {
 			$('a', '#nav-links').removeClass('active');
 			$('a:last', '#nav-links').addClass('active');
 		}
+	}
+
+	function createCookie(name,value) {
+		var expires = "";
+		document.cookie = name+"="+value+expires+"; path=/";
+	}
+
+	function readCookie(name) {
+	    var nameEQ = name + "=";
+	    var ca = document.cookie.split(';');
+	    for(var i=0;i < ca.length;i++) {
+	        var c = ca[i];
+	        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+	        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	    }
+	    return null;
+	}
+
+	if(!readCookie(hideModal)){
+		$('#modal-wrap').removeClass('hide');
+		$('#modal-back').removeClass('hide');
 	}
 
 });
