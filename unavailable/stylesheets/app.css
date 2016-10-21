@@ -125,12 +125,10 @@ h1 .active {
 	width: 5rem;
 	margin-top: -.5rem;
 	margin-left: -2.5rem;
-	color: var(--primary);
 	content: "Loading";
 	font-size: 14px;
 	font-weight: bold;
-	letter-spacing: 1.5px;
-	text-transform: uppercase;
+	text-align: center;
 }
 #calendar.loading:after {
 	display: block;
@@ -138,6 +136,7 @@ h1 .active {
 	top: 1px;
 	left: 1px;
 	z-index: 5;
+	opacity: .75;
 	height: calc(100% - 2px);
 	width: calc(100% - 2px);
 	background: white;
@@ -225,6 +224,7 @@ td:before {
 	position: absolute;
 	top: .65rem;
 	left: .75rem;
+	z-index: 1;
 	content: attr(data-date);
 	color: currentColor;
 	font-size: 11px;
@@ -303,10 +303,10 @@ td:active {
 
 /*** v2, dashed ***/
 .v2 .unknown {
-	box-shadow: 0 0 0 4px white inset;
-	color: #666;
+	/*box-shadow: 0 0 0 4px white inset, 0 0 0 5px #ddd inset;*/
+	/*box-shadow: 0 0 0 4px white inset;*/
 }
-.v2 .unknown span {
+/*.v2 .unknown span {
 	display: block;
 	position: relative;
 	left: 4px;
@@ -314,15 +314,25 @@ td:active {
 	width: calc(100% - 8px);
 	border: 1px dashed #999;
 	border-radius: 2px;
-}
+}*/
 .v2 .unknown:after {
-	top: 50%;
+	/*top: 50%;
 	bottom: auto;
 	height: 1rem;
 	background: url(../images/dash.png) no-repeat center;
 	background-size: 30px;
-	margin-top: -.4rem;
+	margin-top: -.4rem;*/
+
+	bottom: 5px;
+    left: 5px;
+    z-index: 0;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    /*background: url(../images/dots.png) no-repeat center;*/
 	content: "";
+
+	opacity: .5;
+    background: url(../images/pattern.png) repeat;
 }
 
 /*** v3, question mark ***/
@@ -334,14 +344,13 @@ td:active {
 	left: 50%;
 	top: 50%;
 	bottom: auto;
+	opacity: .2;
 	height: 1.5rem;
 	width: 1.5rem;
-	background: url(../images/question.png) no-repeat center;
-	background-size: 11px;
+	background: url(https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/24x24/help.png) no-repeat center;
+	background-size: 24px;
 	margin-top: -.7rem;
 	margin-left: -.75rem;
-	/*border: 1px solid #ddd;
-	border-radius: 100%;*/
 	content: "";
 }
 
@@ -388,10 +397,11 @@ td:active {
 	content: "";
 }
 .v2 .holiday.unknown span:after {
-	top: -1px;
+	z-index: 2;
+	/*top: -1px;
 	right: -1px;
 	width: calc(100% + 2px);
-	border-radius: 2px 2px 0 0;
+	border-radius: 2px 2px 0 0;*/
 }
 
 

@@ -74,6 +74,11 @@ $(function() {
 	});
 
 	$('#hide-modal').on('click', function(){
+		if($(this).text()==='Okay, I Understand'){
+			$('#modal-wrap').remove();
+			$('#modal-back').remove();
+			return;
+		}
 		$('#modal-wrap').addClass('hide');
 		$('#modal-back').addClass('hide');
 		$('.modal-content').hide();
