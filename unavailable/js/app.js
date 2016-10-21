@@ -112,11 +112,11 @@ $(function() {
 		$('#calendar').addClass('loading');
 		setTimeout(function(){
 			$('#calendar').removeClass('loading');
-		}, 1000);
+		}, 750);
 	}
 
 	function countAvailableDays(el) {
-		if(el.length > 2){
+		if(el.length > 9){
 			showModal(el.length, $('#content-two'), 'Okay, I Understand');
 		}
 	}
