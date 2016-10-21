@@ -74,8 +74,9 @@ $(function() {
 	});
 
 	$('#hide-modal').on('click', function(){
-		$('#modal-wrap').remove();
-		$('#modal-back').remove();
+		$('#modal-wrap').addClass('hide');
+		$('#modal-back').addClass('hide');
+		$('.modal-content').hide();
 		createCookie(hideModal, 1);
 	});
 
@@ -104,11 +105,19 @@ $(function() {
 			$('a', '#nav-links').removeClass('active');
 			$('a:last', '#nav-links').addClass('active');
 		}
+		fauxLoading();
+	}
+
+	function fauxLoading() {
+		$('#calendar').addClass('loading');
+		setTimeout(function(){
+			$('#calendar').removeClass('loading');
+		}, 1000);
 	}
 
 	function countAvailableDays(el) {
-		if(el.length > 9){
-			showModal(el.length);
+		if(el.length > 2){
+			showModal(el.length, $('#content-two'), 'Okay, I Understand');
 		}
 	}
 
@@ -128,16 +137,18 @@ $(function() {
 	    return null;
 	}
 
-	function showModal(ctx) {
+	function showModal(ctx, el, text) {
 		$('#modal-wrap').removeClass('hide');
 		$('#modal-back').removeClass('hide');
+		el.show();
+		$('#hide-modal').text(text);
 		if(ctx){
 			$('#available-days').text(ctx);
 		}
 	}
 
 	if(!readCookie(hideModal)){
-		showModal();
+		showModal(false, $('#content-one'), 'Update My Calendar');
 	}
 
 	if(!readCookie(hideAlert)){
