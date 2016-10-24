@@ -13,6 +13,12 @@ $(function(){
 		$('#search-cta').removeClass('showing');
 		$('#map-wrapper').show();
 	});
+	$('a', '.link').on('click', function(){
+		var hidden = $(this).parent().prev('ul').find('.hidden');
+
+		hidden.removeClass('hidden');
+		$(this).remove();
+	});
 
 	function makeUiBetter() {
 		setTimeout(function(){
