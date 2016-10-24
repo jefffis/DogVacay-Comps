@@ -78,7 +78,7 @@ h1, h2, h3 {
 	position: relative;
 	background: #FEF8E7;
 	margin: -1.5rem -1.5rem 1.5rem;
-	padding: .5rem .5rem .5rem 3rem;
+	padding: .75rem .5rem .75rem 3rem;
 	/*border-top: 2px solid var(--primary);
 	border-bottom: 2px solid var(--primary);*/
 	/*text-align: center;*/
@@ -91,7 +91,7 @@ h1, h2, h3 {
 	height: 1rem;
 	width: 1rem;
 	background: url(../images/instant-book.png) no-repeat center;
-	background-size: 1.5rem;
+	background-size: 18px;
 	margin-top: -.5rem;
 	border-radius: 100%;
 	content: "";
@@ -213,6 +213,7 @@ li em {
 	float: left;
 	max-height: 2rem;
 	max-width: 2rem;
+	padding-top: .25rem;
 	/*margin: 0 1.5rem 1.5rem 0;*/
 }
 .covered img {
@@ -222,6 +223,8 @@ li em {
 }
 .covered small {
 	display: block;
+	position: relative;
+    z-index: 10;
 	padding-top: .25rem;
 	color: #999;
 	font-size: 12px;
