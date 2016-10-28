@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary: #69bbc0;
+	--dark-blue: #2A494B;
+	--warn: #FBD56A;
+	--link: #0F748C;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+html {
+	overflow-x: hidden;
+	color: var(--dark-blue);
+	font: normal 100%/1.4 'Helvetica Neue', Arial, sans-serif;
+}
+header {
+	border-bottom: 4px solid var(--primary);
+}
+header img {
+	display: block;
+	max-width: 130px;
+	margin: 1rem auto;
+}
+#content {
+	padding: 13px;
+}
+#label {
+	border-radius: 3px;
+	border: 1px solid var(--primary);
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.125) inset;
+	font-family: inherit;
+	font-size: 16px;
+}
+#label label {
+	float: left;
+	width: 60%;
+}
+#label label:nth-of-type(2) {
+	width: 40%;
+}
+#label input {
+	background: none;
+	width: 100%;
+	outline: none;
+	padding: 1rem;
+	font-family: inherit;
+	font-size: 16px;
+}
+#label .add-dates input {
+	position: relative;
+	top: .65rem;
+	right: .65rem;
+	float: right;
+	width: 6rem;
+	background: var(--warn);
+	padding: .35rem .5rem;
+	border-radius: 3px;
+	text-align: center;
+}
+hr {
+	height: 13px;
+}
+button {
+	font-family: inherit;
+	font-size: inherit;
+}
+.secondary {
+	background: linear-gradient(to bottom, white 0%, #F5FBFB 100%);
+	padding: .35rem .75rem;
+	padding-right: 2rem;
+	border: 1px solid var(--primary);
+	border-radius: 20px;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+	font-size: 14px;
+}
+.secondary + .secondary {
+	float: right;
+}
+small {
+	display: block;
+	color: #999;
+	font-size: 13px;
+}
+small button {
+	float: right;
+	color: var(--link);
+	text-decoration: underline;
+}

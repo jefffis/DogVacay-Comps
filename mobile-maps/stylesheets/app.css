@@ -9,6 +9,7 @@
 	--nav-height: 60px;
 	--page-width: 980px;
 	--primary: #69bbc0;
+	--secondary: #ec6350;
 	--holiday: rgb(240, 146, 14);
 }
 .cf:before,
@@ -321,4 +322,73 @@ li em {
 }
 #search-cta button:before {
 	content: "\2715";
+}
+
+
+
+
+/**** idx stuff ****/
+#idx header {
+	height: 60px;
+	border-bottom: 3px solid var(--primary);
+}
+#idx form {
+	position: relative;
+	height: 280px;
+	border-bottom: 1px solid #ddd;
+}
+#idx form:before {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 1rem;
+	width: 100%;
+	margin-top: -.5rem;
+	color: #ccc;
+	content: "form UI";
+	text-align: center;
+}
+#results div {
+	position: relative;
+	height: 267px;
+	background: #efefef;
+	border-bottom: 1px solid #ddd;
+}
+#results div:before {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 1rem;
+	width: 100%;
+	margin-top: -.5rem;
+	color: #ccc;
+	content: "Host card UI";
+	text-align: center;
+}
+#toggle {
+	position: fixed;
+	bottom: -50%;
+	left: 0;
+	width: 100%;
+	padding: 0 1.5rem 1.5rem;
+	transition: bottom .25s ease-in-out;
+}
+#toggle.sticky {
+	bottom: 0;
+}
+#toggle button {
+	display: block;
+	float: left;
+	width: 50%;
+	background: var(--secondary);
+	padding: .5rem 0;
+	color: white;
+	font-family: inherit;
+	font-size: 16px;
+}
+#toggle button:disabled {
+	background: #ddd;
+	color: #999;
 }
