@@ -349,7 +349,10 @@ li em {
 	content: "form UI";
 	text-align: center;
 }
-#results div {
+#results img {
+	display: block;
+}
+/*#results div {
 	position: relative;
 	height: 238px;
 	background: url(../images/card.png) no-repeat center;
@@ -358,7 +361,7 @@ li em {
 .new #results div {
 	height: 197px;
 	background-image: url(../images/new-card.png);
-}
+}*/
 /*#results div:before {
 	display: block;
 	position: absolute;

@@ -24,7 +24,10 @@ $(function(){
     });
 
     if(window.location.hash==='#new'){
-    	$('html').addClass('new');
+    	// $('html').addClass('new');
+    	$('img', '#results').each(function() {
+    		$(this).attr('src', 'images/new-card.png');
+    	});
     }
 
     $('#toggle-button').on('click', function(){
