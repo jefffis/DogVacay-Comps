@@ -351,6 +351,7 @@ li em {
 }
 #results img {
 	display: block;
+	width: 100%;
 }
 /*#results div {
 	position: relative;
