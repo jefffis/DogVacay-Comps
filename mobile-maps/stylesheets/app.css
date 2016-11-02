@@ -439,8 +439,8 @@ li em {
 #map-view {
 	position: relative;
 	height: 100vh;
-	background: url(../images/map.gif) no-repeat center;
-	background-size: cover;
+	background: url(../images/map.gif) repeat-y center;
+	background-size: 200%;
 }
 
 .pin {
