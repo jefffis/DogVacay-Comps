@@ -351,11 +351,15 @@ li em {
 }
 #results div {
 	position: relative;
-	height: 267px;
-	background: #efefef;
-	border-bottom: 1px solid #ddd;
+	height: 238px;
+	background: url(../images/card.png) no-repeat center;
+	background-size: 100%;
 }
-#results div:before {
+.new #results div {
+	height: 197px;
+	background-image: url(../images/new-card.png);
+}
+/*#results div:before {
 	display: block;
 	position: absolute;
 	top: 50%;
@@ -366,7 +370,7 @@ li em {
 	color: #ccc;
 	content: "Host card UI";
 	text-align: center;
-}
+}*/
 
 .hide {
 	display: none !important;
@@ -402,7 +406,7 @@ li em {
 	/*width: 50%;*/
 	background: white;
 	/*background: var(--secondary);*/
-	padding: .35rem .6rem .35rem 2rem;
+	padding: .5rem .7rem .5rem 2rem;
 	border: 1px solid var(--primary);
 	border-radius: 3px;
 	/*color: white;*/
@@ -449,10 +453,15 @@ li em {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	height: 10rem;
+	height: 8rem;
 	width: 100%;
 	background: white;
 	border-top: 5px solid var(--primary);
+}
+@media screen and (min-height: 569px) {
+	.card {
+		height: 10rem;
+	}
 }
 .pin:focus + .card {
 	display: block;

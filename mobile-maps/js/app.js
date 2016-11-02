@@ -23,6 +23,10 @@ $(function(){
         }
     });
 
+    if(window.location.hash==='#new'){
+    	$('html').addClass('new');
+    }
+
     $('#toggle-button').on('click', function(){
     	if($(this).hasClass('is-map')){
     		$('.list-view').removeClass('hide');
