@@ -367,28 +367,93 @@ li em {
 	content: "Host card UI";
 	text-align: center;
 }
+
+.hide {
+	display: none !important;
+}
+
 #toggle {
-	position: fixed;
+	background: white;
+	padding: .75rem;
+	border-bottom: 1px solid #ddd;
+	/*position: fixed;
 	bottom: -50%;
 	left: 0;
 	width: 100%;
 	padding: 0 1.5rem 1.5rem;
-	transition: bottom .25s ease-in-out;
+	transition: bottom .25s ease-in-out;*/
 }
 #toggle.sticky {
-	bottom: 0;
+	/*bottom: 0;*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
+	/*padding: 0 1.5rem 1.5rem;*/
+	/*transition: bottom .25s ease-in-out;*/
 }
+
 #toggle button {
-	display: block;
-	float: left;
-	width: 50%;
-	background: var(--secondary);
-	padding: .5rem 0;
-	color: white;
+	display: inline-block;
+	position: relative;
+	/*float: left;*/
+	/*width: 50%;*/
+	background: white;
+	/*background: var(--secondary);*/
+	padding: .35rem .6rem .35rem 2rem;
+	border: 1px solid var(--primary);
+	border-radius: 3px;
+	/*color: white;*/
 	font-family: inherit;
 	font-size: 16px;
+}
+#toggle button:before {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: .75rem;
+	height: .75rem;
+	width: .75rem;
+	background: #efefef;
+	margin-top: -.375rem;
+	content: "";
+}
+#toggle button:nth-of-type(2) {
+	float: right;
 }
 #toggle button:disabled {
 	background: #ddd;
 	color: #999;
+}
+
+#map-view {
+	position: relative;
+	height: 100vh;
+	background: url(../images/map.gif) no-repeat center;
+	background-size: cover;
+}
+
+.pin {
+	position: absolute;
+	top: 50vh;
+	left: 35vw;
+	height: 1.5rem;
+	width: 1.5rem;
+	background: var(--primary);
+	border-radius: 100%;
+}
+.card {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 10rem;
+	width: 100%;
+	background: white;
+	border-top: 5px solid var(--primary);
+}
+.pin:focus + .card {
+	display: block;
 }

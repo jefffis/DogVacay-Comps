@@ -88,11 +88,12 @@ button {
 }
 small {
 	display: block;
-	color: #999;
+	color: #;
 	font-size: 13px;
 }
 small button {
 	float: right;
+	background: none;
 	color: var(--link);
 	text-decoration: underline;
 }

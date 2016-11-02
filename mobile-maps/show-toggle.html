@@ -10,11 +10,16 @@
 	</head>
 	<body id="idx">
 
-		<header></header>
+		<header class="list-view"></header>
 
-		<form></form>
+		<form class="list-view"></form>
 
-		<div id="results">
+		<div id="toggle" class="cf">
+			<button type="button" id="toggle-button">View Map</button>
+			<button type="button">Filters</button>
+		</div>
+
+		<div id="results" class="list-view">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -23,9 +28,9 @@
 			<div></div>
 		</div>
 
-		<div id="toggle" class="cf">
-			<button type="button" disabled>List View</button>
-			<button type="button">Map View</button>
+		<div id="map-view" class="hide">
+			<div class="pin"></div>
+			<div class="card"></div>
 		</div>
 
 		<script async src="js/app.js"></script>

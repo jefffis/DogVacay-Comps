@@ -8,15 +8,40 @@ $(function(){
 	// idx
 	var toggle = $('#toggle'),
 		hostResultstop = $('#results').offset().top,
-        win = $(window);
+        win = $(window),
+        scrollPos = null;
 
     win.scroll(function(e){
         var scrollTop = win.scrollTop();
         if(scrollTop > (hostResultstop)){
             toggle.addClass('sticky');
         } else if (scrollTop <= hostResultstop) {
+        	if($('#toggle-button').hasClass('is-map')){
+        		return;
+        	}
             toggle.removeClass('sticky');
         }
+    });
+
+    $('#toggle-button').on('click', function(){
+    	if($(this).hasClass('is-map')){
+    		$('.list-view').removeClass('hide');
+    		$(this).removeClass('is-map').text('View Map');
+    		$('#map-view').addClass('hide');
+    		// console.log('list showing');
+    		window.scroll(0, scrollPos);
+    	}else{
+			$('.list-view').addClass('hide');
+    		$(this).addClass('is-map').text('View List');
+    		$('#map-view').removeClass('hide');
+    		scrollPos = $(window).scrollTop(); // capture where we were at before
+    		window.scroll(0,0);
+    		// console.log('map showing');
+    	}
+    });
+
+    $('.pin').on('click', function(){
+    	$('.card').toggle();
     });
 
 	$('.search-result').on('click', function(){
