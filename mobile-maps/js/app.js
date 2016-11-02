@@ -13,13 +13,17 @@ $(function(){
 
     win.scroll(function(e){
         var scrollTop = win.scrollTop();
-        if(scrollTop > (hostResultstop)){
+        if(scrollTop >= (hostResultstop)){
+        	if(!$('#toggle-button').hasClass('is-map')){
+        		$('body').addClass('sticky-pad');
+        	}
             toggle.addClass('sticky');
         } else if (scrollTop <= hostResultstop) {
         	if($('#toggle-button').hasClass('is-map')){
         		return;
         	}
             toggle.removeClass('sticky');
+            $('body').removeClass('sticky-pad');
         }
     });
 

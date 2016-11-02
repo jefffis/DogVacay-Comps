@@ -376,6 +376,10 @@ li em {
 	text-align: center;
 }*/
 
+.sticky-pad {
+	padding-top: 64px;
+}
+
 .hide {
 	display: none !important;
 }
@@ -383,7 +387,7 @@ li em {
 #toggle {
 	background: white;
 	padding: .75rem;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid white;
 	/*position: fixed;
 	bottom: -50%;
 	left: 0;
@@ -398,7 +402,8 @@ li em {
 	left: 0;
 	z-index: 1;
 	width: 100%;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
+	border-bottom-color: #ddd;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
 	/*padding: 0 1.5rem 1.5rem;*/
 	/*transition: bottom .25s ease-in-out;*/
 }
@@ -413,6 +418,7 @@ li em {
 	padding: .5rem .7rem .5rem 2rem;
 	border: 1px solid var(--primary);
 	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
 	/*color: white;*/
 	font-family: inherit;
 	font-size: 16px;
