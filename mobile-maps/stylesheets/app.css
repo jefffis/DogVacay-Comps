@@ -353,7 +353,7 @@ li em {
 }*/
 form {
 	padding: 1.25rem 0;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #ccc;
 }
 label {
 	display: block;
@@ -367,10 +367,6 @@ label {
 	width: 50%;
 	padding: 0;
 }
-select {
-	background: url(https://cdn1.iconfinder.com/data/icons/material-core/10/arrow-drop-down-48.png) no-repeat calc(100% - .75rem) calc(100% - 14px);
-	background-size: 14px;
-}
 select, input {
 	-webkit-appearance: none;
 	display: block;
@@ -382,6 +378,13 @@ select, input {
 	box-shadow: 0 2px 0 #efefef inset;
 	font-family: inherit;
 	font-size: 16px;
+}
+/*select:active, input:active {
+	opacity: .65;
+}*/
+select {
+	background: url(https://cdn1.iconfinder.com/data/icons/material-core/10/arrow-drop-down-48.png) no-repeat calc(100% - .75rem) calc(100% - 14px);
+	background-size: 14px;
 }
 .half input {
 	border-radius: 3px 0 0 3px;
@@ -457,7 +460,7 @@ select, input {
 	z-index: 1;
 	width: 100%;
 	/*border-top-color: white;*/
-	border-bottom-color: #ddd;
+	border-bottom-color: #ccc;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
 	/*padding: 0 1.5rem 1.5rem;*/
 	/*transition: bottom .25s ease-in-out;*/
@@ -471,23 +474,40 @@ select, input {
 	background: white;
 	/*background: var(--secondary);*/
 	padding: .5rem .7rem .5rem 2rem;
-	border: 1px solid var(--primary);
+	border: 1px solid #999;
 	border-radius: 3px;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 	/*color: white;*/
 	font-family: inherit;
 	font-size: 16px;
+}
+#toggle button:nth-of-type(1) {
+	padding-left: 1.75rem;
+}
+#toggle button.is-map {
+	padding-left: 2rem;
 }
 #toggle button:before {
 	display: block;
 	position: absolute;
 	top: 50%;
-	left: .75rem;
-	height: .75rem;
-	width: .75rem;
-	background: #efefef;
-	margin-top: -.375rem;
+	left: .5rem;
+	height: 20px;
+	width: 20px;
+	margin-top: -10px;
 	content: "";
+}
+#toggle button:nth-of-type(1):before {
+	background: url(../images/map.png) no-repeat center;
+	background-size: 50%;
+}
+#toggle button.is-map:before {
+	background-image: url(../images/list.png);
+	background-size: 12px;
+}
+#toggle button:nth-of-type(2):before {
+	background: url(../images/filters.png) no-repeat center;
+	background-size: 14px;
 }
 #toggle button:nth-of-type(2) {
 	float: right;
