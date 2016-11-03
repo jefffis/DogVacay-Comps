@@ -492,9 +492,9 @@ select {
 	position: absolute;
 	top: 50%;
 	left: .5rem;
-	height: 20px;
+	height: 22px;
 	width: 20px;
-	margin-top: -10px;
+	margin-top: -11px;
 	content: "";
 }
 #toggle button:nth-of-type(1):before {
@@ -503,11 +503,11 @@ select {
 }
 #toggle button.is-map:before {
 	background-image: url(../images/list.png);
-	background-size: 12px;
+	background-size: 15px;
 }
 #toggle button:nth-of-type(2):before {
 	background: url(../images/filters.png) no-repeat center;
-	background-size: 14px;
+	background-size: 15px;
 }
 #toggle button:nth-of-type(2) {
 	float: right;
