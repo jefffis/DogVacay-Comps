@@ -529,6 +529,8 @@ select {
 	background: url(../images/map.gif) repeat-y center;
 	background-size: 200%;
 	overflow-y: hidden;
+
+	-webkit-tap-highligh-color: rgba(0, 0, 0, 0);
 }
 
 .pin {
