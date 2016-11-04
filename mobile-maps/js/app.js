@@ -9,7 +9,8 @@ $(function(){
 	var toggle = $('#toggle'),
 		hostResultstop = $('#results').offset().top,
         win = $(window),
-        scrollPos = null;
+        scrollPos = null,
+        filterScrollPos = null;
 
     win.scroll(function(e){
         var scrollTop = win.scrollTop();
@@ -55,8 +56,35 @@ $(function(){
     	}
     });
 
+    $('#show-filters').on('click', function(){
+    	$('#filters').addClass('show');
+    	filterScrollPos = $(window).scrollTop(); // capture where we were at before
+    	hideUI();
+    });
+
+    $('#close-filters').on('click', function(){
+    	$('#filters').removeClass('show');
+    	if($('#toggle-button').hasClass('is-map')){
+    		$('#map-view').removeClass('hide');
+    	}else{
+    		$('.list-view').removeClass('hide');
+    	}
+    	window.scroll(0, filterScrollPos);
+    });
+
     $('.pin').on('click', function(){
-    	$('.card').toggle();
+    	if($(this).hasClass('active')){
+    		$(this).removeClass('active');
+    		$('.card').hide();
+    	}else{
+    		$('.pin').removeClass('active');
+    		$(this).addClass('active');
+    	}
+    	if($('.pin.active').length){
+    		$('.card').show();
+    	}else{
+    		$('.card').hide();
+    	}
     });
 
 	$('.search-result').on('click', function(){
@@ -74,6 +102,13 @@ $(function(){
 		hidden.removeClass('hidden');
 		$(this).remove();
 	});
+
+	function hideUI() {
+		setTimeout(function(){
+			$('#map-view').addClass('hide');
+	    	$('.list-view').addClass('hide');
+		}, 251);
+	}
 
 	function makeUiBetter() {
 		setTimeout(function(){

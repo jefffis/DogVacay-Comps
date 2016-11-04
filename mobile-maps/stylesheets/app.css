@@ -457,7 +457,7 @@ select {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 4;
 	width: 100%;
 	/*border-top-color: white;*/
 	border-bottom-color: #ccc;
@@ -528,10 +528,50 @@ select {
 	position: absolute;
 	top: 50vh;
 	left: 35vw;
-	height: 1.5rem;
-	width: 1.5rem;
-	background: var(--primary);
-	border-radius: 100%;
+	height: 26px;
+	width: 20px;
+}
+.p2 {
+	top: 30vh;
+	left: 65vw;
+}
+.p3 {
+	top: 40vh;
+	left: 85vw;
+}
+.p4 {
+	top: 60vh;
+	left: 25vw;
+}
+.pin:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background: url(../images/pin.png) no-repeat 0 0;
+	background-size: 40px;
+	content: "";
+}
+.pin.active:before {
+	background-position: -20px 0;
+}
+.pin:after {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 0;
+	height: 1px;
+	width: calc(100% - 50%);
+	background: rgba(0, 0, 0, 0.125);
+	margin-top: -1px;
+	margin-left: 25%;
+	border-radius: 2px;
+	filter: blur(.5px);
+	content: "";
 }
 .card {
 	display: none;
@@ -550,4 +590,41 @@ select {
 }
 .pin:focus + .card {
 	display: block;
+}
+
+#filters {
+	position: fixed;
+	top: 100%;
+	left: 0;
+	z-index: 5;
+	height: 100vh;
+	width: 100vw;
+	background: white;
+	transition: top .25s ease-in-out;
+}
+#filters.show {
+	top: 0;
+}
+#filters h4 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #efefef;
+	padding: 1.4rem 0 1.4rem 1rem;
+	border-bottom: 1px solid #ccc;
+	color: #999;
+	font-weight: normal;
+	/*text-align: center;*/
+}
+#filters button {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: var(--secondary);
+	padding: .5rem 1rem;
+	border-radius: 3px;
+	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	color: white;
+	font-size: 16px;
 }
