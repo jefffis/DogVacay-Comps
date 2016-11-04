@@ -10,6 +10,7 @@
 	--page-width: 980px;
 	--primary: #69bbc0;
 	--secondary: #ec6350;
+	--tertiary: #0f748c;
 	--holiday: rgb(240, 146, 14);
 }
 .cf:before,
@@ -22,7 +23,7 @@
     clear: both;
 }
 html {
-	/*overflow-x: hidden;*/
+	background: #efefef;
 	font: normal 100%/1.5 'Helvetica Neue', Arial, sans-serif;
 }
 html, body {
@@ -330,6 +331,7 @@ li em {
 /**** idx stuff ****/
 #idx header {
 	height: 60px;
+	background: white;
 	border-bottom: 3px solid var(--primary);
 }
 /*#idx form {
@@ -352,6 +354,7 @@ li em {
 	text-align: center;
 }*/
 form {
+	background: white;
 	padding: 1.25rem 0;
 	border-bottom: 1px solid #ccc;
 }
@@ -434,6 +437,9 @@ select {
 
 .sticky-pad {
 	padding-top: 64px;
+}
+.map .sticky-pad {
+	padding-top: 0;
 }
 
 .hide {
@@ -519,9 +525,10 @@ select {
 
 #map-view {
 	position: relative;
-	height: 100vh;
+	height: calc(100vh - 64px);
 	background: url(../images/map.gif) repeat-y center;
 	background-size: 200%;
+	overflow-y: hidden;
 }
 
 .pin {
@@ -532,8 +539,8 @@ select {
 	width: 20px;
 }
 .p2 {
-	top: 30vh;
-	left: 65vw;
+	top: 15vh;
+	left: 15vw;
 }
 .p3 {
 	top: 40vh;
@@ -576,21 +583,74 @@ select {
 .card {
 	display: none;
 	position: absolute;
+	top: 50%;
+	left: 1.5rem;
+	z-index: 4;
+	opacity: 0;
+	height: 12rem;
+	width: calc(100% - 3rem);
+	background: white;
+	margin-top: calc(-6rem + 32px);
+	border-top: 5px solid var(--tertiary);
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	transform: scale(0.95);
+}
+.card.show {
+	display: block;
+	opacity: 1;
+	transform: scale(1);
+	animation: fadeIn .25s ease-in-out;
+}
+.card.show.outro {
+	/*display: none;
+	opacity: 0;
+	transform: scale(0.95);*/
+	animation: fadeOut .15s ease-in-out;
+}
+.card-cta {
+	position: absolute;
 	bottom: 0;
 	left: 0;
-	height: 8rem;
 	width: 100%;
 	background: white;
-	border-top: 5px solid var(--primary);
+	padding: .5rem;
+	border-top: 1px solid #ddd;
+	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
 }
-@media screen and (min-height: 569px) {
+.card-cta a {
+	display: inline-block;
+	background: var(--secondary);
+	padding: .5rem 1rem;
+	border-radius: 3px;
+	color: white;
+	text-decoration: none;
+}
+.card-cta button {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: .75rem;
+	height: 30px;
+	width: 30px;
+	background: url(../images/x.png) no-repeat center;
+	background-size: 22px;
+	margin-top: -15px;
+}
+/*.card-cta button:before {
+	display: inline-block;
+	height: 1.2rem;
+	color: #999;
+	content: "\2715";
+	font-size: 30px;
+	line-height: 0;
+}*/
+/*@media screen and (min-height: 569px) {
 	.card {
 		height: 10rem;
+		margin-top: -5rem;
 	}
-}
-.pin:focus + .card {
-	display: block;
-}
+}*/
 
 #filters {
 	position: fixed;
@@ -600,7 +660,7 @@ select {
 	height: 100vh;
 	width: 100vw;
 	background: white;
-	transition: top .25s ease-in-out;
+	transition: top .45s ease-in-out;
 }
 #filters.show {
 	top: 0;
@@ -648,9 +708,33 @@ select {
 	background: var(--primary);
 	content: "";
 
-	animation: fullWidth .45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	animation: fullWidth .85s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
+@keyframes fadeIn {
+	0% {
+		display: none;
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	100% {
+		display: block;
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes fadeOut {
+	0% {
+		display: block;
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		display: none;
+		opacity: 0;
+		transform: scale(0.95);
+	}
+}
 @keyframes fullWidth {
 	0% {
 		width : 0;

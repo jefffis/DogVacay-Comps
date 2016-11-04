@@ -57,18 +57,21 @@ $(function(){
 
     $('.pin').on('click', function(){
     	if($(this).hasClass('active')){
-    		$(this).removeClass('active');
-    		$('.card').hide();
+    		hideCard();
     	}else{
     		$('.pin').removeClass('active');
     		$(this).addClass('active');
     	}
     	if($('.pin.active').length){
-    		$('.card').show();
+    		$('.card').addClass('show');
     	}else{
-    		$('.card').hide();
+    		hideCard();
     	}
     });
+
+    $('#close-card').on('click', function(){
+    	hideCard();
+	});
 
 	$('.search-result').on('click', function(){
 		$('#search-result-content').addClass('show');
@@ -79,6 +82,7 @@ $(function(){
 		$('#search-cta').removeClass('showing');
 		$('#map-wrapper').show();
 	});
+
 	$('a', '.link').on('click', function(){
 		var hidden = $(this).parent().prev('ul').find('.hidden');
 
@@ -86,17 +90,30 @@ $(function(){
 		$(this).remove();
 	});
 
+	$('#map-view').on('click', function(e){
+		if((!$(e.target).closest('.pin').length) && (!$(e.target).closest('.card').length)){
+			hideCard();
+		}
+	});
+
 	function fauxLoading(ctx) {
 		$('body').append('<div id="loading"></div>');
 		setTimeout(function(){
 			doLoading(ctx);
 			$('#loading').remove();
-		}, 500);
+		}, 1000);
+	}
+
+	function hideCard() {
+		$('.pin').removeClass('active');
+		$('.card').addClass('outro');
+		setTimeout(function(){
+			$('.card').removeClass('outro show');
+		}, 151);
 	}
 
 	function doLoading(ctx) {
-		console.log(ctx);
-		if(ctx.hasClass('is-map')){
+		if(ctx.hasClass('is-map')){ // going to list view
     		$('.list-view').removeClass('hide');
     		ctx.removeClass('is-map').text('View Map');
     		$('#map-view').addClass('hide');
@@ -104,6 +121,8 @@ $(function(){
 				toggle.removeClass('sticky');
     		}
     		window.scroll(0, scrollPos);
+    		$('html').removeClass('map');
+    		hideCard();
     	}else{
     		toggle.addClass('sticky');
 			$('.list-view').addClass('hide');
@@ -111,6 +130,7 @@ $(function(){
     		$('#map-view').removeClass('hide');
     		scrollPos = $(window).scrollTop(); // capture where we were at before
     		window.scroll(0,0);
+    		$('html').addClass('map');
     	}
 	}
 
@@ -118,7 +138,7 @@ $(function(){
 		setTimeout(function(){
 			$('#map-view').addClass('hide');
 	    	$('.list-view').addClass('hide');
-		}, 251);
+		}, 451);
 	}
 
 	function makeUiBetter() {
