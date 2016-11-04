@@ -596,7 +596,7 @@ select {
 	width: calc(100% - 4rem);
 	background: white;
 	margin-top: calc(-6rem + 32px);
-	border-top: .5rem solid var(--tertiary);
+	border-top: 8px solid var(--tertiary);
 	/*border: 1px solid rgba(0, 0, 0, 0.15);*/
 	border-radius: 3px;
 	/*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1);*/
@@ -637,7 +637,7 @@ select {
 	left: 0;
 	width: 100%;
 	background: white;
-	padding: .5rem;
+	padding: .55rem;
 	border-top: 1px solid #ddd;
 	border-radius: 0 0 3px 3px;
 	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
@@ -655,7 +655,7 @@ select {
 	display: inline-block;
 	position: absolute;
 	top: 50%;
-	right: .75rem;
+	right: .5rem;
 	height: 30px;
 	width: 30px;
 	background: url(../images/x.png) no-repeat center;
@@ -696,7 +696,7 @@ select {
 	left: 0;
 	width: 100%;
 	background: #efefef;
-	padding: 1.4rem 0 1.4rem 1rem;
+	padding: 1.5rem 0 1.5rem 1rem;
 	border-bottom: 1px solid #ccc;
 	color: #999;
 	font-weight: normal;
@@ -707,7 +707,7 @@ select {
 	top: 1rem;
 	right: 1rem;
 	background: var(--secondary);
-	padding: .5rem 1rem;
+	padding: .6rem 1rem;
 	border-radius: 3px;
 	/*box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset;*/
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
