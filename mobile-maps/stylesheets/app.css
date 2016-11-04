@@ -525,7 +525,7 @@ select {
 
 #map-view {
 	position: relative;
-	height: calc(100vh - 64px);
+	height: 100vh;
 	background: url(../images/map.gif) repeat-y center;
 	background-size: 200%;
 	overflow-y: hidden;
@@ -535,11 +535,11 @@ select {
 	position: absolute;
 	top: 50vh;
 	left: 35vw;
-	height: 26px;
-	width: 20px;
+	height: 32px;
+	width: 24px;
 }
 .p2 {
-	top: 15vh;
+	top: 20vh;
 	left: 15vw;
 }
 .p3 {
@@ -559,11 +559,11 @@ select {
 	height: 100%;
 	width: 100%;
 	background: url(../images/pin.png) no-repeat 0 0;
-	background-size: 40px;
+	background-size: 48px;
 	content: "";
 }
 .pin.active:before {
-	background-position: -20px 0;
+	background-position: -24px 0;
 }
 .pin:after {
 	display: block;
@@ -573,7 +573,7 @@ select {
 	z-index: 0;
 	height: 1px;
 	width: calc(100% - 50%);
-	background: rgba(0, 0, 0, 0.125);
+	background: rgba(0, 0, 0, 0.15);
 	margin-top: -1px;
 	margin-left: 25%;
 	border-radius: 2px;
@@ -584,11 +584,11 @@ select {
 	display: none;
 	position: absolute;
 	top: 50%;
-	left: 1.5rem;
+	left: 2rem;
 	z-index: 4;
 	opacity: 0;
 	height: 12rem;
-	width: calc(100% - 3rem);
+	width: calc(100% - 4rem);
 	background: white;
 	margin-top: calc(-6rem + 32px);
 	border-top: 5px solid var(--tertiary);
@@ -616,6 +616,7 @@ select {
 	background: white;
 	padding: .5rem;
 	border-top: 1px solid #ddd;
+	border-radius: 0 0 3px 3px;
 	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
 }
 .card-cta a {
