@@ -529,8 +529,6 @@ select {
 	background: url(../images/map.gif) repeat-y center;
 	background-size: 200%;
 	overflow-y: hidden;
-
-	-webkit-tap-highligh-color: rgba(0, 0, 0, 0);
 }
 
 .pin {
@@ -539,6 +537,11 @@ select {
 	left: 35vw;
 	height: 32px;
 	width: 24px;
+}
+@media screen and (min-height: 569px) {
+	.pin {
+		transform: scale(1.2);
+	}
 }
 .p2 {
 	top: 20vh;
