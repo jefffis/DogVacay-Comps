@@ -628,3 +628,34 @@ select {
 	color: white;
 	font-size: 16px;
 }
+
+#loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 6;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(255, 255, 255, 0.5);
+}
+#loading:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 0;
+	background: var(--primary);
+	content: "";
+
+	animation: fullWidth .45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@keyframes fullWidth {
+	0% {
+		width : 0;
+	}
+	100% {
+		width : 110vw;
+	}
+}

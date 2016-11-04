@@ -36,24 +36,7 @@ $(function(){
     }
 
     $('#toggle-button').on('click', function(){
-    	if($(this).hasClass('is-map')){
-    		$('.list-view').removeClass('hide');
-    		$(this).removeClass('is-map').text('View Map');
-    		$('#map-view').addClass('hide');
-    		// console.log('list showing');
-    		if(win.scrollTop() < hostResultstop){
-				toggle.removeClass('sticky');
-    		}
-    		window.scroll(0, scrollPos);
-    	}else{
-    		toggle.addClass('sticky');
-			$('.list-view').addClass('hide');
-    		$(this).addClass('is-map').text('View List');
-    		$('#map-view').removeClass('hide');
-    		scrollPos = $(window).scrollTop(); // capture where we were at before
-    		window.scroll(0,0);
-    		// console.log('map showing');
-    	}
+    	fauxLoading($(this));
     });
 
     $('#show-filters').on('click', function(){
@@ -102,6 +85,34 @@ $(function(){
 		hidden.removeClass('hidden');
 		$(this).remove();
 	});
+
+	function fauxLoading(ctx) {
+		$('body').append('<div id="loading"></div>');
+		setTimeout(function(){
+			doLoading(ctx);
+			$('#loading').remove();
+		}, 500);
+	}
+
+	function doLoading(ctx) {
+		console.log(ctx);
+		if(ctx.hasClass('is-map')){
+    		$('.list-view').removeClass('hide');
+    		ctx.removeClass('is-map').text('View Map');
+    		$('#map-view').addClass('hide');
+    		if(win.scrollTop() < hostResultstop){
+				toggle.removeClass('sticky');
+    		}
+    		window.scroll(0, scrollPos);
+    	}else{
+    		toggle.addClass('sticky');
+			$('.list-view').addClass('hide');
+    		ctx.addClass('is-map').text('View List');
+    		$('#map-view').removeClass('hide');
+    		scrollPos = $(window).scrollTop(); // capture where we were at before
+    		window.scroll(0,0);
+    	}
+	}
 
 	function hideUI() {
 		setTimeout(function(){
