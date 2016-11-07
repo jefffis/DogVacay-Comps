@@ -608,6 +608,7 @@ select {
 	transform: scale(0.95);
 }
 .no-results {
+	height: auto;
 	padding: 2rem;
 	border-top: none;
 	text-align: center;
