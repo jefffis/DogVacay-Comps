@@ -29,10 +29,38 @@ $(function(){
     });
 
     if(window.location.hash==='#new'){
-    	// $('html').addClass('new');
     	$('img', '#results').each(function() {
     		$(this).attr('src', 'images/new-card.png');
     	});
+    }
+
+    if(window.location.hash==='#redo'){
+    	$('.p2').hide();
+    	$('.p3').hide();
+    	$('.p4').hide();
+    	$('#map-view').append('<div id="redo-search"><button type="button">Re-apply Search</button></div>');
+    }
+
+    if(window.location.hash==='#none'){
+    	$('.pin').remove();
+    	$('.card').remove();
+    	// $('#map-view').addClass('no-scroll');
+    	$('#map-view').append('<div class="card show no-results"><img src="images/saface.png" width="40" /><p>Dang, we couldn&rsquo;t find any hosts. Maybe try <a href="###">adjusting your search</a>?</p></div>')
+    }
+
+    $('body').on('click', '#redo-search', function() {
+    	fauxRedosearch($(this));
+    });
+
+    function fauxRedosearch(el) {
+    	$('body').append('<div id="loading"></div>');
+		setTimeout(function(){
+			$('.pin').show();
+	    	el.remove();
+		}, 700);
+		setTimeout(function(){
+			$('#loading').remove();
+		}, 750);
     }
 
     $('#toggle-button').on('click', function(){
