@@ -596,10 +596,10 @@ select {
 	left: 2rem;
 	z-index: 4;
 	opacity: 0;
-	height: 12rem;
+	height: 10rem;
 	width: calc(100% - 4rem);
 	background: white;
-	margin-top: calc(-6rem + 32px);
+	margin-top: calc(-5rem + 32px);
 	border-top: 8px solid var(--tertiary);
 	/*border: 1px solid rgba(0, 0, 0, 0.15);*/
 	border-radius: 3px;
@@ -676,6 +676,68 @@ select {
 	background: url(../images/x.png) no-repeat center;
 	background-size: 22px;
 	margin-top: -15px;
+}
+.card-host {
+	padding: .75rem;
+}
+.card-host h4,
+.card-host h5 {
+	margin: 0;
+}
+.card-host h4 {
+	font-size: 17px;
+}
+.card-host h5 {
+	color: #999;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1;
+}
+.card-image {
+	float: left;
+	width: calc(60px + .5rem);
+}
+.card-stars {
+	position: relative;
+	left: -3px;
+	height: 26px;
+	background: url(../images/stars.png) no-repeat left top;
+	background-size: 70% 30px;
+	margin-top: .1rem;
+}
+.card-image img {
+	max-width: 100%;
+	border-radius: 4px;
+}
+.card-host-details {
+	position: relative;
+	float: right;
+	width: calc(100% - (60px + 1rem));
+}
+.card-pricing {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 27px;
+	line-height: 1;
+}
+.card-pricing:before {
+	position: absolute;
+	top: 0;
+	left: -.65rem;
+	content: "$";
+	font-size: 17px;
+}
+.card-pricing:after {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	content: "night";
+	color: #999;
+	font-size: 12px;
+	text-align: center;
 }
 /*.card-cta button:before {
 	display: inline-block;

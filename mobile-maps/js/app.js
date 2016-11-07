@@ -38,7 +38,7 @@ $(function(){
     	$('.p2').hide();
     	$('.p3').hide();
     	$('.p4').hide();
-    	$('#map-view').append('<div id="redo-search"><button type="button">Re-apply Search</button></div>');
+    	$('#map-view').append('<div id="redo-search"><button type="button">Redo search here</button></div>');
     }
 
     if(window.location.hash==='#none'){
