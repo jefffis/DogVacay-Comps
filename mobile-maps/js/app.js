@@ -80,6 +80,7 @@ $(function(){
     	}else{
     		$('.list-view').removeClass('hide');
     	}
+    	$('#filters').removeClass('static');
     	window.scroll(0, filterScrollPos);
     });
 
@@ -166,6 +167,8 @@ $(function(){
 		setTimeout(function(){
 			$('#map-view').addClass('hide');
 	    	$('.list-view').addClass('hide');
+	    	window.scroll(0, 0);
+	    	$('#filters').addClass('static');
 		}, 451);
 	}
 

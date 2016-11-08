@@ -784,24 +784,27 @@ select {
 #filters.show {
 	top: 0;
 }
+#filters.static {
+	position: absolute;
+	height: 100vh;
+}
 #filters h4 {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: #efefef;
+	background: white;
 	padding: 1.275rem 0 1.275rem 1rem;
 	border-bottom: 1px solid #ccc;
-	color: #999;
 	font-weight: normal;
-	/*text-align: center;*/
+	text-align: center;
 }
 #filters button {
 	position: absolute;
 	top: .75rem;
 	right: 1rem;
 	background: var(--secondary);
-	padding: .6rem 1rem;
+	padding: .6rem .75rem;
 	border-radius: 3px;
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
 	color: white;
