@@ -596,14 +596,12 @@ select {
 	left: 2rem;
 	z-index: 4;
 	opacity: 0;
-	height: 10rem;
+	height: 11.75rem;
 	width: calc(100% - 4rem);
 	background: white;
-	margin-top: calc(-5rem + 32px);
+	margin-top: calc(-5.875rem + 32px);
 	border-top: 8px solid var(--tertiary);
-	/*border: 1px solid rgba(0, 0, 0, 0.15);*/
 	border-radius: 3px;
-	/*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1);*/
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 	transform: scale(0.95);
 }
@@ -642,10 +640,39 @@ select {
 	transform: scale(0.95);*/
 	animation: fadeOut .15s ease-in-out;
 }
+
+.card-host-specifics {
+	position: relative;
+	height: 2rem;
+	clear: left;
+	overflow: hidden;
+	line-height: 1;
+}
+.card-host-specifics:before {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 100%);
+	content: "";
+}
+.card-host-specifics li {
+	display: inline;
+	list-style: none;
+	font-size: 12px;
+}
+.card-host-specifics li:after {
+	content: ", ";
+}
+
 .card-cta {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	z-index: 2;
 	width: 100%;
 	background: white;
 	padding: .55rem;
@@ -774,7 +801,8 @@ select {
 
 @media screen and (min-width: 375px) {
 	.card {
-		height: 11rem;
+		height: 13rem;
+		margin-top: calc(-6.5rem + 32px);
 	}
 	.card-host-details {
 		width: calc(100% - (60px + 1.25rem));
