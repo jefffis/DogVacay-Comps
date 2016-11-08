@@ -619,11 +619,6 @@ select {
 .no-results a {
 	color: var(--primary);
 }
-/*@media screen and (min-height: 569px) {
-	.card {
-		transform: scale(1.15);
-	}
-}*/
 /*.card:before {
 	display: block;
 	position: absolute;
@@ -776,6 +771,24 @@ select {
 		margin-top: -5rem;
 	}
 }*/
+
+@media screen and (min-width: 375px) {
+	.card {
+		height: 11rem;
+	}
+	.card-host-details {
+		width: calc(100% - (60px + 1.25rem));
+	}
+	.card-pricing {
+		right: .25rem;
+	}
+	.card-host {
+		padding: 1rem;
+	}
+	.card-cta {
+		padding: .8rem;
+	}
+}
 
 #redo-search {
 	position: absolute;
