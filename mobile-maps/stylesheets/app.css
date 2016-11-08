@@ -701,7 +701,7 @@ select {
 	width: 60px;
 	background: url(../images/stars.png) repeat-x;
 	background-size: 12px;
-	margin: .2rem 0;
+	margin: .2rem 0 .1rem;
 }
 .card-reviews,
 .card-repeats {
