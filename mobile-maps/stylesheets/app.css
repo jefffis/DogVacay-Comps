@@ -684,6 +684,7 @@ select {
 .card-host h4,
 .card-host h5 {
 	margin: 0;
+	line-height: 1.2;
 }
 .card-host h4 {
 	font-size: 17px;
@@ -700,11 +701,32 @@ select {
 }
 .card-stars {
 	position: relative;
-	left: -3px;
-	height: 26px;
-	background: url(../images/stars.png) no-repeat left top;
-	background-size: 70% 30px;
+	left: -1px;
+	height: 12px;
+	width: 60px;
+	background: url(../images/stars.png) repeat-x;
+	background-size: 12px;
+	margin: .2rem 0;
+}
+.card-reviews,
+.card-repeats {
+	font-size: 12px;
+	line-height: 1.2;
+}
+.card-repeats {
 	margin-top: .1rem;
+}
+.card-repeats:before {
+	display: inline-block;
+	position: relative;
+	top: 1.5px;
+	height: .75em;
+	width: .75em;
+	/*background: var(--primary);*/
+	margin-right: .35em;
+	border: 1px solid var(--primary);
+	border-radius: 100%;
+	content: ""
 }
 .card-image img {
 	max-width: 100%;
