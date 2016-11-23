@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Service Cards</title>
+	<link rel="stylesheet" href="stylesheets/app.css" />
+</head>
+<body>
+
+	<div class="dv-center">
+		<h1>
+			How can DogVacay help you?
+		</h1>
+		<p>
+			You might not know how we can help, so we put some common scenarios together:
+		</p>
+	</div>
+	<div id="dv-help-cards">	
+		<div class="dv-help-card">
+			<h2>
+				I need a last minute dog sitter for my date night.
+			</h2>
+			<p>
+				Perfect! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+			</p>
+			<a href="##" class="dv-card-cta">
+				Check-Ins
+			</a>
+			<a href="###">
+				More about Check-Ins
+			</a>
+		</div>
+
+		<div class="dv-help-card">
+			<h2>
+				I started a new job; what should I with Rex?
+			</h2>
+			<p>
+				Perfect! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+			</p>
+			<a href="##" class="dv-card-cta">
+				Daycare
+			</a>
+			<a href="###">
+				More about Daycare
+			</a>
+		</div>
+		
+		<div class="dv-help-card">
+			<h2>
+				Work is hectic, and I can&rsquo;t get home until late&hellip;
+			</h2>
+			<p>
+				No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+			</p>
+			<a href="##" class="dv-card-cta">
+				Walking
+			</a>
+			<a href="###">
+				More about Walking
+			</a>
+		</div>
+		
+		<div class="dv-help-card">
+			<h2>
+				I&rsquo;m leaving town; my cats need to be fed each day.
+			</h2>
+			<p>
+				No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+			</p>
+			<a href="##" class="dv-card-cta">
+				Sitting
+			</a>
+			<a href="###">
+				More about Sitting
+			</a>
+		</div>
+
+		<div id="dv-help-cards-hidden" class="hidden">
+
+			<hr />
+		
+			<div class="dv-help-card">
+				<h2>
+					I have to go away for 3 days, today! <em>What about Fido?</em>
+				</h2>
+				<p>
+					No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+				</p>
+				<a href="##" class="dv-card-cta">
+					Boarding
+				</a>
+				<a href="###">
+					More about Boarding
+				</a>
+			</div>
+
+			<div class="dv-help-card">
+				<h2>
+					My pup is too energetic; she needs a walk daily!
+				</h2>
+				<p>
+					No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+				</p>
+				<a href="##" class="dv-card-cta">
+					Walking
+				</a>
+				<a href="###">
+					More about Walking
+				</a>
+			</div>
+			
+			<div class="dv-help-card">
+				<h2>
+					My parents are visiting, and they don&rsquo;t like dogs&hellip;
+				</h2>
+				<p>
+					No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+				</p>
+				<a href="##" class="dv-card-cta">
+					Sitting
+				</a>
+				<a href="###">
+					More about Sitting
+				</a>
+			</div>
+			
+			<div class="dv-help-card">
+				<h2>
+					I need a walker and a groomer; help please!!!
+				</h2>
+				<p>
+					No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+				</p>
+				<a href="##" class="dv-card-cta">
+					Walking
+				</a>
+				<a href="###">
+					More about Walking
+				</a>
+			</div>
+
+			<hr />
+			
+			<p class="dv-outro">
+				Don&rsquo;t see yours? <a href="#">Talk to Concierge</a> and we&rsquo;ll find you the right sitter.	
+			</p>
+			
+
+		</div>
+
+		<hr />
+
+		<p>
+			<a id="dv-help-cards-show">See all the ways we can help</a>
+		</p>
+		
+	</div>
+
+	<script>
+		var hiddenCards = document.getElementById('dv-help-cards-hidden'),
+			hiddenCardShow = document.getElementById('dv-help-cards-show');
+
+		hiddenCardShow.onclick = function() {
+			delayUX(hiddenCards, this);
+		}
+
+		function delayUX(el1, el2) {
+			setTimeout(function() {
+				el1.classList = '';
+				el2.parentNode.removeChild(el2);
+			}, 215);
+		}
+	</script>
+	
+</body>
+</html>

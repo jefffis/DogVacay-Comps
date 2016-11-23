@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html {
+	background: white;
+	color: #2A494B;
+	font: normal 100%/1.5 'Ubuntu', 'Helvetica Neue', sans-serif; 
+}
+a {
+	color: #6CBBBF;
+	cursor: pointer;
+	/*font-size: 14px;*/
+	text-decoration: underline;
+}
+a:active {
+	opacity: .65;
+}
+h1 {
+	margin-bottom: .35rem;
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 1.2;
+}
+hr {
+	height: 1.5rem;
+}
+p {
+	color: #999;
+}
+.dv-center {
+	padding: 4rem 0 2rem;
+	text-align: center;
+}
+#dv-help-cards {
+	max-width: 1200px;
+	margin: auto auto 4rem;
+	text-align: center;
+}
+.dv-help-card {
+	display: inline-block;
+	width: 230px;
+	margin: 0 .75rem;
+	padding: 1.5rem;
+	border: 1px solid #6CBBBF;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	cursor: default;
+	line-height: 1.3;
+	text-align: left;
+	vertical-align: top;
+}
+.dv-help-card:hover, .dv-help-card:focus {
+	box-shadow: 0 0 0 2px #6CBBBF, 0 4px 2px rgba(0, 0, 0, 0.1);
+}
+.dv-help-card h2 {
+	margin-bottom: .75rem;
+	font-size: 20px;
+}
+.dv-help-card p {
+	margin-bottom: 1.25rem;
+	color: #2A494B;
+}
+.dv-help-card a {
+	display: block;
+	text-align: center;
+}
+.dv-help-card a:last-of-type {
+	font-size: 14px;
+}
+.dv-card-cta {
+	position: relative;
+	background: #6CBBBF;
+	margin-bottom: 1.25rem;
+	padding: .65rem 1rem;
+	border-radius: 4px;
+	color: white;
+	font-size: 15px;
+	text-decoration: none;
+}
+.dv-card-cta:hover {
+	background: #EC6350;
+}
+/*.dv-card-cta:focus {
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}*/
+.dv-card-cta:before {
+	content: "Book via ";
+}
+/*.dv-card-cta:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 2.5rem;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAABBCAYAAABMx43BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QjZERTNGOUE5RDUxMUU2QjY1RDkzMjBDRTYyNEFDQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QjZERTNGQUE5RDUxMUU2QjY1RDkzMjBDRTYyNEFDQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRCNkRFM0Y3QTlENTExRTZCNjVEOTMyMENFNjI0QUNDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRCNkRFM0Y4QTlENTExRTZCNjVEOTMyMENFNjI0QUNDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+YCqVCQAAAaNJREFUeNrM2k9KxDAUBvBOcKkwWx33LtyLN/AEnsfcwsVcYK7gRreK4NoDeIFRcBtfQMEpbZO8vD/fg29g2hR+U6Zt8ugqpTQs1JpyS9kOjnVUAD5QrigbSnRT5jM5kTXlJR1WnBmrnlqgK7QF6AZtBbpAOUBzaP44ZgBNoYEu8G/KG/PmcGdya/rVBsp94le0unBgoeMNkNCpjXDQuR1Q0KWdMNDSAAhozSB3aO1AV2jLYDdo6wEuUM4vM4dy/yem0J6rzgzaew8zgUo8EdShUs9XVajkbEUNKj33U4FqzKTFoVrrElGo5lJUDKq9ZhaBrgr9SYk6o7xTThjHflIugzLwlPLYAbyhfARl4BPlogP4nL8EdKAWUhSogRQHSiNVgJJINaAUUhUogVQH9iJNgD1IMyAXaQrkIM2BrUgXYAvSDViLdAXWIN2BJSQEcAkJA5xDQgGnkHDAMRIS+B8JC8yV1915ufmKCvw7k1+UHSpw/F5QbGh/7CnXXq/cRDTgXMMqIgGXumoRBVhq/UUEYE1/MnoDa/uT57n9NjjWjwADAEFf2zlElFKIAAAAAElFTkSuQmCC') no-repeat center;
+	background-size: 12px;
+	border-radius: 0 4px 4px 0;
+	content: "";
+}*/
+
+.dv-outro {
+	margin-top: .5rem;
+	color: #2A494B;
+}
+
+@media screen and (max-width: 1100px) {
+
+	#dv-help-cards {
+		max-width: 600px;
+	}
+	.dv-help-card:nth-of-type(n+3) {
+		margin-top: 1.5rem;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	#dv-help-cards {
+		max-width: 320px;
+	}
+	.dv-help-card {
+		margin: 0;
+	}
+	.dv-help-card:nth-of-type(n+2),
+	.dv-help-card:nth-of-type(n+3) {
+		margin-top: 1.5rem;
+	}
+
+}
+
+.hidden {
+	position: relative;
+	height: 8rem;
+	overflow: hidden;
+}
+.hidden:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%);
+	content: "";
+}
+.hidden:after {
+	display: block;
+	position: absolute;
+	bottom: 1px;
+	left: 50%;
+	z-index: 2;
+	height: 1px;
+	width: 1000px;
+	background: rgba(0, 0, 0, 0.05);
+	margin-left: -500px;
+	content: "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
