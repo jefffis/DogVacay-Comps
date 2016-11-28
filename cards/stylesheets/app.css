@@ -44,7 +44,9 @@ p {
 }
 header {
 	position: relative;
+	max-width: 1020px;
 	background: white;
+	margin: auto;
 	padding: 1rem;
 	border-bottom: 1px solid var(--lightgrey);
 	text-align: right;
@@ -89,11 +91,28 @@ header img {
 	box-shadow: 0 0 0 2px #6CBBBF, 0 4px 2px rgba(0, 0, 0, 0.1);
 }
 .dv-help-card h2 {
+	/*position: relative;*/
+	margin-top: .25rem;
 	margin-bottom: .75rem;
+	/*background: #6CBBBF;
+	margin: -1.5rem -1.5rem 1rem;
+	padding: 1.5rem;
+	color: white;*/
 	font-size: 20px;
 }
+/*.dv-help-card h2:after {
+	display: block;
+	position: absolute;
+	top: calc(100% + .875rem);
+	left: 0;
+	height: 1px;
+	width: 100%;
+	background: var(--grey);
+	opacity: .35;
+	content: "";
+}*/
 .dv-help-card p {
-	margin-bottom: 1.25rem;
+	margin-bottom: 1.5rem;
 	color: #2A494B;
 }
 .dv-help-card a {
@@ -101,7 +120,7 @@ header img {
 	text-align: center;
 }
 .dv-help-card a:last-of-type {
-	font-size: 14px;
+	font-size: 13px;
 }
 .dv-card-cta {
 	position: relative;
