@@ -5,7 +5,7 @@
 	<title>Service Cards</title>
 	<link rel="stylesheet" href="stylesheets/app.css" />
 </head>
-<body>
+<body class="no-pix">
 
 	<header>
 		<img src="images/logo.png" alt="DogVacay: Personal pet care that both you and your pet will love." />
@@ -27,18 +27,15 @@
 			<h2>
 				I need a last minute dog sitter for my date night.
 			</h2>
-			<!-- <p>
-				Book this with Check-Ins
-			</p> -->
 			<a href="##" class="dv-card-cta">
 				Check-Ins
 			</a>
+			<!-- <p>
+				<strong>Check-In:</strong> a sitter comes to your house to hang out your pup for a bit.
+			</p> -->
 			<a href="###">
 				More about Check-Ins
 			</a>
-			<span class="dv-help-card-info">
-				Date Night
-			</span>
 		</div>
 
 		<div class="dv-help-card two" tabindex="0">
@@ -54,9 +51,6 @@
 			<a href="###">
 				More about Daycare
 			</a>
-			<span class="dv-help-card-info">
-				New Job
-			</span>
 		</div>
 		
 		<div class="dv-help-card three" tabindex="0">
@@ -75,9 +69,6 @@
 			<a href="###">
 				More about Walking
 			</a>
-			<span class="dv-help-card-info">
-				Long Day at Work
-			</span>
 		</div>
 		
 		<div class="dv-help-card four" tabindex="0">
@@ -96,9 +87,6 @@
 			<a href="###">
 				More about Sitting
 			</a>
-			<span class="dv-help-card-info">
-				Vacation
-			</span>
 		</div>
 
 		<div class="dv-help-card five" tabindex="0">
@@ -117,77 +105,80 @@
 			<a href="###">
 				More about Sitting
 			</a>
-			<span class="dv-help-card-info">
-				Work Trip
-			</span>
 		</div>
 
-		<div class="dv-help-card hide">
-			<h2>
-				My pup is too energetic; she needs a walk daily!
-			</h2>
-			<!-- <p>
-				No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
-			</p> -->
-			<a href="##" class="dv-card-cta">
-				Walking
-			</a>
-			<a href="###">
-				More about Walking
-			</a>
-			<span class="dv-help-card-info">
-				Active Puppy
-			</span>
-		</div>
+		<div id="dv-help-cards-hidden" class="hidden">
+
+			<hr />
 		
-		<div class="dv-help-card hide">
-			<h2>
-				My parents are visiting, and they don&rsquo;t like dogs&hellip;
-			</h2>
-			<!-- <p>
-				No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
-			</p> -->
-			<a href="##" class="dv-card-cta">
-				Sitting
-			</a>
-			<a href="###">
-				More about Sitting
-			</a>
-			<span class="dv-help-card-info">
-				Family In-town
-			</span>
-		</div>
-		
-		<div class="dv-help-card hide">
-			<h2>
-				I need a walker and a groomer; help please!!!
-			</h2>
-			<!-- <p>
-				No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
-			</p> -->
-			<a href="##" class="dv-card-cta">
-				Walking
-			</a>
-			<a href="###">
-				More about Walking
-			</a>
-			<span class="dv-help-card-info">
-				Grooming
-			</span>
-		</div>
+			<div class="dv-help-card">
+				<h2>
+					I have to go away for 3 days, today! <em>What about Fido?</em>
+				</h2>
+				<!-- <p>
+					No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+				</p> -->
+				<a href="##" class="dv-card-cta">
+					Boarding
+				</a>
+				<a href="###">
+					More about Boarding
+				</a>
+			</div>
 
-		<!-- <div id="dv-help-cards-hidden" class="hidden">
+			<div class="dv-help-card">
+				<h2>
+					My pup is too energetic; she needs a walk daily!
+				</h2>
+				<!-- <p>
+					No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+				</p> -->
+				<a href="##" class="dv-card-cta">
+					Walking
+				</a>
+				<a href="###">
+					More about Walking
+				</a>
+			</div>
+			
+			<div class="dv-help-card">
+				<h2>
+					My parents are visiting, and they don&rsquo;t like dogs&hellip;
+				</h2>
+				<!-- <p>
+					No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+				</p> -->
+				<a href="##" class="dv-card-cta">
+					Sitting
+				</a>
+				<a href="###">
+					More about Sitting
+				</a>
+			</div>
+			
+			<div class="dv-help-card">
+				<h2>
+					I need a walker and a groomer; help please!!!
+				</h2>
+				<!-- <p>
+					No worries! We&rsquo;ve got hundreds of sitters who&rsquo;d love to help out.
+				</p> -->
+				<a href="##" class="dv-card-cta">
+					Walking
+				</a>
+				<a href="###">
+					More about Walking
+				</a>
+			</div>
 
-			<hr /> -->
-
-			<!-- <hr />
+			<hr />
 			
 			<p class="dv-outro">
 				Don&rsquo;t see yours? <a href="#">Talk to Concierge</a> and we&rsquo;ll find you the right sitter.	
 			</p>
 			
 
-		</div> -->
+		</div>
 
 		<hr />
 
@@ -197,10 +188,9 @@
 		
 	</div>
 
-	<!-- <script>
+	<script>
 		var hiddenCards = document.getElementById('dv-help-cards-hidden'),
-			hiddenCardShow = document.getElementById('dv-help-cards-show'),
-			hiddenCardsInd = document.querySelectorAll('div.hide');
+			hiddenCardShow = document.getElementById('dv-help-cards-show');
 
 		hiddenCardShow.onclick = function() {
 			delayUX(hiddenCards, this);
@@ -212,10 +202,7 @@
 				el2.parentNode.removeChild(el2);
 			}, 215);
 		}
-	</script> -->
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="js/app.js"></script>
+	</script>
 	
 </body>
 </html>
