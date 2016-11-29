@@ -1,5 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');*/
 /*@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');*/
+
+@font-face {
+	font-family: 'Intro';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Intro'), local('Intro'), url(https://static1.dogvacay.com/fonts/Intro.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Intro';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Intro Bold'), local('IntroBold'), url(https://static1.dogvacay.com/fonts/IntroBold.woff2) format('woff2');
+}
+
 :root{
 	--white0: rgba(255, 255, 255, 0);
 	--white100: rgba(255, 255, 255, 1);
@@ -24,7 +38,7 @@ html {
 	/*background: var(--grey100);*/
 	background: var(--white100);
 	color: var(--darkgrey);
-	font: normal 100%/1.5 'Ubuntu', 'Open Sans', 'Helvetica Neue', sans-serif; 
+	font: normal 100%/1.5 'Intro', 'Helvetica Neue', sans-serif; 
 }
 a {
 	color: #6CBBBF;
@@ -38,7 +52,7 @@ a:active {
 	opacity: .65;
 }
 h1 {
-	margin-bottom: .35rem;
+	/*margin-bottom: .35rem;*/
 	font-size: 30px;
 	font-weight: normal;
 	line-height: 1.2;
@@ -238,10 +252,12 @@ header img {
 	/*outline: none;*/
 	margin-top: 1.75rem;
 	margin-bottom: .5rem;
-	padding: .65rem 1rem;
+	padding: .75rem 1rem .6rem;
 	border-radius: 4px;
 	color: white;
-	font-size: 15px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1;
 	text-align: left;
 	text-decoration: none;
 }
@@ -375,7 +391,6 @@ header img {
 	}
 	.dv-card-cta {
 		font-size: 16px;
-		font-weight: bold;
 	}
 	.dv-login {
 		color: transparent;
