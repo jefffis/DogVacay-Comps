@@ -11,7 +11,7 @@ $(function(){
 			el1.each(function(){
 				$(this).removeClass('hide');
 			});
-			el2.remove();
+			el2.parent().parent().remove();
 		}, 215);
 	}	
 });
