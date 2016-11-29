@@ -5,7 +5,10 @@
 	--grey0: rgba(246, 246, 241, 0);
 	--grey100: rgba(246, 246, 241, 1);
 	--lightgrey: rgba(0, 0, 0, 0.075);
+	--primary: #69bbc0;
+	--secondary: #ec6350;
 	--grey: #999;
+	--darkgrey: #2A494B;
 }
 * {
 	margin: 0;
@@ -16,7 +19,7 @@
 html {
 	/*background: var(--grey100);*/
 	background: var(--white100);
-	color: #2A494B;
+	color: var(--darkgrey);
 	font: normal 100%/1.5 'Ubuntu', 'Helvetica Neue', sans-serif; 
 }
 a {
@@ -44,7 +47,7 @@ p {
 }
 header {
 	position: relative;
-	max-width: 1020px;
+	/*max-width: 1020px;*/
 	background: white;
 	margin: auto;
 	padding: 1rem;
@@ -69,26 +72,77 @@ header img {
 	text-align: center;
 }
 #dv-help-cards {
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: auto auto 4rem;
 	text-align: center;
 }
 .dv-help-card {
 	display: inline-block;
+	position: relative;
 	width: 230px;
-	background: white;
+	/*background: white;*/
+	background: var(--darkgrey);
+	outline: none;
 	margin: 0 .75rem;
-	padding: 1.5rem;
-	border: 1px solid #6CBBBF;
-	border-radius: 4px;
+	padding: 7rem 1.5rem 1.5rem;
+	/*border: 1px solid var(--darkgrey);*/
+	border-radius: 3px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	cursor: default;
 	line-height: 1.3;
 	text-align: left;
 	vertical-align: top;
+
+	/*transition: transform .125s ease-in-out;*/
+}
+.dv-help-card:before,
+.dv-help-card:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 3px;
+	content: "";
+}
+.dv-help-card:before {
+	z-index: 0;
+	background-color: var(--darkgrey);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: .5;
+}
+
+.one:before {
+	background-image: url(https://www.rover.com/static/new_design/images/homepage/dogs_card@1x.19c340311f73.jpg);
+}
+.two:before {
+	background-image: url(https://www.rover.com/static/new_design/images/homepage/tv_card@1x.87879b9a78aa.jpg);
+}
+.three:before {
+	background-image: url(https://www.rover.com/static/new_design/images/homepage/local_card@1x.bc7f42adc03b.jpg);
+}
+.four:before {
+	background-image: url(https://www.rover.com/static/new_design/images/homepage/safety_card@1x.ed4448a79814.jpg);
+}
+.five:before {
+	background-image: url(https://static1.dogvacay.com/thumbnail/full/72305.1453606805.0608.jpg);	
+}
+
+.dv-help-card:after {
+	z-index: 1;
+	background: linear-gradient(to bottom, var(--white0) 0%, var(--darkgrey) 100%);
 }
 .dv-help-card:hover, .dv-help-card:focus {
-	box-shadow: 0 0 0 2px #6CBBBF, 0 4px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary), 0 6px 2px rgba(0, 0, 0, 0.15);
+	/*transform: scale(1.075);*/
+	/*border-radius: 0;*/
+}
+.dv-help-card * {
+	position: relative;
+	z-index: 2;
 }
 .dv-help-card h2 {
 	/*position: relative;*/
@@ -98,6 +152,7 @@ header img {
 	margin: -1.5rem -1.5rem 1rem;
 	padding: 1.5rem;
 	color: white;*/
+	color: white;
 	font-size: 20px;
 }
 /*.dv-help-card h2:after {
@@ -112,20 +167,43 @@ header img {
 	content: "";
 }*/
 .dv-help-card p {
-	margin-bottom: 1.5rem;
-	color: #2A494B;
+	position: relative;
+	margin-bottom: .75rem;
+	padding-top: .6rem;
+	/*padding-left: 2rem;*/
+	/*color: var(--primary);*/
+	font-size: 14px;
+	line-height: 1;
+}
+.dv-help-card p:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2rem;
+	width: 1.5rem;
+	background: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_directions_walk_48px-32.png) no-repeat center;
+	background-size: 100%;
+	/*border-radius: 100%;*/
+	/*content: "";*/
 }
 .dv-help-card a {
 	display: block;
 	text-align: center;
 }
 .dv-help-card a:last-of-type {
+	display: none;
+	margin-top: 1.25rem;
+	opacity: .75;
+	color: white;
 	font-size: 13px;
+	text-decoration: none;
 }
 .dv-card-cta {
 	position: relative;
 	background: #6CBBBF;
-	margin-bottom: 1.25rem;
+	margin-top: 1.75rem;
+	margin-bottom: .5rem;
 	padding: .65rem 1rem;
 	border-radius: 4px;
 	color: white;
@@ -139,7 +217,7 @@ header img {
 	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }*/
 .dv-card-cta:before {
-	content: "Book via ";
+	content: "Book with ";
 }
 /*.dv-card-cta:after {
 	display: block;
@@ -194,7 +272,8 @@ header img {
 
 .hidden {
 	position: relative;
-	height: 8rem;
+	/*height: 8rem;*/
+	height: 0;
 	overflow: hidden;
 }
 .hidden:before {
