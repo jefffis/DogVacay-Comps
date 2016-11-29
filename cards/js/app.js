@@ -6,12 +6,12 @@ $(function(){
 		delayUX(hiddenCardsInd, $(this));
 	});
 
-	$('.dv-help-card').hover(function(){
-		$(this).addClass('focus');
-	}, function(){
-		$(this).removeClass('focus');
-		$(this).blur();
-	});
+	// $('.dv-help-card').hover(function(){
+	// 	$(this).addClass('focus');
+	// }, function(){
+	// 	$(this).removeClass('focus');
+	// 	$(this).blur();
+	// });
 
 	function delayUX(el1, el2) {
 		setTimeout(function() {
