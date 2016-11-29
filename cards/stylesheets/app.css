@@ -373,6 +373,10 @@ header img {
 		top: auto;
 		bottom: 5rem;
 	}
+	.dv-card-cta {
+		font-size: 16px;
+		font-weight: bold;
+	}
 	.dv-login {
 		color: transparent;
 	}
