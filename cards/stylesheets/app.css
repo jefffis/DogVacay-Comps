@@ -121,7 +121,7 @@ header img {
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: 150%;
-	/*opacity: .75;*/
+	opacity: .75;
 }
 
 .one:before {
