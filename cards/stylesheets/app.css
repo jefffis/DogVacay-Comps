@@ -12,6 +12,7 @@
 	--grey: #999;
 	--darkgrey: #2A494B;
 	--darkgrey60: rgba(42, 73, 75, 0.6);
+	--green: #25c077;
 }
 * {
 	margin: 0;
@@ -156,7 +157,7 @@ header img {
 }
 .dv-help-card:hover,
 .dv-help-card:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary), 0 6px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 0 2px white, 0 0 0 4px var(--green), 0 6px 2px rgba(0, 0, 0, 0.15);
 	/*transform: scale(1.075);*/
 	/*border-radius: 0;*/
 }
@@ -422,7 +423,7 @@ header img {
 
 
 /*** no pics ***/
-.no-pix .dv-help-card {
+/*.no-pix .dv-help-card {
 	background: white;
 	padding: 2.5rem 1.5rem 2.5rem;
 	border: 1px solid var(--primary);
@@ -430,21 +431,18 @@ header img {
 .no-pix .dv-help-card:hover,
 .no-pix .dv-help-card:focus {
 	box-shadow: 0 0 0 2px var(--primary), 0 4px 2px rgba(0, 0, 0, 0.15);
-}
+}*/
 .no-pix .dv-help-card:before,
 .no-pix .dv-help-card:after {
-	background-image: none;
 	content: initial;
 }
-.no-pix .dv-help-card h2 {
+.no-pix .dv-help-card-info {
+	background: white;
 	color: var(--darkgrey);
 }
-.no-pix .dv-help-card p {
-	margin: 1rem 0 .5rem;
-	color: white;
-	/*text-align: center;*/
-}
-
+/*.no-pix .dv-help-card h2 {
+	color: var(--darkgrey);
+}*/
 
 
 
