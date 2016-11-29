@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+/*@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');*/
 :root{
 	--white0: rgba(255, 255, 255, 0);
 	--white100: rgba(255, 255, 255, 1);
@@ -20,7 +21,7 @@ html {
 	/*background: var(--grey100);*/
 	background: var(--white100);
 	color: var(--darkgrey);
-	font: normal 100%/1.5 'Ubuntu', 'Helvetica Neue', sans-serif; 
+	font: normal 100%/1.5 'Ubuntu', 'Open Sans', 'Helvetica Neue', sans-serif; 
 }
 a {
 	color: #6CBBBF;
@@ -40,7 +41,7 @@ h1 {
 	line-height: 1.2;
 }
 hr {
-	height: 1.5rem;
+	height: 1rem;
 }
 p {
 	color: var(--grey);
@@ -79,6 +80,7 @@ header img {
 .dv-help-card {
 	display: inline-block;
 	position: relative;
+	height: 330px;
 	width: 230px;
 	/*background: white;*/
 	background: var(--darkgrey);
@@ -149,7 +151,9 @@ header img {
 	background: linear-gradient(to bottom, var(--white0) 0%, var(--darkgrey) 60%);
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset, 0 0 10px rgba(0, 0, 0, 0.25) inset;
 }
-.dv-help-card:hover, .dv-help-card:focus {
+.dv-help-card:hover,
+.dv-help-card:focus,
+.focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary), 0 6px 2px rgba(0, 0, 0, 0.15);
 	/*transform: scale(1.075);*/
 	/*border-radius: 0;*/
@@ -159,7 +163,10 @@ header img {
 	z-index: 2;
 }
 .dv-help-card h2 {
-	/*position: relative;*/
+	position: absolute;
+	top: 8rem;
+	left: 1.5rem;
+	width: calc(100% - 3rem);
 	margin-top: .25rem;
 	margin-bottom: .75rem;
 	/*background: #6CBBBF;
@@ -214,19 +221,27 @@ header img {
 	text-decoration: none;
 }
 .dv-card-cta {
-	position: relative;
+	position: absolute;
+	bottom: 1.5rem;
+	left: 1.5rem;
+	width: calc(100% - 3rem);
 	background: #6CBBBF;
+	/*outline: none;*/
 	margin-top: 1.75rem;
 	margin-bottom: .5rem;
-	padding: .65rem 1rem;
+	padding: .65rem 0;
 	border-radius: 4px;
 	color: white;
 	font-size: 15px;
 	text-decoration: none;
 }
-.dv-card-cta:hover {
+.dv-card-cta:hover,
+.focus .dv-card-cta {
 	background: #EC6350;
 }
+/*.dv-card-cta:focus {
+	box-shadow: 0 0 
+}*/
 /*.dv-card-cta:focus {
 	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }*/
