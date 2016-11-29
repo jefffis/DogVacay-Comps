@@ -135,7 +135,12 @@ header img {
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: 150%;
-	opacity: .75;
+	opacity: .5;
+	transition: opacity .125s ease-in-out;
+}
+.dv-help-card:hover:before,
+.dv-help-card:focus:before {
+	opacity: 1;
 }
 
 .one:before {
@@ -282,7 +287,7 @@ header img {
 	position: absolute;
 	top: 0;
 	left: 1.5rem;
-	padding: .45rem;
+	padding: .45rem .45rem .3rem;
 	background: var(--darkgrey);
 	/*width: calc(100% - 3rem);
 	padding-bottom: .25rem;
@@ -423,7 +428,6 @@ header img {
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(to bottom, var(--white0) 0%, var(--white100) 100%);
-	/*background: linear-gradient(to bottom, var(--grey0) 0%, var(--grey100) 100%);*/
 	content: "";
 }
 .hidden:after {
@@ -442,15 +446,6 @@ header img {
 
 
 /*** no pics ***/
-/*.no-pix .dv-help-card {
-	background: white;
-	padding: 2.5rem 1.5rem 2.5rem;
-	border: 1px solid var(--primary);
-}
-.no-pix .dv-help-card:hover,
-.no-pix .dv-help-card:focus {
-	box-shadow: 0 0 0 2px var(--primary), 0 4px 2px rgba(0, 0, 0, 0.15);
-}*/
 .no-pix .dv-help-card:before,
 .no-pix .dv-help-card:after {
 	content: initial;
@@ -459,15 +454,24 @@ header img {
 	background: white;
 	color: var(--darkgrey);
 }
-/*.no-pix .dv-card-cta:before {
-	content: initial;
-}*/
-/*.no-pix .dv-help-card h2 {
+
+/*** light ***/
+.l .dv-help-card {
+	background: white;
+	border: 1px solid;
+}
+.l .dv-help-card:hover,
+.l .dv-help-card:focus {
+	box-shadow: 0 0 0 3px var(--green), 0 4px 2px rgba(0, 0, 0, 0.15);
+}
+.l .dv-help-card h2 {
 	color: var(--darkgrey);
-}*/
-
-
-
+}
+.l .dv-help-card-info {
+	top: 1rem;
+	background: var(--darkgrey);
+	color: white;
+}
 
 
 
