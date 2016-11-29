@@ -347,9 +347,10 @@ header img {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
 
 	#dv-help-cards {
+		max-width: 100%;
 		padding: 0 1rem;
 		text-align: left;
 	}
