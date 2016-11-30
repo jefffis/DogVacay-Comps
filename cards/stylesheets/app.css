@@ -94,6 +94,9 @@ header img {
 	margin: auto auto 4rem;
 	text-align: center;
 }
+.no-pix #dv-help-cards {
+	max-width: 1200px;
+}
 .dv-help-card {
 	display: inline-block;
 	position: relative;
@@ -102,7 +105,7 @@ header img {
 	/*background: white;*/
 	background: var(--darkgrey);
 	outline: none;
-	margin: .5rem;
+	margin: .75rem;
 	padding: 9rem 1.5rem 1.5rem;
 	border-radius: 3px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -145,7 +148,7 @@ header img {
 }*/
 
 .one:before {
-	background-image: url(http://ind5.ccio.co/yF/q5/J7/1a752758a7bfc3d86cfb6590b35bc43b.jpg);
+	background-image: url(http://thisfairytalelife.com/wp-content/uploads/2015/05/date-night-euphoria-calvin-klein-9.jpg);
 	background-position: 0 -35px;
 	background-size: 110%;
 }
@@ -451,6 +454,15 @@ header img {
 
 
 /*** no pics ***/
+/*.no-pix .dv-help-card {
+	background: var(--primary);
+}
+.no-pix .dv-card-cta {
+	background: var(--darkgrey);
+}*/
+/*.no-pix .dv-help-card:hover .dv-card-cta {
+	background: var(--green);
+}*/
 .no-pix .dv-help-card:before,
 .no-pix .dv-help-card:after {
 	content: initial;
@@ -461,7 +473,9 @@ header img {
 	transform: scale(1);
 }*/
 .no-pix .dv-help-card-info {
+	top: 1rem;
 	background: white;
+	padding: .3rem .35rem .2rem;
 	color: var(--darkgrey);
 }
 
