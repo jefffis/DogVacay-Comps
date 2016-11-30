@@ -136,7 +136,7 @@ header img {
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: 150%;
-	opacity: .5;
+	/*opacity: .5;*/
 	/*transition: opacity .125s ease-in-out;*/
 }
 /*.dv-help-card:hover:before,
