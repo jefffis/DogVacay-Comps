@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Service Cards</title>
+		<link rel="stylesheet" href="css/app.css" />
+		<script>document.addEventListener("touchstart", function() {},false);</script>
+	</head>
+	<body>
+
+		<header>
+			<img src="img/logo.png" alt="DogVacay: better for pets, better for people." />
+			<span>
+				Need help? Call us:
+				<a href="tel:18551234567">855-DOGVACAY</a>
+			</span>
+		</header>
+
+		<form action="POST">
+
+			<div class="rr-warning-intro">
+				Reminder: you will not be charged until Shelly confirms your reservation.
+			</div>
+
+			<!-- card -->
+			<div class="rr-card">
+				<h2 data-step="1" class="rr-header">
+					About Me
+				</h2>
+				<label class="rr-label rr-half">
+					First Name
+					<input type="text" class="rr-input rr-left-border" data-required autocorrect="off" />
+				</label>
+				<label class="rr-label rr-half">
+					Last Name
+					<input type="text" class="rr-input rr-right-border" data-required autocorrect="off" />
+				</label>
+				<hr class="rr-hr" />
+				<label class="rr-label rr-label-top">
+					Phone Number
+					<input type="email" class="rr-input" data-required autocorrect="off" />
+					<small class="rr-small">
+						This helps your Shelly contact you easier.
+					</small>
+				</label>
+			</div>
+			<!--/ card -->
+
+			<!-- card -->
+			<div class="rr-card">
+				<h2 data-step="2" class="rr-header">
+					My Pets
+				</h2>
+				<div class="rr-half rr-name">
+					<label class="rr-label">
+						Name
+						<input type="text" class="rr-input" data-required autocorrect="off" />
+					</label>
+				</div>
+				<div class="rr-half rr-label rr-age">
+					<div>
+						Age
+					</div>
+					<div class="rr-faux-input cf">
+						<label data-annotate="yrs">
+							<input type="number" class="rr-input rr-yrs" />
+						</label>
+						<label data-annotate="ms">
+							<input type="number" class="rr-input rr-mos" />
+						</label>
+					</div>
+				</div>
+				<hr class="rr-hr" />
+				<label class="rr-label">
+					Breed
+					<input type="text" class="rr-input" data-required />
+				</label>
+				<hr class="rr-hr" />
+				<div class="rr-label">
+					Weight
+					<div class="rr-radio-tabs cf">
+						<label>
+							<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
+							<span class="rr-radio-tab rr-left-border">1-20</span>
+						</label>
+						<label>
+							<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
+							<span class="rr-radio-tab">1-20</span>
+						</label>
+						<label>
+							<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
+							<span class="rr-radio-tab">1-20</span>
+						</label>
+						<label>
+							<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
+							<span class="rr-radio-tab rr-right-border">1-20</span>
+						</label>
+					</div>
+					<small class="rr-small">
+						Pet weight in pounds (lbs)
+					</small>
+				</div>
+				<hr class="rr-hr" />
+				<label class="rr-label">
+					<span class="rr-optional">
+						Description
+					</span>
+					<textarea class="rr-textarea">Hi Shelly,</textarea>
+					<small class="rr-small">
+						What is your pet like: easy-going, anxious, high-energy, housebroken, etc.
+					</small>
+				</label>
+			</div>
+			<!--/ card -->
+
+			<!-- card -->
+			<div class="rr-card cf">
+				<h2 data-step="3" class="rr-header">
+					Drop-off &amp; Pick-up
+				</h2>
+				<h3 class="rr-faux-label rr-optional">
+					Preferred times
+				</h3>
+				<div class="rr-half">
+					<select class="rr-select rr-left-border" data-required>
+						<option value="">-- drop-off -- </option>
+						<option value="1">I&rsquo;m flexible</option>
+					</select>
+				</div>
+				<div class="rr-half">
+					<select class="rr-select rr-right-border" data-required>
+						<option value="">-- pick-off -- </option>
+						<option value="1">I&rsquo;m flexible</option>
+					</select>
+				</div>
+			</div>
+			<!--/ card -->
+
+			<!-- card -->
+			<div class="rr-card">
+				<h2 data-step="4" class="rr-header">
+					Payment Information
+				</h2>
+				<div class="rr-warning rr-card-neg-margin rr-padding">
+					Reminder: you will not be charged until Shelly confirms your reservation.
+				</div>
+				<hr class="rr-hr" />
+				<label>
+					<input type="radio" class="rr-input-radio" name="payment_type" value="0" />
+					<span class="rr-radio">PayPal</span>
+				</label>
+				<hr class="rr-hr" />
+				<label>
+					<input type="radio" class="rr-input-radio" checked name="payment_type" value="1" />
+					<span class="rr-radio">Credit/Debit Card</span>
+				</label>
+				<!-- <label class="rr-label">
+					Full Name
+					<input type="text" class="rr-input" />
+				</label>
+				<hr class="rr-hr" />
+				<label class="rr-label rr-label-top">
+					Phone Number
+					<input type="email" class="rr-input" />
+					<small class="rr-small">
+						This helps your Shelly contact you easier.
+					</small>
+				</label> -->
+			</div>
+			<!--/ card -->
+
+			<div class="rr-card">
+				<button class="rr-button">Send Request</button>
+			</div>
+
+		</form>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/app.js"></script>
+
+	</body>
+</html>
