@@ -385,21 +385,36 @@ header a {
 }
 
 form {
-	max-width: 350px;
+	max-width: 400px;
 	margin: auto;
 }
 
+@media screen and (min-width: 375px) and (max-width: 500px) {
 
-@media screen and (min-width: 650px) {
+	.rr-card {
+		padding: calc(var(--padding) * 2);
+	}
+
+}
+
+@media screen and (min-width: 650px) and (orientation: portrait) {
 	form {
+		max-width: 350px;
 		float: left;
+	}
+	.rr-card {
+		padding-bottom: calc(var(--padding) * 3);
+		border-bottom: 1px solid var(--lightgrey);
+	}
+	.rr-card:nth-child(n+2) {
+		padding-top: calc(var(--padding) * 3);
 	}
 	.rr-host-card {
 		position: fixed;
 		top: 6rem;
 		right: 2rem;
 		width: 320px;
-		padding: 15px;
+		padding: 15px !important;
 		border: 1px solid var(--lightgrey);
 		border-radius: 4px;
 		box-shadow: 0 0 2px #efefef;
