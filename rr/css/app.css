@@ -394,4 +394,14 @@ form {
 	form {
 		float: left;
 	}
+	.rr-host-card {
+		position: fixed;
+		top: 6rem;
+		right: 2rem;
+		width: 320px;
+		padding: 15px;
+		border: 1px solid var(--lightgrey);
+		border-radius: 4px;
+		box-shadow: 0 0 2px #efefef;
+	}
 }
