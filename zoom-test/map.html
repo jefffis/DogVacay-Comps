@@ -13,9 +13,10 @@
 		  box-sizing: border-box;
 		}
 		html, body {
+			background: #F6F6F1;
 			height: 100%;
 		}
-		div {
+		.foo {
 		  height: 100%;
 		  background: url(img/mweb.jpg) no-repeat center;
 		  background-size: 100vh;
@@ -32,12 +33,12 @@
 			padding: 1rem;
 		}
 		@media screen and (orientation: landscape) {
-			div {
+			.foo {
 				background-size: 100vw;
 			}
 		}
 		@media screen and (min-width: 768px) {
-			div {
+			.foo {
 				background: url(img/tablet.jpg) no-repeat -20vw -10vh;
 				background-size: 150vh;
 			}
@@ -50,7 +51,7 @@
 			}
 		}
 		@media screen and (min-width: 1024px) {
-			div {
+			.foo {
 				background: url(img/tablet.jpg) no-repeat left center;
 				background-size: 100vw;
 			}
@@ -64,6 +65,23 @@
 				margin-bottom: -5rem;
 			}
 		}
+		@media screen and (min-width: 1200px) {
+			body {
+				position: relative;
+				max-width: 1200px;
+				margin: auto;
+			}
+			.foo {
+				max-height: 900px;
+				/*max-width: 1200px;*/
+				background-size: 1200px;
+				box-shadow: 0 0 0 1px #E8E5E0;
+				/*margin: auto;*/
+			}
+			span {
+				position: absolute;
+			}
+		}
 		/*img {
 		  display: block;
 		}*/
@@ -73,7 +91,7 @@
 <body>
 
 
-<div></div>
+<div class="foo"></div>
 
 <span></span>
 
