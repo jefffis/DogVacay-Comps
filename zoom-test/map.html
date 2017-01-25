@@ -51,21 +51,6 @@
 			}
 		}
 		@media screen and (min-width: 1024px) {
-			.foo {
-				background: url(img/tablet.jpg) no-repeat left center;
-				background-size: 100vw;
-			}
-			span {
-				width: 20rem;
-				bottom: 50%;
-				left: auto;
-				right: 3rem;
-				height: 10rem;
-				padding: 3rem;
-				margin-bottom: -5rem;
-			}
-		}
-		@media screen and (min-width: 1200px) {
 			body {
 				position: relative;
 				max-width: 1200px;
@@ -73,18 +58,21 @@
 			}
 			.foo {
 				max-height: 900px;
-				/*max-width: 1200px;*/
+				background: url(img/tablet.jpg) no-repeat left center;
 				background-size: 1200px;
 				box-shadow: 0 0 0 1px #E8E5E0;
-				/*margin: auto;*/
 			}
 			span {
 				position: absolute;
+				bottom: 50%;
+				left: auto;
+				right: 3rem;
+				height: 10rem;
+				width: 20rem;
+				padding: 3rem;
+				margin-bottom: -5rem;
 			}
 		}
-		/*img {
-		  display: block;
-		}*/
 
 	</style>
 </head>
