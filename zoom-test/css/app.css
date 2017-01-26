@@ -18,6 +18,8 @@ html {
 	color: #2A494B;
 }
 header {
+	position: relative;
+	z-index: 3;
 	padding: 1rem 0 .9rem;
 	border-bottom: 1px solid #E8E5E0;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
@@ -189,7 +191,7 @@ small {
 }
 @media screen and (min-width: 350px) {
 	html, body {
-		height: calc(100% - 56px);
+		height: 100%;
 	}
 	body {
 		background: #F6F6F1;
@@ -208,6 +210,7 @@ small {
 		padding: 20px;
 		border: 1px solid #E8E5E0;
 		border-radius: 4px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 	}
 	#cta {
 		margin-bottom: 0;
@@ -217,15 +220,25 @@ small {
 		display: table;
 		height: calc(100% - 56px);
 		width: 100%;
+		background: url(../img/mweb.jpg) no-repeat center;
+		background-size: cover;
 	}
 	#content-wrapper {
 		display: table-cell;
+		background: rgba(255, 255, 255, 0.75);
 		vertical-align: middle;
 	}
 }
 @media screen and (min-width: 600px) {
+	/*html, body {
+		height: 100%;
+	}*/
 	h1 {
 		font-size: 27px;
+	}
+	#content-wrapper-outer {
+		background: url(../img/tablet.jpg) no-repeat center;
+		background-size: cover;
 	}
 	#content {
 		width: 80vw;
