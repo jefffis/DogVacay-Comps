@@ -169,6 +169,19 @@ small {
 	margin: auto;
 	color: #777;
 	font-size: 13px;
+	line-height: 1.2;
+}
+
+button {
+	display: none;
+	background: none;
+	margin: auto;
+	color: #0f748c;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 @keyframes fadeIn {
