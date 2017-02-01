@@ -40,7 +40,7 @@
 						</div>
 					</div>
 					<div id="cta">
-						<a href="###">Book my FREE walk</a>
+						<a data-href="###" id="cta-button">Book my FREE walk</a>
 						<small>
 							Upon request, a DogVacay concierge will contact you to schedule the walk.
 						</small>
@@ -52,8 +52,9 @@
 
 		<script>
 			var cta = document.getElementById('cta'),
+				ctaButton = document.getElementById('cta-button'),
 				chat = document.querySelectorAll('.chat'),
-				startTime = 500,
+				startTime = 750,
 				chatUiDelay = 1500,
 				ctaUidelay = (startTime + chatUiDelay) * (chat.length - 1);
 
@@ -63,8 +64,6 @@
 				}, time);
 			}
 
-			showCTA(cta, ctaUidelay, true);
-
 			function showChatUi(el) {
 				setTimeout(function() {
 					Array.prototype.forEach.call(chat, function(el, e){
@@ -72,6 +71,16 @@
 					});
 				}, startTime);
 			}
+
+			function showNextStep(el) {
+				el.className = 'submitted';
+			}
+
+			ctaButton.onclick = function() {
+				showNextStep(this);
+			}
+
+			showCTA(cta, ctaUidelay, true);
 
 			showChatUi(chat);
 		</script>

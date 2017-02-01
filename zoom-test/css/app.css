@@ -163,6 +163,21 @@ a:active {
 	background: #B13737;
 	color: rgba(255, 255, 255, 0.75);
 }
+a.submitted {
+	position: relative;
+}
+a.submitted:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #B13737 url(http://wtf.jefff.co/TigerText-comps/images/lodr.gif) no-repeat center;
+	background-size: 20px;
+	border-radius: 4px;
+	content: "";
+}
 small {
 	display: block;
 	max-width: 80vw;
@@ -288,6 +303,7 @@ button {
 @media screen and (min-width: 1202px) {
 	body {
 		position: relative;
+		overflow-x: hidden;
 		max-width: 1200px;
 		margin: auto;
 		border-left: 1px solid #E8E5E0;
