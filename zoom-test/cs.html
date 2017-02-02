@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="static-concierge">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+	<body>
+
+		<header>
+			<img src="img/logo.png" />
+		</header>
+
+		<div id="content-wrapper-outer">
+			<div id="content-wrapper">
+				
+				<div id="content">
+					<h1>
+						We hand-pick the perfect dog walker for you &amp; your pup.
+					</h1>
+					<div id="chat-content">
+						<div class="chat cf">
+							<img src="img/concierge.jpg" />
+							<div class="chat-content">
+								Hi Jan! What type of walk are you looking for?
+							</div>
+						</div>
+						<div class="chat cf">
+							<img src="img/guest.jpg" />
+							<div class="chat-content">
+								Heya! Pickles has lots of energy. I&rsquo;d love to get a long walk to tire her out.
+							</div>
+						</div>
+						<div class="chat cf">
+							<img src="img/concierge.jpg" />
+							<div class="chat-content">
+								👍&nbsp;&nbsp;Finding a walker now
+							</div>
+						</div>
+					</div>
+					<div id="cta">
+						<a data-href="###" id="cta-button">Book my FREE walk</a>
+						<small>
+							Upon request, a DogVacay concierge will contact you to schedule the walk.
+						</small>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script>
+			var ctaButton = document.getElementById('cta-button');
+
+			function showNextStep(el) {
+				el.className = 'submitted';
+			}
+
+			ctaButton.onclick = function() {
+				showNextStep(this);
+			}
+		</script>
+		
+	</body>
+</html>
