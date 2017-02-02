@@ -168,8 +168,6 @@ a.submitted:before {
 	z-index: 2;
 	height: 1rem;
 	width: 1rem;
-	/*background: #B13737 url(http://wtf.jefff.co/TigerText-comps/images/lodr.gif) no-repeat center;*/
-	/*background-size: 20px;*/
 	margin-top: calc(-.5rem - 1px);
 	margin-left: calc(-.5rem - 1px);
 	border-top: 2px solid white;
@@ -265,6 +263,11 @@ button {
 	#content-wrapper-outer {
 		background: url(../img/mweb.jpg) no-repeat center;
 		background-size: cover;
+	}
+}
+@media screen and (min-width: 500px) and (max-width: 599px) {
+	#content {
+		padding: 35px;
 	}
 }
 @media screen and (min-width: 600px) {
