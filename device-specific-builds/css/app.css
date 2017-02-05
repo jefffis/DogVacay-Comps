@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+:root {
+	--padding: 10vw;
+	--neg-padding: -10vw;
+}
+html {
+	background: #efefef;
+}
+body {
+	padding: var(--padding);
+}
+header {
+	height: 3.25rem;
+	background: white;
+	margin: var(--neg-padding) var(--neg-padding) auto;
+}
+#content {
+	height: 100vh;
+	background: white;
+	margin-top: var(--padding);
+}
+/*@media screen and (min-width: 375px) {
+
+	:root {
+		--padding: 12.5vw;
+		--neg-padding: -10vw;
+	}
+
+}*/

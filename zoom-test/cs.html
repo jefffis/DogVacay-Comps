@@ -16,49 +16,73 @@
 			<div id="content-wrapper">
 				
 				<div id="content">
-					<h1>
-						We hand-pick the perfect dog walker for you &amp; your pup.
-					</h1>
-					<div id="chat-content">
-						<div class="chat cf">
-							<img src="img/concierge.jpg" />
-							<div class="chat-content">
-								Hi Jan! What type of walk are you looking for?
+					<div id="before-submit">
+						<h1>
+							We hand-pick the perfect dog walker for you &amp; your pup.
+						</h1>
+						<div id="chat-content">
+							<div class="chat cf">
+								<img src="img/concierge.jpg" />
+								<div class="chat-content">
+									Hi Jan! What type of walk are you looking for?
+								</div>
+							</div>
+							<div class="chat cf">
+								<img src="img/guest.jpg" />
+								<div class="chat-content">
+									Heya! Pickles has lots of energy. I&rsquo;d love to get a long walk to tire her out.
+								</div>
+							</div>
+							<div class="chat cf">
+								<img src="img/concierge.jpg" />
+								<div class="chat-content">
+									👍&nbsp;&nbsp;Finding a walker now
+								</div>
 							</div>
 						</div>
-						<div class="chat cf">
-							<img src="img/guest.jpg" />
-							<div class="chat-content">
-								Heya! Pickles has lots of energy. I&rsquo;d love to get a long walk to tire her out.
-							</div>
-						</div>
-						<div class="chat cf">
-							<img src="img/concierge.jpg" />
-							<div class="chat-content">
-								👍&nbsp;&nbsp;Finding a walker now
-							</div>
+						<div id="cta">
+							<a data-href="###" id="cta-button">Book my FREE walk</a>
+							<small>
+								Upon request, a DogVacay concierge will contact you to schedule the walk.
+							</small>
 						</div>
 					</div>
-					<div id="cta">
-						<a data-href="###" id="cta-button">Book my FREE walk</a>
-						<small>
-							Upon request, a DogVacay concierge will contact you to schedule the walk.
-						</small>
+					<div id="after-submit">
+						<img src="https://static1.dogvacay.com/pug/react-dist/dv-app-walking/dist/images/dog-running.gif" />
+						<h1>
+							Great, we’re on it!
+						</h1>
+						<p>
+							A DogVacay concierge will contact you shortly to finalize your walk.
+						</p>
+						<p>
+							In the meantime, <a href="#">read our blog</a>.
+						</p>
 					</div>
+
 				</div>
 
 			</div>
 		</div>
 
 		<script>
-			var ctaButton = document.getElementById('cta-button');
+			var ctaButton = document.getElementById('cta-button'),
+				beforeSubmit = document.getElementById('before-submit'),
+				afterSubmit = document.getElementById('after-submit');
 
-			function showNextStep(el) {
+			function showNextStep(el, b, a) {
 				el.className = 'submitted';
+				setTimeout(function() {
+					b.className = 'hide';
+				}, 500);
+				setTimeout(function() {
+					b.parentNode.removeChild(b);
+					a.className = 'show';
+				}, 750);
 			}
 
 			ctaButton.onclick = function() {
-				showNextStep(this);
+				showNextStep(this, beforeSubmit, afterSubmit);
 			}
 		</script>
 		
