@@ -25,7 +25,16 @@
 		<style amp-custom>
 			html {
 				box-sizing: border-box;
+				color: #2a494b;
 				font: normal 100%/1.5 'Helvetica Neue', Arial, sans-serif;
+			}
+			.cf:before,
+			.cf:after {
+				content: " ";
+				display: table;
+			}
+			.cf:after {
+				clear: both;
 			}
 			header {
 				padding: 4vw 5vw 2vw;
@@ -72,12 +81,21 @@
 				display: block;
 				color: #0f748c;
 				text-align: center;
+				text-decoration: none;
+			}
+			li img {
+				border-radius: 6px;
+			}
+			.dv-host-stars {
+				text-decoration: none;
 			}
 			li p {
 				margin: 0;
+				text-decoration: underline;
 			}
 			p {
 				font-size: 14px;
+				line-height: 1.4;
 			}
 			hr {
 				height: 1rem;
@@ -87,6 +105,44 @@
 				border-right: 0;
 				border-top: 1px solid #ddd;
 				border-bottom: 1px solid #ddd;
+			}
+			blockquote {
+				margin: 0;
+				padding: .5rem 0 0;
+				font-size: 13px;
+			}
+			blockquote:nth-of-type(n+2) {
+				margin-top: 1rem;
+				border-top: 1px solid #ddd;
+			}
+			.dv-guest {
+				padding: .5rem 0;
+			}
+			.dv-guest img {
+				float: left;
+				width: 50px;
+				border-radius: 100%;
+			}
+			.dv-guest-name {
+				float: right;
+				width: calc(100% - 60px);
+				padding-top: .4rem;
+				font-size: 15px;
+				font-weight: bold;
+			}
+			.dv-guest-name span {
+				display: block;
+				font-size: 13px;
+				font-weight: normal;
+			}
+			.dv-guest-stars {
+				margin-bottom: .5rem;
+			}
+			footer {
+				height: 200px;
+				background: #efefef;
+				margin-top: .5rem;
+				border-top: 1px solid #ddd;
 			}
 		</style>
 
@@ -100,60 +156,99 @@
 		<main role="main" id="content">
 			<h1>
 				Dog boarding in {city_name}
-				<!-- <span>
-					Millions of nights &bull; 60,000 sitters &bull; 8,000 cities
-				</span> -->
 			</h1>
 			<h2>
 				Top dog sitters
 			</h2>
-			<amp-carousel height="130" layout="fixed-height" type="carousel">
+			<amp-carousel height="150" layout="fixed-height" type="carousel">
 				<ul>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
@@ -176,60 +271,207 @@
 			</p>
 			<hr />
 			<h2>
+				Why choose DogVacay for in-home dog boarding?
+			</h2>
+			<p>
+				<strong>The highest quality hosts</strong>
+				<br />
+				Our pet sitters are individually screened and reviewed.
+			</p>
+			<p>
+				<strong>Thousands of happy customers</strong>
+				<br />
+				More than 250,000 customers have booked with DogVacay.
+			</p>
+			<p>
+				<strong>Support is just a call away</strong>
+				<br />
+				In-house Customer Care provides support 24/7.
+			</p>
+			<p>
+				<strong>Premium insurance</strong>
+				<br />
+				Each booking includes premium pet insurance and daily updates on your dog.
+			</p>
+			<hr />
+			<h2>
+				What people say about DogVacay Dog Boarding
+			</h2>
+			<blockquote>
+				<div class="dv-guest cf">
+					<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="{guest_name}" height="50" width="50"></amp-img>
+					<div class="dv-guest-name">
+						Richard G.
+						<span>
+							Whitmore Lake, MI
+						</span>
+					</div>
+				</div>
+				<div class="dv-guest-stars">
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+				</div>
+				We always use Bill and Suzanne to puppy watch because we are very comfortable with them and know Bella will be well take care of.
+			</blockquote>
+			<blockquote>
+				<div class="dv-guest cf">
+					<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="{guest_name}" height="50" width="50"></amp-img>
+					<div class="dv-guest-name">
+						Richard G.
+						<span>
+							Whitmore Lake, MI
+						</span>
+					</div>
+				</div>
+				<div class="dv-guest-stars">
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+				</div>
+				We always use Bill and Suzanne to puppy watch because we are very comfortable with them and know Bella will be well take care of.
+			</blockquote>
+			<blockquote>
+				<div class="dv-guest cf">
+					<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="{guest_name}" height="50" width="50"></amp-img>
+					<div class="dv-guest-name">
+						Richard G.
+						<span>
+							Whitmore Lake, MI
+						</span>
+					</div>
+				</div>
+				<div class="dv-guest-stars">
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+				</div>
+				We always use Bill and Suzanne to puppy watch because we are very comfortable with them and know Bella will be well take care of.
+			</blockquote>
+			<blockquote>
+				<div class="dv-guest cf">
+					<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="{guest_name}" height="50" width="50"></amp-img>
+					<div class="dv-guest-name">
+						Richard G.
+						<span>
+							Whitmore Lake, MI
+						</span>
+					</div>
+				</div>
+				<div class="dv-guest-stars">
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+					<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+				</div>
+				We always use Bill and Suzanne to puppy watch because we are very comfortable with them and know Bella will be well take care of.
+			</blockquote>
+			<hr />
+			<h2>
 				Top dog sitters
 			</h2>
-			<amp-carousel width="300" height="150" layout="fixed" type="carousel">
+			<amp-carousel height="150" layout="fixed-height" type="carousel">
 				<ul>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 					<li>
 						<a href="###">
 							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="100" width="100"></amp-img>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
 							<p>
-								Sitter name
+								{sitter_name}
 							</p>
 						</a>
 					</li>
 				</ul>
 			</amp-carousel>
 		</main>
+		<footer></footer>
 	</body>
 </html>
