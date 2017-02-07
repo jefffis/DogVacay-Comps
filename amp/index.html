@@ -25,7 +25,7 @@
 		<style amp-custom>
 			html {
 				box-sizing: border-box;
-				color: #2a494b;
+				/*color: #2a494b;*/
 				font: normal 100%/1.5 'Helvetica Neue', Arial, sans-serif;
 			}
 			.cf:before,
@@ -44,11 +44,11 @@
 			}
 			h1 {
 				background: #efefef;
-				margin: -1.5rem -1.5rem 2rem;
+				margin: -1.5rem -1.5rem 1.5rem;
 				padding: 1.5rem;
 				border-bottom: 1px solid #ddd;
-				font-size: 20px;
-				line-height: 1.2;
+				font-size: 24px;
+				line-height: 1.15;
 			}
 			h1 > span {
 				display: block;
@@ -57,9 +57,20 @@
 				font-weight: normal;
 			}
 			h2 {
-				margin: 0 0 .5rem;
-				font-size: 18px;
+				margin: 0 0 1.5rem;
+				font-size: 20px;
 				font-weight: normal;
+				line-height: 1.15;
+			}
+			h3 {
+				margin: 0 0 .5rem;
+				font-size: 15px;
+				font-weight: normal;
+				line-height: 1.15;
+			}
+			h3 strong {
+				display: block;
+				padding-bottom: .25rem;
 			}
 			.dv-pad-top {
 				padding-top: 1.5rem;
@@ -74,7 +85,7 @@
 			li {
 				display: inline-block;
 				overflow: hidden;
-				margin-right: 1rem;
+				margin-right: 1.5rem;
 				vertical-align: top;
 				white-space: normal;
 			}
@@ -92,10 +103,12 @@
 			}
 			li p {
 				margin: 0;
-				text-decoration: underline;
+				/*text-decoration: underline;*/
+				font-size: 15px;
+				font-weight: bold;
 			}
 			p {
-				font-size: 14px;
+				/*font-size: 14px;*/
 				line-height: 1.4;
 			}
 			hr {
@@ -107,22 +120,28 @@
 				border-top: 1px solid #ddd;
 				border-bottom: 1px solid #ddd;
 			}
+			.dv-min {
+				height: 1px;
+				background: #ddd;
+				border: 0;
+			}
 			blockquote {
 				margin: 0;
-				padding: .5rem 0 0;
-				font-size: 13px;
+				padding: 0;
+				font-size: 14px;
 			}
 			blockquote:nth-of-type(n+2) {
 				margin-top: 1rem;
+				padding-top: 1rem;
 				border-top: 1px solid #ddd;
 			}
 			.dv-guest {
-				padding: .5rem 0;
+				padding: 0 0 .5rem;
 			}
 			.dv-guest img {
 				float: left;
 				width: 50px;
-				border-radius: 100%;
+				border-radius: 4px;
 			}
 			.dv-guest-name {
 				float: right;
@@ -138,6 +157,50 @@
 			}
 			.dv-guest-stars {
 				margin-bottom: .5rem;
+			}
+			.dv-host {
+				margin-top: 1rem;
+				color: #0f748c;
+			}
+			.dv-host-img {
+				float: left;
+			}
+			.dv-host-img img {
+				width: 80px;
+				border-radius: 4px;
+			}
+			.dv-host-info {
+				float: left;
+				width: calc(100% - (80px + 40px + 15px));
+				margin-left: 15px;
+			}
+			.dv-host-price {
+				position: relative;
+				float: right;
+				width: 40px;
+				font-size: 24px;
+				line-height: 1;
+				text-align: right;
+			}
+			.dv-host-price:before {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 4px;
+				height: 1rem;
+				content: "$";
+				font-size: 14px;
+			}
+			.dv-host-tags {
+				margin-top: .5rem;
+			}
+			.dv-host-tag {
+				display: inline-block;
+				background: #f6f6f1;
+				padding: 2px 5px 3px;
+				border-radius: 4px;
+				color: #2a494b;
+				text-decoration: none;
 			}
 			footer {
 				height: 200px;
@@ -156,7 +219,7 @@
 		</header>
 		<main role="main" id="content">
 			<h1>
-				Dog boarding in {city_name}
+				Dog boarding in Los Angeles, CA
 			</h1>
 			<h2>
 				Top dog sitters
@@ -374,9 +437,14 @@
 				</div>
 				We always use Bill and Suzanne to puppy watch because we are very comfortable with them and know Bella will be well take care of.
 			</blockquote>
+			<!-- <p>
+				<a href="###">
+					View more
+				</a>
+			</p> -->
 			<hr />
 			<h2>
-				Top dog sitters
+				New dog sitters in Los Angeles, CA
 			</h2>
 			<amp-carousel height="150" layout="fixed-height" type="carousel">
 				<ul>
@@ -472,6 +540,228 @@
 					</li>
 				</ul>
 			</amp-carousel>
+			<hr />
+			<div id="top-sitters">
+				<small>
+					996 amazing pet sitters near Los Angeles, CA
+				</small>
+				<a href="###">
+					<div class="dv-host cf">
+						<div class="dv-host-img">
+							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="80" width="80"></amp-img>
+						</div>
+						<div class="dv-host-info">
+							<h3>
+								<strong>
+									{sitter_name}
+								</strong>
+								{location}
+							</h3>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
+						</div>
+						<div class="dv-host-price">
+							40
+						</div>
+					</div>
+					<div class="dv-host-tags">
+						<div class="dv-host-tag">
+							fooo	
+						</div>
+					</div>
+				</a>
+				<hr class="dv-min" />
+				<a href="###">
+					<div class="dv-host cf">
+						<div class="dv-host-img">
+							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="80" width="80"></amp-img>
+						</div>
+						<div class="dv-host-info">
+							<h3>
+								<strong>
+									{sitter_name}
+								</strong>
+								{location}
+							</h3>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
+						</div>
+						<div class="dv-host-price">
+							40
+						</div>
+					</div>
+					<div class="dv-host-tags">
+						<div class="dv-host-tag">
+							fooo	
+						</div>
+					</div>
+				</a>
+				<hr class="dv-min" />
+				<a href="###">
+					<div class="dv-host cf">
+						<div class="dv-host-img">
+							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="80" width="80"></amp-img>
+						</div>
+						<div class="dv-host-info">
+							<h3>
+								<strong>
+									{sitter_name}
+								</strong>
+								{location}
+							</h3>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
+						</div>
+						<div class="dv-host-price">
+							40
+						</div>
+					</div>
+					<div class="dv-host-tags">
+						<div class="dv-host-tag">
+							fooo	
+						</div>
+					</div>
+				</a>
+				<hr class="dv-min" />
+				<a href="###">
+					<div class="dv-host cf">
+						<div class="dv-host-img">
+							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="80" width="80"></amp-img>
+						</div>
+						<div class="dv-host-info">
+							<h3>
+								<strong>
+									{sitter_name}
+								</strong>
+								{location}
+							</h3>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
+						</div>
+						<div class="dv-host-price">
+							40
+						</div>
+					</div>
+					<div class="dv-host-tags">
+						<div class="dv-host-tag">
+							fooo	
+						</div>
+					</div>
+				</a>
+				<hr class="dv-min" />
+				<a href="###">
+					<div class="dv-host cf">
+						<div class="dv-host-img">
+							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="80" width="80"></amp-img>
+						</div>
+						<div class="dv-host-info">
+							<h3>
+								<strong>
+									{sitter_name}
+								</strong>
+								{location}
+							</h3>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
+						</div>
+						<div class="dv-host-price">
+							40
+						</div>
+					</div>
+					<div class="dv-host-tags">
+						<div class="dv-host-tag">
+							fooo	
+						</div>
+					</div>
+				</a>
+				<hr class="dv-min" />
+				<a href="###">
+					<div class="dv-host cf">
+						<div class="dv-host-img">
+							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="80" width="80"></amp-img>
+						</div>
+						<div class="dv-host-info">
+							<h3>
+								<strong>
+									{sitter_name}
+								</strong>
+								{location}
+							</h3>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
+						</div>
+						<div class="dv-host-price">
+							40
+						</div>
+					</div>
+					<div class="dv-host-tags">
+						<div class="dv-host-tag">
+							fooo	
+						</div>
+					</div>
+				</a>
+				<hr class="dv-min" />
+				<a href="###">
+					<div class="dv-host cf">
+						<div class="dv-host-img">
+							<amp-img src="https://static1.dogvacay.com/thumb/180/1238065.1482882604.3302.jpeg" alt="DogVacay" height="80" width="80"></amp-img>
+						</div>
+						<div class="dv-host-info">
+							<h3>
+								<strong>
+									{sitter_name}
+								</strong>
+								{location}
+							</h3>
+							<div class="dv-host-stars">
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+								<amp-img src="https://cdn2.iconfinder.com/data/icons/humano2/48x48/actions/bookmark-new.png" alt="Star review" height="15" width="15"></amp-img>
+							</div>
+						</div>
+						<div class="dv-host-price">
+							40
+						</div>
+					</div>
+					<div class="dv-host-tags">
+						<div class="dv-host-tag">
+							fooo	
+						</div>
+					</div>
+				</a>
+			</div>
 		</main>
 		<footer></footer>
 	</body>
