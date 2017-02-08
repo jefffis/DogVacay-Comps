@@ -70,6 +70,11 @@ h1 {
 	opacity: 1;
 	animation: fadeIn .25s ease-in-out;
 }
+#content.pos-2-out .dv-slide:nth-child(2) {
+	display: block;
+	opacity: 1;
+	animation: fadeOut .25s ease-in-out;
+}
 #content.pos-3 .dv-slide:nth-child(1),
 #content.pos-3 .dv-slide:nth-child(2) {
 	display: block;
@@ -81,14 +86,19 @@ h1 {
 	opacity: 1;
 	animation: fadeIn .25s ease-in-out;
 }
+#content.pos-3-out .dv-slide:nth-child(3) {
+	display: block;
+	opacity: 1;
+	animation: fadeOut .25s ease-in-out;
+}
 
 .dv-slide p {
 	text-align: center;
 }
 .dv-slide img {
 	display: block;
-	max-height: 150px;
-	margin: auto auto 22px;
+	max-height: 175px;
+	margin: -15px auto 10px;
 }
 .dv-map {
 	position: relative;
@@ -109,13 +119,8 @@ h1 {
 	position: relative;
 	top: 0;
 	left: 0;
-	/*width: 100vw;*/
 	margin-top: 6vh;
-	/*transition: left .25s ease-in-out;*/
 }
-/*#overflow-wrapper {
-	width: 300vw;
-}*/
 
 #dv-walker-cards {
 	position: relative;
@@ -127,32 +132,51 @@ h1 {
 	margin-bottom: 22px;
 }
 .card {
+	display: none;
+	opacity: 0;
 	position: absolute;
 	height: 150px;
 	width: 60vw;
 	max-width: 250px;
-	background: red;
+	background: url(../img/walker.jpg) no-repeat center;
+	background-size: cover;
 	border-radius: 6px;
 }
 .card:nth-child(1) {
 	z-index: 3;
 	box-shadow: 0 0 0 2px white;
 }
+.card.loaded {
+	display: block;
+	opacity: 1;
+	animation: fadeIn .25s ease-in-out;
+}
 .card:nth-child(2) {
 	top: -15px;
 	left: 50%;
 	z-index: 2;
-	background: blue;
+	background: url(../img/walker-2.jpg) no-repeat center;
+	background-size: cover;
 	margin-left: -30vw;
 	box-shadow: 0 0 0 2px white;
-	opacity: .5;
 }
 .card:nth-child(3) {
 	top: -30px;
 	right: 0;
 	z-index: 1;
-	background: green;
-	opacity: .25;
+	background: url(../img/walker-3.jpg) no-repeat center;
+	background-size: cover;
+}
+.card:nth-child(2):before,
+.card:nth-child(3):before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.75);
+	content: "";
 }
 .card:nth-child(1):before {
 	display: block;
@@ -162,7 +186,7 @@ h1 {
 	z-index: 4;
 	height: 40%;
 	width: 100%;
-	background: blue;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
 	border-radius: 0 0 6px 6px;
 	content: "";
 }
@@ -171,7 +195,11 @@ h1 {
 	bottom: 1rem;
 	left: 1rem;
 	z-index: 5;
+	background: url(https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-48.png) repeat-x bottom left;
+	background-size: 13px;
 	margin: 0;
+	padding-bottom: .75rem;
+	color: white;
 	font-size: 17px;
 }
 
@@ -195,8 +223,6 @@ h1 {
 
 
 #cta {
-	/*position: absolute;
-	bottom: 0;*/
 	width: 100%;
 	background: white;
 	margin-top: 20px;
@@ -444,6 +470,16 @@ small {
 	100% {
 		display: block;
 		opacity: 1;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		display: block;
+		opacity: 1;
+	}
+	100% {
+		display: none;
+		opacity: 0;
 	}
 }
 /*@keyframes fadeOut {
