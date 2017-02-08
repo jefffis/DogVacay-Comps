@@ -141,6 +141,7 @@ h1 {
 	background: url(../img/walker.jpg) no-repeat center;
 	background-size: cover;
 	border-radius: 6px;
+	transform: translate(20px, 0);
 }
 .card:nth-child(1) {
 	z-index: 3;
@@ -149,7 +150,8 @@ h1 {
 .card.loaded {
 	display: block;
 	opacity: 1;
-	animation: fadeIn .25s ease-in-out;
+	transform: translate(0, 0);
+	animation: slideIn .25s ease-in-out;
 }
 .card:nth-child(2) {
 	top: -15px;
@@ -470,6 +472,18 @@ small {
 	100% {
 		display: block;
 		opacity: 1;
+	}
+}
+@keyframes slideIn {
+	0% {
+		display: none;
+		opacity: 0;
+		transform: translate(20px, 0);
+	}
+	100% {
+		display: block;
+		opacity: 1;
+		transform: translate(0, 0);
 	}
 }
 @keyframes fadeOut {
