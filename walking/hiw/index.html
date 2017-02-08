@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<title>Dog Walking, On Demand | DogVacay</title>
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+	<body>
+
+		<header>
+			<img src="img/logo.png" />
+		</header>
+
+		<div id="content-wrapper-outer">
+			<div id="content-wrapper">
+				
+				<div id="content">
+					<!-- slide 1 -->
+					<div class="dv-slide" id="slide-1">
+						<h1>
+							Get matched with the perfect walker.
+						</h1>
+						<div id="dv-walker-cards">
+							<div class="card">
+								<h2>
+									Tanya Z.
+								</h2>
+							</div>
+							<div class="card"></div>
+							<div class="card"></div>
+						</div>
+						<p>
+							Loving, certified walkers
+						</p>
+					</div>
+					<!--\ slide 1 -->
+					<!-- slide 2 -->
+					<div class="dv-slide" id="slide-2">
+						<h1>
+							Use our free lock box to let your walker in.
+						</h1>
+						<img src="img/lock.jpg" alt="Free, secure lock box" />
+						<p>
+							Easy, secure access
+						</p>
+					</div>
+					<!--\ slide 2 -->
+					<!-- slide 3 -->
+					<div class="dv-slide" id="slide-3">
+						<h1>
+							See the walk, right on your phone.
+						</h1>
+						<div class="dv-map">
+							<img src="img/block.png" alt="Free, secure lock box" />
+							<div class="dv-dog">
+								<img src="img/dog.jpg" />
+							</div>
+						</div>
+						<p>
+							Updates from the walker
+						</p>
+					</div>
+					<!--\ slide 3 -->
+				</div>
+
+				<!-- slide state -->
+				<ul id="dv-slide-state">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<!--\ slide state -->
+
+				<div id="cta">
+					<a href="###" id="cta-button">Book my FREE walk</a>
+					<small>
+						A DogVacay concierge will contact you to schedule the walk.
+					</small>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+		<script src="js/app.js"></script>
+
+		<!-- <script>
+			var cta = document.getElementById('cta'),
+				ctaButton = document.getElementById('cta-button'),
+				chat = document.querySelectorAll('.chat'),
+				startTime = 750,
+				chatUiDelay = 1500,
+				ctaUidelay = (startTime + chatUiDelay) * (chat.length - 1);
+
+			function showCTA(el, time, ctx) {
+				setTimeout(function() {
+					el.className += ' fade-in';
+				}, time);
+			}
+
+			function showChatUi(el) {
+				setTimeout(function() {
+					Array.prototype.forEach.call(chat, function(el, e){
+						showCTA(el, chatUiDelay * e, false);
+					});
+				}, startTime);
+			}
+
+			function showNextStep(el) {
+				el.className = 'submitted';
+			}
+
+			ctaButton.onclick = function() {
+				showNextStep(this);
+			}
+
+			showCTA(cta, ctaUidelay, true);
+
+			showChatUi(chat);
+		</script> -->
+		
+	</body>
+</html>
