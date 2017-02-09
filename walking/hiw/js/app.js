@@ -29,6 +29,32 @@ slidesSwipe.on('swiperight', function(ev) {
 	setUIState(pos + 1);
 });
 
+$('li', '#dv-slide-state').on('click', function() {
+	if(window.innerWidth < 649 || $(this).hasClass('active')) return;
+
+	var position = parseInt($(this).data('pos'), 10);
+
+	if(pos === 0 && position === 1) {
+		content.attr('class', 'pos-2');
+	}else if(pos === 0 && position === 2) {
+		content.attr('class', 'pos-3');
+	}else if(pos === 1 && position === 2) {
+		content.attr('class', 'pos-3');
+	}else if(pos === 1 && position === 0) {
+		content.attr('class', 'pos-2-out');
+		removeOutClass(content, '');
+	}else if(pos === 2 && position === 1) {
+		content.attr('class', 'pos-2 pos-3-out');
+		removeOutClass(content, 'pos-2');
+	}else if(pos === 2 && position === 0) {
+		content.attr('class', 'pos-3-out');
+		removeOutClass(content, '');
+	}
+
+	pos = position;
+	setUIState(pos + 1);
+});
+
 function removeOutClass(el, classLeft) {
 	setTimeout(function() {
 		el.attr('class', classLeft);
@@ -45,7 +71,7 @@ function setUIState(pos) {
 }
 
 $('.card').each(function(e){
-	loadCards($(this), 500 * e);
+	loadCards($(this), 750 * e);
 });
 
 function loadCards(el, time) {

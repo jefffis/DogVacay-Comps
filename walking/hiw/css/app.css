@@ -435,22 +435,63 @@ small {
 	h1 {
 		font-size: 27px;
 	}
-	/*#content-wrapper-outer {
-		background: url(../img/tablet.jpg) no-repeat center;
-		background-size: cover;
-	}*/
-	/*#content {
-		width: 80vw;
-		padding: 50px;
-	}*/
-	#cta {
-		margin-top: 30px;
-		margin-bottom: -20px;
-		padding-top: 30px;
+	#content {
+		margin-top: 0;
 	}
-	#cta:before {
-		left: -50px;
-		width: calc(100% + 100px);
+	#content-wrapper-outer {
+		display: table;
+		height: calc(100% - 56px);
+		width: 100%;
+	}
+	#content-wrapper {
+		display: table-cell;
+		background: rgba(255, 255, 255, 0.75);
+		vertical-align: middle;
+	}
+	#dv-walker-cards {
+		top: -20px;
+		margin-bottom: 35px;
+	}
+	.dv-slide img {
+		margin-top: -25px;
+	}
+	.dv-slide:nth-child(2),
+	.dv-slide:nth-child(3) {
+		width: 100%;
+	}
+	.dv-slide:nth-of-type(2) img {
+		margin-top: -32px;
+		margin-bottom: 17px;
+	}
+	.dv-slide:nth-of-type(3) img {
+		max-height: 180px;
+		margin-bottom: 30px;
+	}
+	.dv-map {
+		max-width: 320px;
+		margin: auto;
+	}
+	.dv-dog img {
+		top: -1rem;
+		margin-top: 0;
+	}
+	#cta-button,
+	small {
+		max-width: 320px;
+		margin-left: auto;
+		margin-auto: auto;
+	}
+	#dv-slide-state li {
+		cursor: pointer;
+	}
+	#dv-slide-state li:active {
+		opacity: .5;
+	}
+	#dv-slide-state .active {
+		cursor: default;
+	}
+	#dv-slide-state .active:active {
+		opacity: 1;
 	}
 }
 @media screen and (min-width: 1202px) {
