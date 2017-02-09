@@ -59,7 +59,10 @@ if(window.innerWidth > 650) {
 	var ctaHeight = $('#cta').height(),
 		ctaHeightNegative = ctaHeight / 2;
 	$('#content').css('margin-top', -Math.abs(ctaHeightNegative));
-	console.log(ctaHeight, ctaHeightNegative);
+}
+
+if(window.innerWidth > 1023) {
+	// auto scroll
 }
 
 function removeOutClass(el, classLeft) {

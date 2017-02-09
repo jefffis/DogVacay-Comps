@@ -112,7 +112,7 @@ h1 {
 	max-width: 80px;
 	margin: auto;
 	border-radius: 6px;
-	box-shadow: 0 0 0 2px white;
+	box-shadow: 0 0 0 2px white, 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 #content {
@@ -145,7 +145,7 @@ h1 {
 }
 .card:nth-child(1) {
 	z-index: 3;
-	box-shadow: 0 0 0 2px white;
+	box-shadow: 0 0 0 2px white, 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 .card.loaded {
 	display: block;
