@@ -55,6 +55,13 @@ $('li', '#dv-slide-state').on('click', function() {
 	setUIState(pos + 1);
 });
 
+if(window.innerWidth > 650) {
+	var ctaHeight = $('#cta').height(),
+		ctaHeightNegative = ctaHeight / 2;
+	$('#content').css('margin-top', -Math.abs(ctaHeightNegative));
+	console.log(ctaHeight, ctaHeightNegative);
+}
+
 function removeOutClass(el, classLeft) {
 	setTimeout(function() {
 		el.attr('class', classLeft);

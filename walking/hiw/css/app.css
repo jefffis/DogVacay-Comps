@@ -343,25 +343,18 @@ small {
 	html, body {
 		height: 100%;
 	}
-	/*body {
+	html {
 		background: #F6F6F1;
-	}*/
+	}
+	body {
+		background: white;
+	}
 	header {
 		background: white;
 	}
 	header img {
 		max-height: 25px;
 	}
-	/*#content {
-		max-width: 400px;
-		width: 86vw;
-		background: white;
-		margin: 20px auto;
-		padding: 20px;
-		border: 1px solid #E8E5E0;
-		border-radius: 4px;
-		box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-	}*/
 	#cta:before {
 		display: block;
 		position: absolute;
@@ -372,29 +365,18 @@ small {
 		background: #E8E5E0;
 		content: "";
 	}
-	/*#content-wrapper-outer {
-		display: table;
-		height: calc(100% - 56px);
-		width: 100%;
+	#cta-button,
+	small {
+		max-width: 320px;
+		margin-left: auto;
+		margin-auto: auto;
 	}
-	#content-wrapper {
-		display: table-cell;
-		background: rgba(255, 255, 255, 0.75);
-		vertical-align: middle;
-	}*/
 	#content {
 		margin-top: 5.5vh;
 	}
-	/*#dv-walker-cards {
-		top: 3vh;
-		margin-bottom: 4vh;
-	}*/
 	#dv-slide-state {
 		margin-top: 3vh;
 	}
-	/*.dv-slide img {
-		max-height: 200px;
-	}*/
 }
 @media screen and (orientation: landscape) {
 	#cta {
@@ -434,6 +416,13 @@ small {
 @media screen and (min-width: 600px) {
 	h1 {
 		font-size: 27px;
+	}
+	#cta {
+		padding-bottom: 40px;
+		border-top: 0;
+	}
+	#cta:before {
+		display: none;
 	}
 	#content {
 		margin-top: 0;
@@ -475,13 +464,12 @@ small {
 		top: -1rem;
 		margin-top: 0;
 	}
-	#cta-button,
-	small {
-		max-width: 320px;
-		margin-left: auto;
-		margin-auto: auto;
+	#dv-slide-state {
+		margin-top: 20px;
 	}
 	#dv-slide-state li {
+		height: 15px;
+		width: 15px;
 		cursor: pointer;
 	}
 	#dv-slide-state li:active {
@@ -502,6 +490,9 @@ small {
 		margin: auto;
 		border-left: 1px solid #E8E5E0;
 		border-right: 1px solid #E8E5E0;
+	}
+	#dv-slide-state {
+		margin-top: 40px;
 	}
 }
 
