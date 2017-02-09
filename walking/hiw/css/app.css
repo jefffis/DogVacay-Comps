@@ -108,7 +108,7 @@ h1 {
 .dv-dog img {
 	position: absolute;
 	top: -15px;
-	right: 0;
+	right: -8px;
 	max-width: 80px;
 	margin: auto;
 	border-radius: 6px;
@@ -339,15 +339,19 @@ small {
 	color: #0F748C;
 }*/
 
+@media screen and (max-width: 349px) {
+	.dv-slide img {
+		max-width: 100%;
+	}
+	.dv-dog img {
+		top: -8px;
+		right: -8px;
+		max-width: 80px;
+	}
+}
 @media screen and (min-width: 350px) {
 	html, body {
 		height: 100%;
-	}
-	html {
-		background: #F6F6F1;
-	}
-	body {
-		background: white;
 	}
 	header {
 		background: white;
@@ -408,12 +412,14 @@ small {
 	.card:nth-child(2) {
 		margin-left: -125px;
 	}
-	#cta {
-		position: absolute;
-		bottom: 0;
-	}
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 699px) {
+	html {
+		background: #F6F6F1;
+	}
+	body {
+		background: white;
+	}
 	h1 {
 		font-size: 27px;
 	}
@@ -480,6 +486,16 @@ small {
 	}
 	#dv-slide-state .active:active {
 		opacity: 1;
+	}
+	#cta {
+		position: absolute;
+		bottom: 0;
+	}
+}
+@media screen and (min-width: 699px) and (max-height: 700px) {
+	#cta {
+		background: none;
+		padding-bottom: 20px;
 	}
 }
 @media screen and (min-width: 1202px) {
@@ -559,7 +575,7 @@ small {
 		left: auto;
 		opacity: 1;
 	}
-}
+}*/
 @keyframes rotate {
 	0% {
 		transform: rotate(0deg);
@@ -567,4 +583,4 @@ small {
 	100% {
 		transform: rotate(360deg);
 	}
-}*/
+}
