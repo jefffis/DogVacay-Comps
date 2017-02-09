@@ -99,6 +99,7 @@ h1 {
 	display: block;
 	max-height: 175px;
 	margin: -15px auto 10px;
+	border-radius: 6px;
 }
 .dv-map {
 	position: relative;
@@ -111,7 +112,6 @@ h1 {
 	right: -8px;
 	max-width: 80px;
 	margin: auto;
-	border-radius: 6px;
 	box-shadow: 0 0 0 2px white, 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -473,7 +473,7 @@ small {
 	#dv-slide-state {
 		margin-top: 20px;
 	}
-	#dv-slide-state li {
+	/*#dv-slide-state li {
 		height: 15px;
 		width: 15px;
 		cursor: pointer;
@@ -486,7 +486,7 @@ small {
 	}
 	#dv-slide-state .active:active {
 		opacity: 1;
-	}
+	}*/
 	#cta {
 		position: absolute;
 		bottom: 0;

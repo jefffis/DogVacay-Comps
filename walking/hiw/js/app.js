@@ -1,84 +1,86 @@
-var slides = document.getElementById('content'),
-	slidesSwipe = new Hammer(slides),
-	pos = 0,
+// var slides = document.getElementById('content'),
+// 	slidesSwipe = new Hammer(slides),
+// 	pos = 0,
+// 	content = $('#content');
+
+// slidesSwipe.on('swipeleft', function(ev) {
+// 	if(pos === 0) {
+// 		content.attr('class', 'pos-2');
+// 	}else if(pos === 1){
+// 		content.attr('class', 'pos-3');
+// 	}else {
+// 		return;
+// 	}
+// 	pos++;
+// 	setUIState(pos + 1);
+// });
+
+// slidesSwipe.on('swiperight', function(ev) {
+// 	if(pos === 1) {
+// 		content.attr('class', 'pos-2-out');
+// 		removeOutClass(content, '');
+// 	}else if(pos === 2){
+// 		content.attr('class', 'pos-2 pos-3-out');
+// 		removeOutClass(content, 'pos-2');
+// 	}else {
+// 		return;
+// 	}
+// 	pos--;
+// 	setUIState(pos + 1);
+// });
+
+// $('li', '#dv-slide-state').on('click', function() {
+// 	if(window.innerWidth < 699 || $(this).hasClass('active')) return;
+
+// 	var position = parseInt($(this).data('pos'), 10);
+
+// 	if(pos === 0 && position === 1) {
+// 		content.attr('class', 'pos-2');
+// 	}else if(pos === 0 && position === 2) {
+// 		content.attr('class', 'pos-3');
+// 	}else if(pos === 1 && position === 2) {
+// 		content.attr('class', 'pos-3');
+// 	}else if(pos === 1 && position === 0) {
+// 		content.attr('class', 'pos-2-out');
+// 		removeOutClass(content, '');
+// 	}else if(pos === 2 && position === 1) {
+// 		content.attr('class', 'pos-2 pos-3-out');
+// 		removeOutClass(content, 'pos-2');
+// 	}else if(pos === 2 && position === 0) {
+// 		content.attr('class', 'pos-3-out');
+// 		removeOutClass(content, '');
+// 	}
+
+// 	pos = position;
+// 	setUIState(pos + 1);
+// });
+
+var pos = 0,
 	content = $('#content');
-
-slidesSwipe.on('swipeleft', function(ev) {
-	if(pos === 0) {
-		content.attr('class', 'pos-2');
-	}else if(pos === 1){
-		content.attr('class', 'pos-3');
-	}else {
-		return;
-	}
-	pos++;
-	setUIState(pos + 1);
-});
-
-slidesSwipe.on('swiperight', function(ev) {
-	if(pos === 1) {
-		content.attr('class', 'pos-2-out');
-		removeOutClass(content, '');
-	}else if(pos === 2){
-		content.attr('class', 'pos-2 pos-3-out');
-		removeOutClass(content, 'pos-2');
-	}else {
-		return;
-	}
-	pos--;
-	setUIState(pos + 1);
-});
-
-$('li', '#dv-slide-state').on('click', function() {
-	if(window.innerWidth < 699 || $(this).hasClass('active')) return;
-
-	var position = parseInt($(this).data('pos'), 10);
-
-	if(pos === 0 && position === 1) {
-		content.attr('class', 'pos-2');
-	}else if(pos === 0 && position === 2) {
-		content.attr('class', 'pos-3');
-	}else if(pos === 1 && position === 2) {
-		content.attr('class', 'pos-3');
-	}else if(pos === 1 && position === 0) {
-		content.attr('class', 'pos-2-out');
-		removeOutClass(content, '');
-	}else if(pos === 2 && position === 1) {
-		content.attr('class', 'pos-2 pos-3-out');
-		removeOutClass(content, 'pos-2');
-	}else if(pos === 2 && position === 0) {
-		content.attr('class', 'pos-3-out');
-		removeOutClass(content, '');
-	}
-
-	pos = position;
-	setUIState(pos + 1);
-});
 
 if(window.innerWidth > 700) {
 	var ctaHeight = $('#cta').height(),
 		ctaHeightNegative = ctaHeight / 2;
-	$('#content').css('margin-top', -Math.abs(ctaHeightNegative));
+		
+	content.css('margin-top', -Math.abs(ctaHeightNegative));
 }
 
-// if(window.innerWidth > 1023) {
-// 	autoScroll(pos);
-// }
-// function autoScroll(pos) {
-// 	setInterval(function() {
-// 		if(pos === 0) {
-// 			content.attr('class', 'pos-2');
-// 		}else if(pos === 1){
-// 			content.attr('class', 'pos-3');
-// 		}else {
-// 			pos = -1;
-// 			content.attr('class', 'pos-3-out');
-// 			removeOutClass(content, '');
-// 		}
-// 		pos++;
-// 		setUIState(pos + 1);
-// 	}, 3000);
-// }
+function autoScroll(pos) {
+	setInterval(function() {
+		if(pos === 0) {
+			content.attr('class', 'pos-2');
+		}else if(pos === 1){
+			content.attr('class', 'pos-3');
+		}else {
+			pos = -1;
+			content.attr('class', 'pos-3-out');
+			removeOutClass(content, '');
+		}
+		pos++;
+		setUIState(pos + 1);
+	}, 5000);
+}
+autoScroll(pos);
 
 $('#cta-button').on('click', function(e) {
 	e.preventDefault();
