@@ -58,7 +58,7 @@ $('li', '#dv-slide-state').on('click', function() {
 function removeOutClass(el, classLeft) {
 	setTimeout(function() {
 		el.attr('class', classLeft);
-	}, 250);
+	}, 225);
 }
 
 function setUIState(pos) {
