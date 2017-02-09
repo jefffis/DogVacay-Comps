@@ -56,58 +56,62 @@
 // });
 
 var pos = 0,
-	content = $('#content');
+	content = document.getElementById('content'),
+	cta = document.getElementById('cta'),
+	ctaButton = document.getElementById('cta-button'),
+	cards = document.querySelectorAll('.card');
 
 if(window.innerWidth > 700) {
-	var ctaHeight = $('#cta').height(),
-		ctaHeightNegative = ctaHeight / 2;
-		
-	content.css('margin-top', -Math.abs(ctaHeightNegative));
+	var ctaHeight = cta.clientHeight,
+		ctaHeightNegative = -Math.abs(ctaHeight / 2);
+
+	content.setAttribute('style', 'margin-top:' + ctaHeightNegative + 'px');
 }
 
 function autoScroll(pos) {
 	setInterval(function() {
 		if(pos === 0) {
-			content.attr('class', 'pos-2');
+			content.setAttribute('class', 'pos-2');
 		}else if(pos === 1){
-			content.attr('class', 'pos-3');
+			content.setAttribute('class', 'pos-3');
 		}else {
 			pos = -1;
-			content.attr('class', 'pos-3-out');
+			content.setAttribute('class', 'pos-3-out');
 			removeOutClass(content, '');
 		}
 		pos++;
 		setUIState(pos + 1);
 	}, 5000);
 }
-autoScroll(pos);
-
-$('#cta-button').on('click', function(e) {
-	e.preventDefault();
-	$(this).addClass('submitted');
-});
 
 function removeOutClass(el, classLeft) {
 	setTimeout(function() {
-		el.attr('class', classLeft);
+		el.setAttribute('class', classLeft);
 	}, 225);
 }
 
 function setUIState(pos) {
-	var uiState = $('#dv-slide-state');
+	var uiState = document.getElementById('dv-slide-state');
 
 	setTimeout(function() {
-		uiState.find('li').removeClass('active');
-		uiState.find('li:nth-child(' + pos + ')').addClass('active');
+		uiState.querySelector('li.active').classList = '';
+		uiState.querySelector('li:nth-child(' + pos + ')').classList = 'active';
 	}, 250);
 }
 
-$('.card').each(function(e){
-	loadCards($(this), 750 * e);
-});
-
 function loadCards(el, time) {
 	setTimeout(function() {
-		el.addClass('loaded');
+		el.classList = 'card loaded';
 	}, time);
+}
+
+Array.prototype.forEach.call(cards, function(el, e){
+	loadCards(el, 750 * e);
+});
+
+autoScroll(pos);
+
+ctaButton.onclick = function() {
+	e.preventDefault();
+	this.className = 'submitted';
 }
