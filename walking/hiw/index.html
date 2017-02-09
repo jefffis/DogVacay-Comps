@@ -15,68 +15,83 @@
 		<div id="content-wrapper-outer">
 			<div id="content-wrapper">
 				
-				<div id="content">
-					<!-- slide 1 -->
-					<div class="dv-slide" id="slide-1">
-						<h1>
-							Get matched with the perfect walker.
-						</h1>
-						<div id="dv-walker-cards">
-							<div class="card">
-								<h2>
-									Tanya Z.
-								</h2>
+				<div id="before-submit">
+					<div id="content">
+						<!-- slide 1 -->
+						<div class="dv-slide" id="slide-1">
+							<h1>
+								Get matched with a certified walker.
+							</h1>
+							<div id="dv-walker-cards">
+								<div class="card">
+									<h2>
+										Tanya Z.
+									</h2>
+								</div>
+								<div class="card"></div>
+								<div class="card"></div>
 							</div>
-							<div class="card"></div>
-							<div class="card"></div>
+							<p>
+								We&rsquo;ll find you perfect one
+							</p>
 						</div>
-						<p>
-							Loving, certified walkers
-						</p>
-					</div>
-					<!--\ slide 1 -->
-					<!-- slide 2 -->
-					<div class="dv-slide" id="slide-2">
-						<h1>
-							Use our free lock box to let your walker in.
-						</h1>
-						<img src="img/lock.jpg" alt="Free, secure lock box" />
-						<p>
-							Easy, secure access
-						</p>
-					</div>
-					<!--\ slide 2 -->
-					<!-- slide 3 -->
-					<div class="dv-slide" id="slide-3">
-						<h1>
-							See the walk, right on your phone.
-						</h1>
-						<div class="dv-map">
-							<img src="img/my-walk-map-sm.png" alt="See your dogs walk" />
-							<div class="dv-dog">
-								<img src="img/dog.jpg" />
+						<!--\ slide 1 -->
+						<!-- slide 2 -->
+						<div class="dv-slide" id="slide-2">
+							<h1>
+								Use our free lock box to let your walker in.
+							</h1>
+							<img src="img/lock.jpg" alt="Free, secure lock box" />
+							<p>
+								Simple, secure access
+							</p>
+						</div>
+						<!--\ slide 2 -->
+						<!-- slide 3 -->
+						<div class="dv-slide" id="slide-3">
+							<h1>
+								Get updates on your pup, and see their walk.
+							</h1>
+							<div class="dv-map">
+								<img src="img/my-walk-map-sm.png" alt="See your dogs walk" />
+								<div class="dv-dog">
+									<img src="img/dog.jpg" />
+								</div>
 							</div>
+							<p>
+								Stay in the know
+							</p>
 						</div>
-						<p>
-							Updates from the walker
-						</p>
+						<!--\ slide 3 -->
 					</div>
-					<!--\ slide 3 -->
+
+					<!-- slide state -->
+					<ul id="dv-slide-state">
+						<li data-pos="0" class="active"></li>
+						<li data-pos="1"></li>
+						<li data-pos="2"></li>
+					</ul>
+					<!--\ slide state -->
+
+					<div id="cta">
+						<a href="###" id="cta-button">Book my FREE walk</a>
+						<small>
+							Upon request, a DogVacay concierge will contact you to schedule the walk.
+						</small>
+					</div>
 				</div>
 
-				<!-- slide state -->
-				<ul id="dv-slide-state">
-					<li data-pos="0" class="active"></li>
-					<li data-pos="1"></li>
-					<li data-pos="2"></li>
-				</ul>
-				<!--\ slide state -->
-
-				<div id="cta">
-					<a href="###" id="cta-button">Book my FREE walk</a>
-					<small>
-						Upon request, a DogVacay concierge will contact you to schedule the walk.
-					</small>
+				<div id="after-submit">
+					<img src="https://static1.dogvacay.com/pug/react-dist/dv-app-walking/dist/images/dog-running.gif" />
+					<h1>
+						Great, we’re on it!
+					</h1>
+					<p>
+						A DogVacay concierge will contact you shortly to finalize your walk.
+					</p>
+					<p>
+						In the meantime, <a href="#">read our blog</a>.
+					</p>
 				</div>
 
 			</div>
@@ -91,7 +106,9 @@
 				content = document.getElementById('content'),
 				cta = document.getElementById('cta'),
 				ctaButton = document.getElementById('cta-button'),
-				cards = document.querySelectorAll('.card');
+				cards = document.querySelectorAll('.card'),
+				beforeSubmit = document.getElementById('before-submit'),
+				afterSubmit = document.getElementById('after-submit');
 
 			if(window.innerWidth > 700) {
 				var ctaHeight = cta.clientHeight,
@@ -137,6 +154,16 @@
 				}, time);
 			}
 
+			function showNext(a,b) {
+				setTimeout(function() {
+					a.className = 'hide';
+				}, 500);
+				setTimeout(function() {
+					a.parentNode.removeChild(a);
+					b.className = 'show';
+				}, 750);
+			}
+
 			Array.prototype.forEach.call(cards, function(el, e){
 				loadCards(el, 750 * e);
 			});
@@ -146,6 +173,7 @@
 			ctaButton.onclick = function(e) {
 				e.preventDefault();
 				this.className = 'submitted';
+				showNext(beforeSubmit, afterSubmit);
 			}
 		</script>
 		

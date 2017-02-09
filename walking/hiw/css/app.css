@@ -306,7 +306,7 @@ small {
 	line-height: 1.2;
 }
 
-/*#before-submit.hide {
+#before-submit.hide {
 	opacity: 0;
 	animation: fadeOut .25s ease-in-out;
 }
@@ -315,6 +315,8 @@ small {
 	position: relative;
 	left: 50%;
 	opacity: 0;
+	max-width: 320px;
+	margin: 20px auto auto;
 }
 #after-submit.show {
 	display: block;
@@ -328,7 +330,9 @@ small {
 	margin: auto auto 1.5rem;
 }
 #after-submit h1 {
+	margin: auto;
 	font-size: 20px;
+	text-align: left;
 }
 #after-submit p {
 	max-width: 80vw;
@@ -337,7 +341,7 @@ small {
 }
 #after-submit a {
 	color: #0F748C;
-}*/
+}
 
 @media screen and (max-width: 349px) {
 	.dv-slide img {
@@ -443,6 +447,9 @@ small {
 		background: rgba(255, 255, 255, 0.75);
 		vertical-align: middle;
 	}
+	#after-submit {
+		margin-top: 0;
+	}
 	#dv-walker-cards {
 		top: -20px;
 		margin-bottom: 35px;
@@ -544,7 +551,7 @@ small {
 		opacity: 0;
 	}
 }
-/*@keyframes fadeOut {
+@keyframes fadeOut {
 	0% {
 		opacity: 1;
 	}
@@ -564,7 +571,7 @@ small {
 		opacity: 1;
 	}
 }
-@keyframes fadeInRight {
+/*@keyframes fadeInRight {
 	0% {
 		right: -20%;
 		left: auto;
