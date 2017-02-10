@@ -61,7 +61,9 @@ var pos = 0,
 	ctaButton = document.getElementById('cta-button'),
 	cards = document.querySelectorAll('.card');
 
-if(window.innerWidth > 700) {
+console.log(window.innerHeight);
+
+if(window.innerWidth > 700 && window.innerHeight > 800) {
 	var ctaHeight = cta.clientHeight,
 		ctaHeightNegative = -Math.abs(ctaHeight / 2);
 

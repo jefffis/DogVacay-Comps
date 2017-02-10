@@ -110,7 +110,9 @@
 				beforeSubmit = document.getElementById('before-submit'),
 				afterSubmit = document.getElementById('after-submit');
 
-			if(window.innerWidth > 700) {
+			console.log(window.innerHeight);
+
+			if(window.innerWidth > 700 && window.innerHeight > 600) {
 				var ctaHeight = cta.clientHeight,
 					ctaHeightNegative = -Math.abs(ctaHeight / 2);
 
