@@ -12,24 +12,24 @@
 			<img src="img/logo.png" />
 		</header>
 
-		<div id="content-wrapper-outer">
-			<div id="content-wrapper">
+		<div id="dv-content-wrapper-outer">
+			<div id="dv-content-wrapper">
 				
-				<div id="before-submit">
-					<div id="content">
+				<div id="dv-before-submit">
+					<div id="dv-content">
 						<!-- slide 1 -->
 						<div class="dv-slide" id="slide-1">
 							<h1>
 								Get matched with a certified walker.
 							</h1>
 							<div id="dv-walker-cards">
-								<div class="card">
+								<div class="dv-card">
 									<h2>
 										Tanya Z.
 									</h2>
 								</div>
-								<div class="card"></div>
-								<div class="card"></div>
+								<div class="dv-card"></div>
+								<div class="dv-card"></div>
 							</div>
 							<p>
 								We&rsquo;ll find you perfect one
@@ -67,24 +67,24 @@
 
 					<!-- slide state -->
 					<ul id="dv-slide-state">
-						<li data-pos="0" class="active"></li>
-						<li data-pos="1"></li>
-						<li data-pos="2"></li>
+						<li class="active"></li>
+						<li></li>
+						<li></li>
 					</ul>
 					<!--\ slide state -->
 
-					<div id="cta">
-						<a href="###" id="cta-button">Book my FREE walk</a>
+					<div id="dv-cta">
+						<a href="###" id="dv-cta-button">Book my FREE walk</a>
 						<small>
 							Upon request, a DogVacay concierge will contact you to schedule the walk.
 						</small>
 					</div>
 				</div>
 
-				<div id="after-submit">
+				<div id="dv-after-submit">
 					<img src="https://static1.dogvacay.com/pug/react-dist/dv-app-walking/dist/images/dog-running.gif" />
 					<h1>
-						Great, we’re on it!
+						Great, we&rsquo;re on it!
 					</h1>
 					<p>
 						A DogVacay concierge will contact you shortly to finalize your walk.
@@ -99,20 +99,20 @@
 
 		<script>
 			var pos = 0,
-				content = document.getElementById('content'),
-				cta = document.getElementById('cta'),
-				ctaButton = document.getElementById('cta-button'),
-				cards = document.querySelectorAll('.card'),
-				beforeSubmit = document.getElementById('before-submit'),
-				afterSubmit = document.getElementById('after-submit');
+				content = document.getElementById('dv-content'),
+				cta = document.getElementById('dv-cta'),
+				ctaButton = document.getElementById('dv-cta-button'),
+				cards = document.querySelectorAll('.dv-card'),
+				beforeSubmit = document.getElementById('dv-before-submit'),
+				afterSubmit = document.getElementById('dv-after-submit');
 
-			if(window.innerWidth > 700 && window.innerHeight > 600) {
-				var ctaHeight = cta.clientHeight,
-					ctaHeightNegative = -Math.abs(ctaHeight / 2);
+			// if(window.innerWidth > 700 && window.innerHeight > 600) {
+			// 	var ctaHeight = cta.clientHeight,
+			// 		ctaHeightNegative = -Math.abs(ctaHeight / 2);
 
-				content.setAttribute('style', 'margin-top:' + ctaHeightNegative + 'px');
-				afterSubmit.setAttribute('style', 'margin-top:' + ctaHeightNegative + 'px');
-			}
+			// 	content.setAttribute('style', 'margin-top:' + ctaHeightNegative + 'px');
+			// 	afterSubmit.setAttribute('style', 'margin-top:' + ctaHeightNegative + 'px');
+			// }
 
 			function autoScroll(pos) {
 				setInterval(function() {
@@ -147,17 +147,17 @@
 
 			function loadCards(el, time) {
 				setTimeout(function() {
-					el.classList = 'card loaded';
+					el.classList = 'dv-card loaded';
 				}, time);
 			}
 
-			function showNext(a,b) {
+			function showNext(elHide,elShow) {
 				setTimeout(function() {
-					a.className = 'hide';
+					elHide.className = 'hide';
 				}, 500);
 				setTimeout(function() {
-					a.parentNode.removeChild(a);
-					b.className = 'show';
+					elHide.parentNode.removeChild(elHide);
+					elShow.className = 'show';
 				}, 750);
 			}
 
