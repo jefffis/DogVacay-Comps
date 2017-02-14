@@ -400,9 +400,6 @@ small,
 	html, body {
 		height: 100%;
 	}
-	h1 {
-		max-width: 90vw;
-	}
 	#dv-content {
 		margin-top: 0;
 	}
