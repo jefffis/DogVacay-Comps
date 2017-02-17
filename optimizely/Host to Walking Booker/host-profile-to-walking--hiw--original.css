@@ -386,7 +386,7 @@ small,
         max-height: 25px;
     }
 }
-@media screen and (min-width: 350px) and (min-height: 800px) {
+@media screen and (min-width: 350px) and (min-height: 700px) {
 	#dv-cta {
 		position: absolute;
 		left: 0;
@@ -418,15 +418,6 @@ small,
 	html {
 		height: 100%;
 		background: #F6F6F1;
-	}
-	body {
-		position: relative;
-		height: 100%;
-		max-width: 700px;
-		background: white;
-		margin: auto;
-		border-left: 1px solid #E8E5E0;
-		border-right: 1px solid #E8E5E0;
 	}
 	h1 {
 		font-size: 27px;

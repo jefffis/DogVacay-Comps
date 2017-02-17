@@ -87,6 +87,10 @@ body {
 	padding: 0 20px;
 }
 
+#dv-content-wrapper-outer {
+	height: auto;
+}
+
 @media screen and (min-width: 415px) {
 	#dv-cta-wrapper,
 	[data-profile-reservation] {
