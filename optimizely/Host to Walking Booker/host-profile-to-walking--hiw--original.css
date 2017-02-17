@@ -386,7 +386,7 @@ small,
         max-height: 25px;
     }
 }
-@media screen and (min-width: 350px) and (min-height: 568px) {
+@media screen and (min-width: 350px) and (min-height: 800px) {
 	#dv-cta {
 		position: absolute;
 		left: 0;
@@ -434,9 +434,9 @@ small,
 	#dv-content-wrapper {
 		overflow-x: hidden;
 	}
-	#dv-cta {
+	/*#dv-cta {
 		bottom: 20px;
-	}
+	}*/
 }
 
 @keyframes fadeIn {
