@@ -16,6 +16,9 @@ html {
 	font: normal 100%/1.5 "Helvetica Neue", Arial, sans-serif;
 	color: #2A494B;
 }
+body {
+	background: white;
+}
 
 /* header & dv header code */
 header {
@@ -386,7 +389,7 @@ small,
         max-height: 25px;
     }
 }
-@media screen and (min-width: 350px) and (min-height: 700px) {
+@media screen and (min-width: 350px) and (min-height: 850px) {
 	#dv-cta {
 		position: absolute;
 		left: 0;
@@ -413,6 +416,8 @@ small,
 @media screen and (min-width: 702px) {
 	html {
 		height: 100%;
+	}
+	body {
 		background: #F6F6F1;
 	}
 	h1 {
