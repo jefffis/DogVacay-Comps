@@ -91,7 +91,7 @@ $('#profile-right-sidebar').remove();
 $('.dv-profile-footer').remove();
 $('#dv-footer').remove();
 
-$('head').append('<link rel="stylesheet" href="http://localhost:9999/host-profile-to-walking--hiw--original.css" type="text/css" media="screen" />');
+$('head').append('<link rel="stylesheet" href="https://rawgithub.com/jefffis/DogVacay-Comps/master/optimizely/Host%20to%20Walking%20Booker/host-profile-to-walking--hiw--original.css" type="text/css" media="screen" />');
 $('head').append('<style>' + styles + '</style>');
 $('#dv-header').after(containerWrapper);
 $('#dv-content-wrapper-outer', 'body').append(container);

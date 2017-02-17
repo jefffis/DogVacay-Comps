@@ -394,21 +394,21 @@ small,
 		width: 100%;
 	}
 }
-@media screen and (min-width: 350px) and (min-height: 568px) {
+@media screen and (min-width: 350px) and (min-height: 800px) {
 	html, body {
 		height: 100%;
 	}
 	#dv-content {
-		margin-top: 0;
+		margin-top: -150px;
 	}
 	#dv-content-wrapper-outer {
 		display: table;
 		height: calc(100% - 56px);
 		width: 100%;
+		background: white;
 	}
 	#dv-content-wrapper {
 		display: table-cell;
-		background: rgba(255, 255, 255, 0.75);
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		vertical-align: middle;
