@@ -1,0 +1,80 @@
+#dv-application-conf-screen {
+  max-width: 600px;
+  margin: 30px auto;
+}
+#dv-conf-message {
+  background: #d7efdf;
+  margin: 30px auto;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+#dv-conf-message h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+#dv-conf-message span {
+  display: block;
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: normal;
+}
+.dv-conf-next-steps {
+  background: white;
+  padding: 30px;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+.dv-conf-next-steps:nth-of-type(n+2) {
+  margin-top: 30px;
+}
+.dv-conf-next-steps h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.dv-conf-next-steps h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.dv-conf-next-steps p {
+  margin: 15px auto auto;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.dv-conf-next-steps ul {
+  margin: 20px auto auto;
+  padding: 0;
+  font-size: 18px;
+}
+.dv-conf-next-steps li {
+  position: relative;
+  list-style: none;
+  padding-left: 1rem;
+}
+.dv-conf-next-steps li:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  font-size: 20px;
+}
+.dv-conf-next-steps li:nth-of-type(n+2) {
+  margin-top: 20px;
+}
+.dv-conf-next-steps small {
+  display: block;
+  padding-top: 2px;
+  color: #777;
+  font-size: 13px;
+  font-weight: normal;
+}
+.dv-conf-next-steps a {
+  text-decoration: underline;
+}

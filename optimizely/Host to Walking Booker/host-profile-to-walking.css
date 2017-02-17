@@ -1,0 +1,194 @@
+body {
+    max-width: 100% !important;
+	font-family: "Helvetica Neue", Arial, sans-serif !important;
+}
+.dv-header__content {
+	text-align: center;
+}
+.dv-nav {
+	display: none !important;
+}
+.dv-header__left-content {
+	float: none;
+    width: 100%;
+    padding: 0;
+}
+.dv-site-banner {
+	margin: auto;
+}
+.dv-logo__img {
+	height: 25px;
+	width: 144px;
+	background-size: contain;
+}
+.dv-profile-booking-cta:nth-of-type(n+2) {
+	display: none;
+}
+#dv-header div:nth-child(1) {
+	margin: auto;
+}
+
+#before-submit {
+	position: relative !important;
+}
+#chat-content {
+	margin-bottom: 70px !important;
+}
+#cta {
+	position: absolute !important;
+	z-index: 2 !important;
+	left: -50px !important;
+    width: calc(100% + 100px) !important;
+    margin-bottom: -10px !important;
+    padding: 30px 50px 10px !important; /* adjust for media qs */
+}
+#cta:before {
+    display: block;
+    position: absolute;
+    top: -41px !important;
+    left: -20px;
+    height: 40px !important;
+    width: calc(100% + 40px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.075) 100%) !important;
+    content: "";
+}
+#cta.fade-in {
+	bottom: -90px !important;
+}
+#cta .dv-button {
+	padding: .5rem 0 !important;
+	font-family: "Helvetica Neue", Arial, sans-serif !important;
+	font-size: 20px !important;
+	line-height: 1.5 !important;
+	transition: none !important;
+}
+#cta .dv-input-date__picker {
+	padding: .75rem;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px #efefef inset;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; !important;
+	font-size: 16px;
+}
+#cta .dv-input-date__picker::-webkit-input-placeholder,
+#cta .dv-input-date__picker:-moz-placeholder,
+#cta .dv-input-date__picker::-moz-placeholder,
+#cta .dv-input-date__picker:-ms-input-placeholder {
+	color: #777;
+}
+#cta .dv-input-date .dv-icon {
+	left: auto;
+	right: 1rem;
+	margin: .85rem 0 0 .75rem;
+	color: #999;
+}
+.dv-selected-service-rate {
+	display: none;
+}
+#before-submit.hidden:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background: white;
+	opacity: .5;
+	content: "";
+}
+#cta .dv-booking-section {
+	margin-bottom: 15px;
+}
+#cta .dv-free-cancellation {
+	display: block;
+	padding-top: 10px;
+	color: #777;
+	font-size: 13px;
+	line-height: 1;
+	text-align: left;
+}
+#cta h1 {
+	margin: 0 0 15px;
+	font-size: 24px;
+	text-align: left;
+}
+#cta h1 span {
+	color: #777;
+	font-size: 17px;
+    font-weight: normal;
+}
+.cal-1 .fine-print {
+	display: none !important;
+}
+
+@media screen and (max-width: 1000px) {
+	#cta .dv-profile-booking-cta {
+		padding: 0 !important;
+	}
+}
+@media screen and (min-width: 501px) and (max-width: 600px) {
+	#cta {
+		margin-bottom: 5px !important;
+	}
+}
+@media screen and (max-width: 500px) {
+	#cta {
+		margin-bottom: 20px !important;
+	}
+}
+@media screen and (min-width: 350px) and (max-width: 600px) {
+	#cta.fade-in {
+		bottom: -120px !important;
+	}
+	#chat-content {
+		margin-bottom: 100px !important;
+	}
+}
+@media screen and (max-width: 599px) {
+	#cta .dv-input-date .dv-icon {
+		margin-top: 1rem;
+	}
+}
+@media screen and (min-width: 1202px) {
+	#content-wrapper-outer {
+		position: relative;
+	    overflow-x: hidden;
+	    max-width: 1200px;
+	    margin: auto;
+	    border-left: 1px solid #E8E5E0;
+	    border-right: 1px solid #E8E5E0;
+	}
+}
+@media screen and (max-width: 349px) {
+	body {
+		background: white !important;
+	}
+	#cta {
+		position: fixed !important;
+		left: 0 !important;
+	    width: 100% !important;
+	    margin-bottom: 0 !important;
+	    padding: 1.5rem !important;
+	}
+	#cta.fade-in {
+		bottom: 0 !important;
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width: 599px) and (min-width: 350px) {
+	#content-wrapper-outer {
+	    background: url(https://raw.githubusercontent.com/jefffis/DogVacay-Comps/master/walking/hiw/img/map-santa-monica-mweb.jpg) no-repeat center !important;
+	    background-size: cover;
+	}
+}
+@media screen and (min-width: 600px) {
+	#content-wrapper-outer {
+	    background: url(https://raw.githubusercontent.com/jefffis/DogVacay-Comps/master/walking/hiw/img/map-santa-monica.jpg) no-repeat center !important;
+	    background-size: cover;
+	}
+}
