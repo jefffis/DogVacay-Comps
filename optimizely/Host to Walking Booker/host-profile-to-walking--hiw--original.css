@@ -13,7 +13,7 @@
 	clear: both;
 }
 html {
-	font: normal 100%/1.5 'Helvetica Neue', Arial, sans-serif;
+	font: normal 100%/1.5 "Helvetica Neue", Arial, sans-serif;
 	color: #2A494B;
 }
 
@@ -398,12 +398,8 @@ small,
 	html, body {
 		height: 100%;
 	}
-	#dv-content {
-		margin-top: -150px;
-	}
 	#dv-content-wrapper-outer {
 		display: table;
-		height: calc(100% - 56px);
 		width: 100%;
 		background: white;
 	}
