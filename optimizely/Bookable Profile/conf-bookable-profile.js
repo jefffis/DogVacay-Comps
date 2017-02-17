@@ -72,8 +72,6 @@ $(window).bind('popstate', function() {
 		isSignUpConf = window.location.pathname === '/signup/host' && window.location.hash === '#/confirmation' ? true : false,
 		isProfileConf = window.location.pathname === '/account/profile' && window.location.hash === '#/confirmation' ? true : false;
 
-	// console.log(isSignUpConf, isPendingDashboard, isProfileConf, location.pathname, location.hash);
-
 	// both versions
 	if(isSignUpConf || isProfileConf || isPendingDashboard) {
 		removeMain();
