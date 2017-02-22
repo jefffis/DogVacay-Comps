@@ -5,6 +5,12 @@ var hostNumber,
 $('.dv-host-list-item').off('click').on('click', function(e) {
 	e.preventDefault();
 	
+	hostNumberText = $(this).data('auto');
+
+	hostNumberText = hostNumberText.slice(-1);
+
+	console.log(hostNumberText);
+
 	hostNumber = parseInt($(this).data('index'), 10) - 1;
 	
 	var hostData = DV.Search.json.results[hostNumber];
