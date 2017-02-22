@@ -247,6 +247,10 @@ h1 {
 	background: #254747;
 }
 
+#dv-content-wrapper-outer {
+	background: white;
+}
+
 
 #dv-cta {
 	padding: 0 0 20px;
@@ -360,6 +364,11 @@ small,
 	color: #0F748C;
 }
 
+#dv-cta-wrapper,
+[data-profile-reservation] {
+	padding: 0 20px;
+}
+
 @media screen and (max-width: 349px) {
 	#dv-content,
 	#dv-cta {
@@ -378,6 +387,10 @@ small,
 	.dv-dog img {
 		max-width: 80px;
 	}
+	#dv-cta-wrapper,
+	[data-profile-reservation] {
+		padding: 0;
+	}
 }
 @media screen and (min-width: 350px) {
 	header,
@@ -389,6 +402,14 @@ small,
         max-height: 25px;
     }
 }
+@media screen and (min-width: 415px) {
+	#dv-cta-wrapper,
+	[data-profile-reservation] {
+		max-width: 320px;
+		margin: auto;
+		padding: 0;
+	}
+}
 @media screen and (min-width: 350px) and (min-height: 850px) {
 	#dv-cta {
 		position: absolute;
@@ -397,14 +418,49 @@ small,
 		width: 100%;
 	}
 }
-@media screen and (min-width: 350px) and (min-height: 800px) {
-	html, body {
-		height: 100%;
+@media screen and (min-width: 500px) and (min-height: 700px) {
+	#dv-cta {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
 	}
+}
+@media screen and (min-width: 700px) and (max-height: 799px) {
+	#dv-content-wrapper-outer {
+		height: calc(100% - 56px);
+	}
+	#dv-content {
+		margin-top: 56px;
+	}
+}
+/* for larger phones */
+@media screen and (min-width: 400px) and (max-width: 700px) and (min-height: 625px) and (max-height: 750px) {
 	#dv-content-wrapper-outer {
 		display: table;
+		height: calc(100% - 56px);
 		width: 100%;
-		background: white;
+	}
+	#dv-content-wrapper {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#dv-content {
+		margin-top: -150px;
+	}
+	#dv-cta {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+}
+/* for larger screens */
+@media screen and (min-width: 350px) and (min-height: 800px) {
+	#dv-content-wrapper-outer {
+		display: table;
+		height: calc(100% - 56px);
+		width: 100%;
 	}
 	#dv-content-wrapper {
 		display: table-cell;
@@ -412,23 +468,28 @@ small,
 		padding-bottom: 2rem;
 		vertical-align: middle;
 	}
+	#dv-content {
+		margin-top: -56px;
+	}
 }
 @media screen and (min-width: 702px) {
-	html {
+	html, body {
 		height: 100%;
-	}
-	body {
 		background: #F6F6F1;
 	}
 	h1 {
 		font-size: 27px;
 	}
+	#dv-content-wrapper-outer {
+		position: relative;
+		max-width: 700px;
+		margin: auto;
+		border-left: 1px solid #E8E5E0;
+		border-right: 1px solid #E8E5E0;
+	}
 	#dv-content-wrapper {
 		overflow-x: hidden;
 	}
-	/*#dv-cta {
-		bottom: 20px;
-	}*/
 }
 
 @keyframes fadeIn {
