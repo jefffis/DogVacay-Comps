@@ -430,9 +430,15 @@ small,
 	#dv-content-wrapper-outer {
 		height: calc(100% - 56px);
 	}
+	.has-promo-code #dv-content-wrapper-outer {
+		height: calc(100% - 111px);
+	}
 	#dv-content {
 		margin-top: 56px;
 	}
+	/*.has-promo-code #dv-content {
+		margin-top: 1px;
+	}*/
 }
 /* for larger phones */
 @media screen and (min-width: 400px) and (max-width: 700px) and (min-height: 625px) and (max-height: 750px) {
@@ -440,6 +446,9 @@ small,
 		display: table;
 		height: calc(100% - 56px);
 		width: 100%;
+	}
+	.has-promo-code #dv-content-wrapper-outer {
+		height: calc(100% - 111px);
 	}
 	#dv-content-wrapper {
 		display: table-cell;
@@ -454,6 +463,15 @@ small,
 		bottom: 0;
 		width: 100%;
 	}
+	.has-promo-code #dv-cta {
+		position: static;
+	}
+	.has-promo-code #dv-content-wrapper {
+		display: block;
+	}
+	.has-promo-code #dv-content {
+		margin-top: 6vh;
+	}
 }
 /* for larger screens */
 @media screen and (min-width: 350px) and (min-height: 800px) {
@@ -461,6 +479,9 @@ small,
 		display: table;
 		height: calc(100% - 56px);
 		width: 100%;
+	}
+	.has-promo-code #dv-content-wrapper-outer {
+		height: calc(100% - 111px);
 	}
 	#dv-content-wrapper {
 		display: table-cell;
@@ -471,6 +492,9 @@ small,
 	#dv-content {
 		margin-top: -56px;
 	}
+	/*.has-promo-code #dv-content {
+		margin-top: 1px;
+	}*/
 }
 @media screen and (min-width: 702px) {
 	html, body {

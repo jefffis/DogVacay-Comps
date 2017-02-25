@@ -118,6 +118,39 @@ $('#cta', 'body').prepend('<h1>$20 <span>for a 30-minute walk</span></h1>');
 
 $('.dv-input-date__picker', '#cta').attr('placeholder', 'Select Date');
 
+// for coupon code traffic
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+var couponCode = '<div id="dv-coupon">Use code <code id="dv-walk-code"></code> for your free walk.<small>Limit one per customer, not valid in all zip codes.</small></div>',
+  coupoCodeStyles = '#dv-coupon{padding:.5rem;text-align:center;background:#0f748c;color:#fff}#dv-coupon code{text-transform:uppercase;font-weight:700;letter-spacing:1px;border-bottom:1px dotted}#dv-coupon small{color:#fff;font-size:11px;opacity:.75}';
+
+// FB walk code
+var fBAd = getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '001' ||
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '002' ||
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '003' ? true : false;
+
+if(fBAd) {
+  $('#dv-header').before(couponCode);
+  $('#dv-walk-code').text('FBWALK20');
+  $('head').append('<style>' + coupoCodeStyles + '</style>');
+  $('body').addClass('has-promo-code');
+  document.cookie = 'dv_ondemand_walking_promo=fb; expires=; path=/';
+}
+
+// SEM walk code
+if(getUrlParameter('sid') === '066' && getUrlParameter('cid') === '001' && getUrlParameter('aid') === '001') {
+  $('#dv-header').before(couponCode);
+  $('#dv-walk-code').text('GWALK20');
+  $('head').append('<style>' + coupoCodeStyles + '</style>');
+  $('body').addClass('has-promo-code');
+  document.cookie = 'dv_ondemand_walking_promo=sem; expires=; path=/';
+}
+
 window.$(document).ajaxComplete(function(event, xhr, settings) {
 	var url = settings.url;
 	if(url.indexOf('/api/host/') !== -1) $('[data-button-text]', '.dv-booking-button').text('Request my walk');
@@ -151,4 +184,13 @@ hideChatUI();
 
 $('.chat', '#chat-content').each(function(e) { var $that = $(this); setTimeout(function(){ $that.className += ' fade-in'; },1500 * e);});
 
-console.log('THIS IS RUNNING, v8');
+function showChat(time) {
+  setTimeout(function() {
+    (function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
+    olark.identify('3883-419-10-1869');
+  }, time);
+}
+
+showChat(5000);
+
+// console.log('THIS IS RUNNING, v8');

@@ -1,3 +1,36 @@
+// for coupon code traffic
+function getCook(cookiename) {
+	var cookiestring=RegExp(""+cookiename+"[^;]+").exec(document.cookie);
+	return unescape(!!cookiestring ? cookiestring.toString().replace(/^[^=]+./,"") : "");
+}
+
+var couponCode = '<div id="dv-coupon">Use code <code id="dv-walk-code"></code> for your free walk.<small>Limit one per customer, not valid in all zip codes.</small></div>',
+	coupoCodeStyles = '#dv-coupon{padding:.5rem;text-align:center;background:#0f748c;color:#fff;font-size:16px}#dv-coupon code{text-transform:uppercase;font-weight:700;letter-spacing:1px;border-bottom:1px dotted;font-family:inherit}#dv-coupon small{color:#fff;font-size:11px;opacity:.75;display:block;max-width:320px;margin-left:auto;margin-right:auto}';
+
+// FB walk code
+if(getCook('dv_ondemand_walking_promo') === 'fb') {
+  $('#dv-header').before(couponCode);
+  $('#dv-walk-code').text('FBWALK20');
+  $('head').append('<style>' + coupoCodeStyles + '</style>');
+  $('body').addClass('has-promo-code');
+}
+
+// SEM walk code
+if(getCook('dv_ondemand_walking_promo') === 'sem') {
+  $('#dv-header').before(couponCode);
+  $('#dv-walk-code').text('GWALK20');
+  $('head').append('<style>' + coupoCodeStyles + '</style>');
+  $('body').addClass('has-promo-code');
+}
+
+// SEM walk code
+if(getCook('dv_ondemand_walking_promo') === 'modal') {
+  $('#dv-header').before(couponCode);
+  $('#dv-walk-code').text('WALK20');
+  $('head').append('<style>' + coupoCodeStyles + '</style>');
+  $('body').addClass('has-promo-code');
+}
+
 // tracking stuff
 function addPixel(src) {
 	var img = new Image();  
