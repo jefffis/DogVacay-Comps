@@ -130,16 +130,36 @@ var couponCode = '<div id="dv-coupon">Use code <code id="dv-walk-code"></code> f
   coupoCodeStyles = '#dv-coupon{padding:.5rem;text-align:center;background:#0f748c;color:#fff}#dv-coupon code{text-transform:uppercase;font-weight:700;letter-spacing:1px;border-bottom:1px dotted}#dv-coupon small{color:#fff;font-size:11px;opacity:.75}';
 
 // FB walk code
-var fBAd = getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '001' ||
+var fromFBAd = getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '001' ||
 getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '002' ||
 getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '003' ? true : false;
 
-if(fBAd) {
+if(fromFBAd) {
   $('#dv-header').before(couponCode);
   $('#dv-walk-code').text('FBWALK20');
   $('head').append('<style>' + coupoCodeStyles + '</style>');
   $('body').addClass('has-promo-code');
   document.cookie = 'dv_ondemand_walking_promo=fb; expires=; path=/';
+}
+
+// email walk code
+var fromEmail = getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1577' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1578' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1579' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1580' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1581' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1582' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1583' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1584' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1585' ||
+getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1586'  ? true : false;
+
+if(fromEmail) {
+  $('#dv-header').before(couponCode);
+  $('#dv-walk-code').text('DVWALK20');
+  $('head').append('<style>' + coupoCodeStyles + '</style>');
+  $('body').addClass('has-promo-code');
+  document.cookie = 'dv_ondemand_walking_promo=email; expires=; path=/';
 }
 
 // SEM walk code
@@ -153,14 +173,14 @@ if(getUrlParameter('sid') === '066' && getUrlParameter('cid') === '001' && getUr
 
 window.$(document).ajaxComplete(function(event, xhr, settings) {
 	var url = settings.url;
-	if(url.indexOf('/api/host/') !== -1) $('[data-button-text]', '.dv-booking-button').text('Request my walk');
+	if(url.indexOf('/api/host/') !== -1) $('[data-button-text]', '.dv-booking-button').text('Continue');
 });
 
 // nothing runs below here -- this is concatenated and included above
 function showCTA(el, time, ctx) {
   setTimeout(function() {
     $('body').find(el).addClass('fade-in');
-    $('.dv-booking-button', 'body').find('span[data-button-text]').text('Request my walk');
+    $('.dv-booking-button', 'body').find('span[data-button-text]').text('Continue');
   }, time);
 }
 
