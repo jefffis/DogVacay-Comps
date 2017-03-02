@@ -20,6 +20,9 @@
 		body {
 		  padding: 1.5rem;
 		}
+		#dv-container {
+			max-width: 560px;
+		}
 		.dv-date-picker {
 		  display: block;
 		  position: relative;
@@ -62,12 +65,10 @@
 		  left: -9999px;
 		}
 		#dv-time-picker {
-		  /*font: normal 100%/1.5 "Helvetica Neue", Arial, sans-serif;*/
-		  max-width: 300px;
 		  margin-top: 20px;
 		}
-		#dv-time-picker h3 {
-			margin: 0 0 10px;
+		#dv-container h3 {
+			margin: 0 0 5px;
 			font-size: 16px;
 			font-weight: normal;
 		}
@@ -82,7 +83,7 @@
 		  color: #444;
 		  cursor: pointer;
 		  font-family: inherit;
-		  font-size: 16px;
+		  font-size: 13px;
 		  text-align: center;
 		}
 		#dv-time-picker span:active {
@@ -93,15 +94,20 @@
 		}
 		#dv-time-picker label:last-of-type span {
 		  border-radius: 0 4px 4px 0;
-		  box-shadow: 0 2px 0 #efefef;
 		}
 		#dv-time-picker label:nth-of-type(n+2) span {
 		  /* border-left: 0; */
 		  margin-left: -1px;
 		}
+		#dv-time-picker input:focus + span {
+			position: relative;
+			z-index: 1;
+			outline: 1px dotted;
+		}
 		#dv-time-picker input:checked + span {
 		  position: relative;
 		  z-index: 1;
+		  outline: none;
 		  border-color: #69bbc0;
 		  box-shadow: 0 0 0 1px #69bbc0 inset;
 		  color: #2a494b;
@@ -110,7 +116,7 @@
 		@media screen and (max-width: 450px) {
 		  #dv-time-picker span {
 		    padding: .65rem 0;
-		    /*font-size: 12px;*/
+		    font-size: 12px;
 		  }
 		}
 
@@ -122,12 +128,14 @@
 		    float: none;
 		    width: 100%;
 		    padding: .75rem 0;
+		    font-size: 16px;
 		  }
 		  #dv-time-picker label:nth-of-type(1) span {
 		    border-radius: 4px 4px 0 0; 
 		  }
 		  #dv-time-picker label:last-of-type span {
-		    border-radius: 0 0 4px 4px; 
+		    border-radius: 0 0 4px 4px;
+		    box-shadow: 0 2px 0 #efefef;
 		  }
 		  #dv-time-picker label:nth-of-type(n+2) span {
 		    margin-top: -1px;
@@ -138,35 +146,37 @@
 </head>
 <body>
 
-	<!-- <input type="text" id="datepicker"> -->
+	<div id="dv-container">
 
-	<label class="dv-date-picker">
-		<!-- <span id="selector">Choose Date</span> -->
-		<input type="text" id="selector" placeholder="Select Date" />
-	</label>
+		<h3>What day?</h3>
+		<label class="dv-date-picker">
+			<input type="text" id="selector" placeholder="Select Date" />
+		</label>
 
-	<div id="dv-time-picker">
-		<h3>What time?</h3>
-		<label>
-			<input type="radio" name="dv-walk-time" value="0" />
-			<span>9am-11am</span>
-		</label>
-		<label>
-			<input type="radio" name="dv-walk-time" value="1" />
-			<span>11am-1pm</span>
-		</label>
-		<label>
-			<input type="radio" name="dv-walk-time" value="2" />
-			<span>1pm-3pm</span>
-		</label>
-		<label>
-			<input type="radio" name="dv-walk-time" value="3" />
-			<span>3pm-5pm</span>
-		</label>
-	  <label>
-			<input type="radio" name="dv-walk-time" value="3" />
-			<span>5pm-7pm</span>
-		</label>
+		<div id="dv-time-picker">
+			<h3>What time?</h3>
+			<label>
+				<input type="radio" name="dv-walk-time" value="0" />
+				<span>9am-11am</span>
+			</label>
+			<label>
+				<input type="radio" name="dv-walk-time" value="1" />
+				<span>11am-1pm</span>
+			</label>
+			<label>
+				<input type="radio" name="dv-walk-time" value="2" />
+				<span>1pm-3pm</span>
+			</label>
+			<label>
+				<input type="radio" name="dv-walk-time" value="3" />
+				<span>3pm-5pm</span>
+			</label>
+		  <label>
+				<input type="radio" name="dv-walk-time" value="3" />
+				<span>5pm-7pm</span>
+			</label>
+		</div>
+
 	</div>
 
 	<script src="pickaday.js"></script>
@@ -204,7 +214,7 @@
 	        yearRange: [2017,2018]
 	    });
 
-	    // picker.show();
+	    picker.show();
 	    
 
 	    document.getElementById('selector').onclick = function() {
