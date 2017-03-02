@@ -22,7 +22,7 @@
 		label {
 		  display: block;
 		  position: relative;
-		  /*max-width: 300px;*/
+		  max-width: 300px;
 		  cursor: pointer;
 		}
 		label:active {
@@ -72,6 +72,30 @@
 
 	<script src="pickaday.js"></script>
 	<script>
+		// var isMobile = {
+		//     Android: function() {
+		//         return navigator.userAgent.match(/Android/i);
+		//     },
+		//     BlackBerry: function() {
+		//         return navigator.userAgent.match(/BlackBerry/i);
+		//     },
+		//     iOS: function() {
+		//         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		//     },
+		//     Opera: function() {
+		//         return navigator.userAgent.match(/Opera Mini/i);
+		//     },
+		//     Windows: function() {
+		//         return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+		//     },
+		//     any: function() {
+		//         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		//     }
+		// };
+		// console.log(isMobile.any());
+		// if(isMobile.any()) {
+		// 	document.getElementsByTagName('body')[0].classList = 'is-mobile';
+		// }
 		var picker = new Pikaday(
 	    {
 	        field: document.getElementById('selector'),
@@ -80,6 +104,8 @@
 	        maxDate: new Date(2018, 12, 31),
 	        yearRange: [2017,2018]
 	    });
+
+	    picker.show();
 	    
 
 	    document.getElementById('selector').onclick = function() {
