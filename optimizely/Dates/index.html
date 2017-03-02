@@ -23,6 +23,15 @@
 		#dv-container {
 			max-width: 560px;
 		}
+		.cf:before,
+		.cf:after {
+		    content: " "; /* 1 */
+		    display: table; /* 2 */
+		}
+
+		.cf:after {
+		    clear: both;
+		}
 		.dv-date-picker {
 		  display: block;
 		  position: relative;
@@ -66,6 +75,7 @@
 		}
 		#dv-time-picker {
 		  margin-top: 20px;
+		  margin-bottom: 15px;
 		}
 		#dv-container h3 {
 			margin: 0 0 5px;
@@ -121,6 +131,9 @@
 		}
 
 		@media screen and (max-width: 410px) {
+		.dv-date-picker {
+			max-width: 100%;
+		}
 		  #dv-time-picker {
 		    width: 100%;
 		  }
@@ -181,30 +194,6 @@
 
 	<script src="pickaday.js"></script>
 	<script>
-		// var isMobile = {
-		//     Android: function() {
-		//         return navigator.userAgent.match(/Android/i);
-		//     },
-		//     BlackBerry: function() {
-		//         return navigator.userAgent.match(/BlackBerry/i);
-		//     },
-		//     iOS: function() {
-		//         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		//     },
-		//     Opera: function() {
-		//         return navigator.userAgent.match(/Opera Mini/i);
-		//     },
-		//     Windows: function() {
-		//         return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
-		//     },
-		//     any: function() {
-		//         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		//     }
-		// };
-		// console.log(isMobile.any());
-		// if(isMobile.any()) {
-		// 	document.getElementsByTagName('body')[0].classList = 'is-mobile';
-		// }
 		var picker = new Pikaday(
 	    {
 	        field: document.getElementById('selector'),
@@ -213,21 +202,10 @@
 	        maxDate: new Date(2018, 12, 31),
 	        yearRange: [2017,2018]
 	    });
-
-	    picker.show();
 	    
-
 	    document.getElementById('selector').onclick = function() {
 		  picker.show();
-		  // setDate(this);
 		};
-		function setDate(el) {
-			el.innerText = '---';
-		  setTimeout(function() {
-		  	el.classList = 'chosen';
-		  	el.innerText = 'Mar 01, 2017';
-		  }, 251);
-		}
 
 		// picker.toString('YYYY-MM-DD');
 	</script>
