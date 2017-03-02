@@ -14,21 +14,22 @@
 		}
 		html {
 		  background: white;
+		  color: #2A494B;
 		  font: normal 100%/1.5 'Helvetica Neue', sans-serif;
 		}
 		body {
-		  padding: 2rem;
+		  padding: 1.5rem;
 		}
-		label {
+		.dv-date-picker {
 		  display: block;
 		  position: relative;
 		  max-width: 300px;
 		  cursor: pointer;
 		}
-		label:active {
+		.dv-date-picker:active {
 		  opacity: .65;
 		}
-		label:after {
+		.dv-date-picker:after {
 		  display: block;
 		  position: absolute;
 		  top: 0;
@@ -40,7 +41,7 @@
 		  opacity: .5;
 		  content: "";
 		}
-		input {
+		.dv-date-picker input {
 		  display: block;
 		  width: 100%;
 		  padding: .75rem;
@@ -53,22 +54,120 @@
 		  font-size: 16px;
 		  -webkit-appearance: none;
 		}
-		input:focus {
+		.dv-date-picker input:focus {
 			border-color: #69BBC0;
 		}
-		/*.chosen {
-		  color: inherit;
-		}*/
+		input[name="dv-walk-time"] {
+		  position: absolute;
+		  left: -9999px;
+		}
+		#dv-time-picker {
+		  /*font: normal 100%/1.5 "Helvetica Neue", Arial, sans-serif;*/
+		  max-width: 300px;
+		  margin-top: 20px;
+		}
+		#dv-time-picker h3 {
+			margin: 0 0 10px;
+			font-size: 16px;
+			font-weight: normal;
+		}
+		#dv-time-picker span {
+		  display: block;
+		  float: left;
+		  width: 20%;
+		  background: white;
+		  padding: .5rem 0;
+		  border: 1px solid #ccc;
+		  box-shadow: 0 1px 0 rgba(0,0,0,0.025);
+		  color: #444;
+		  cursor: pointer;
+		  font-family: inherit;
+		  font-size: 16px;
+		  text-align: center;
+		}
+		#dv-time-picker span:active {
+		  background: rgba(0,0,0,0.0025);
+		}
+		#dv-time-picker label:nth-of-type(1) span {
+		  border-radius: 4px 0 0 4px; 
+		}
+		#dv-time-picker label:last-of-type span {
+		  border-radius: 0 4px 4px 0;
+		  box-shadow: 0 2px 0 #efefef;
+		}
+		#dv-time-picker label:nth-of-type(n+2) span {
+		  /* border-left: 0; */
+		  margin-left: -1px;
+		}
+		#dv-time-picker input:checked + span {
+		  position: relative;
+		  z-index: 1;
+		  border-color: #69bbc0;
+		  box-shadow: 0 0 0 1px #69bbc0 inset;
+		  color: #2a494b;
+		  font-weight: bold;
+		}
+		@media screen and (max-width: 450px) {
+		  #dv-time-picker span {
+		    padding: .65rem 0;
+		    /*font-size: 12px;*/
+		  }
+		}
+
+		@media screen and (max-width: 410px) {
+		  #dv-time-picker {
+		    width: 100%;
+		  }
+		  #dv-time-picker span {
+		    float: none;
+		    width: 100%;
+		    padding: .75rem 0;
+		  }
+		  #dv-time-picker label:nth-of-type(1) span {
+		    border-radius: 4px 4px 0 0; 
+		  }
+		  #dv-time-picker label:last-of-type span {
+		    border-radius: 0 0 4px 4px; 
+		  }
+		  #dv-time-picker label:nth-of-type(n+2) span {
+		    margin-top: -1px;
+		    margin-left: 0;
+		  }
+		}
 	</style>
 </head>
 <body>
 
 	<!-- <input type="text" id="datepicker"> -->
 
-	<label>
+	<label class="dv-date-picker">
 		<!-- <span id="selector">Choose Date</span> -->
 		<input type="text" id="selector" placeholder="Select Date" />
 	</label>
+
+	<div id="dv-time-picker">
+		<h3>What time?</h3>
+		<label>
+			<input type="radio" name="dv-walk-time" value="0" />
+			<span>9am-11am</span>
+		</label>
+		<label>
+			<input type="radio" name="dv-walk-time" value="1" />
+			<span>11am-1pm</span>
+		</label>
+		<label>
+			<input type="radio" name="dv-walk-time" value="2" />
+			<span>1pm-3pm</span>
+		</label>
+		<label>
+			<input type="radio" name="dv-walk-time" value="3" />
+			<span>3pm-5pm</span>
+		</label>
+	  <label>
+			<input type="radio" name="dv-walk-time" value="3" />
+			<span>5pm-7pm</span>
+		</label>
+	</div>
 
 	<script src="pickaday.js"></script>
 	<script>
@@ -105,7 +204,7 @@
 	        yearRange: [2017,2018]
 	    });
 
-	    picker.show();
+	    // picker.show();
 	    
 
 	    document.getElementById('selector').onclick = function() {
