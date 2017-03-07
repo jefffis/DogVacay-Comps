@@ -13,7 +13,7 @@
 	cursor: default;
 }
 #signupform label b {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.2;
 }
 #signupform label br {
@@ -25,13 +25,29 @@
 	font-style: normal;
 	line-height: 1.4;
 }
-
+#content hr {
+	color: #888;
+    height: 0;
+    padding: 5px 0;
+    border: 0;
+}
+#content h2 {
+	background: none;
+	padding-left: 0;
+	color: #999;
+	font-family: "Helvetica Neue", sans-serif;
+    font-size: 27px;
+    letter-spacing: normal;
+}
 #content h3 {
-	color: #666;
+	font-size: 17px;
+}
+#content h3, #content b {
+	color: #111;
 }
 #content h3 + p {
 	margin: .25rem 0 1rem;
-	color: #666;
+	color: #111;
 	font-size: 13px;
 	line-height: 1.2;
 }
@@ -56,7 +72,7 @@
 	position: relative;
 	height: 30px;
 	width: 30px;
-	background: url(https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-128.png) no-repeat center;
+	background: url(/pug/img/corp/lander/walking-howitworks/star.png) no-repeat center;
 	background-size: 30px;
   cursor: pointer;
 }
@@ -103,6 +119,7 @@
 }
 #public-note-container.has-error:after {
 	margin: 0 0 .5rem;
+	content: "Please add your review of " attr(data-host-name);
 }
 #public-note-container.has-error textarea {
 	border-color: red;

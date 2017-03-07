@@ -11,37 +11,26 @@ var couponCode = '<div id="dv-coupon">Use code <code id="dv-walk-code"></code> f
 // FB walk code
 if(getCook('dv_ondemand_walking_promo') === 'fb') {
 	couponCodeText = 'FBWALK20';
-  // $('#dv-header').before(couponCode);
-  // $('#dv-walk-code').text(couponCodeText);
-  // $('head').append('<style>' + coupoCodeStyles + '</style>');
-  // $('body').addClass('has-promo-code');
 }
 
 // SEM walk code
 if(getCook('dv_ondemand_walking_promo') === 'sem') {
 	couponCodeText = 'GWALK20';
-  // $('#dv-header').before(couponCode);
-  // $('#dv-walk-code').text('GWALK20');
-  // $('head').append('<style>' + coupoCodeStyles + '</style>');
-  // $('body').addClass('has-promo-code');
 }
 
 // email walk code
 if(getCook('dv_ondemand_walking_promo') === 'email') {
 	couponCodeText = 'DVWALK20';
-  // $('#dv-header').before(couponCode);
-  // $('#dv-walk-code').text('DVWALK20');
-  // $('head').append('<style>' + coupoCodeStyles + '</style>');
-  // $('body').addClass('has-promo-code');
+}
+
+// email2 walk code
+if(getCook('dv_ondemand_walking_promo') === 'email2') {
+	couponCodeText = 'WALKING20';
 }
 
 // modal walk code
 if(getCook('dv_ondemand_walking_promo') === 'modal') {
 	couponCodeText = 'WALK20';
-  // $('#dv-header').before(couponCode);
-  // $('#dv-walk-code').text('WALK20');
-  // $('head').append('<style>' + coupoCodeStyles + '</style>');
-  // $('body').addClass('has-promo-code');
 }
 
 // tracking stuff
