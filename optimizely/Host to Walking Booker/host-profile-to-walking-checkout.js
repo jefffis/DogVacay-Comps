@@ -25,7 +25,7 @@ if(getCook('dv_ondemand_walking_promo') === 'email') {
 
 // email2 walk code
 if(getCook('dv_ondemand_walking_promo') === 'email2') {
-	couponCodeText = 'WALKING20';
+	couponCodeText = 'FIRSTWALK';
 }
 
 // modal walk code

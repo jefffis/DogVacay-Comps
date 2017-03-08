@@ -1,0 +1,205 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+html {
+	color: #2a494b;
+	font: normal 100%/1.5 'usual', 'Helvetca Neue', Arial, sans-serif;
+}
+.usual {
+	font-family: 'usual', 'Helvetca Neue', Arial, sans-serif;
+}
+.tablet {
+	font-family: 'tablet-gothic', 'Helvetca Neue', Arial, sans-serif;
+}
+.news-gothic {
+	font-family: 'news-gothic-std', 'Helvetca Neue', Arial, sans-serif;
+}
+.museo-sans {
+	font-family: 'museo-sans', 'Helvetca Neue', Arial, sans-serif;
+}
+.system {
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+	max-width: 800px;
+	margin: auto;
+	padding: 0 1.5rem;
+}
+
+a {
+	color: #0f748c;
+}
+
+header {
+	margin: 0 -1.5rem;
+	padding: .75rem 0;
+	border-bottom: 1px solid #ddd;
+}
+header img {
+	display: block;
+	max-height: 30px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 35px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 20px;
+	font-weight: normal;
+}
+p {
+	font-size: 15px;
+}
+
+#dv-about-host {
+	max-width: 35rem;
+	padding: 3rem 0;
+}
+/*#dv-about-host h3 {
+	color: #69bbc0;
+}*/
+
+hr {
+	height: 20px;
+}
+
+.dv-card {
+	margin: 0 -1.5rem;
+	padding: 1rem 1rem 0;
+	border-top: 8px solid #e8e5e0;
+}
+.dv-card:last-of-type {
+	border-bottom: 8px solid #e8e5e0;
+}
+.dv-img {
+	float: left;
+	height: 80px;
+	width: 80px;
+	background: #888;
+	margin-right: 1rem;
+	border-radius: 6px;
+}
+.dv-name {
+	position: relative;
+	float: left;
+	width: calc(100% - (80px + 1rem) - 50px);
+	font-size: 18px;
+}
+.dv-name:after {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 1.65rem;
+	width: 90%;
+	background: #ddd;
+	opacity: .5;
+	margin-top: .5rem;
+	content: "";
+}
+.dv-name span {
+	display: block;
+	margin-top: -4px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.dv-price {
+	position: relative;
+	float: right;
+	font-size: 24px;
+	line-height: 1;
+}
+.dv-price:after {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	opacity: .5;
+	margin-top: .25rem;
+	content: "night";
+	font-size: 13px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.dv-tags {
+	margin: 0 -4px;
+}
+.dv-tag {
+	display: inline-block;
+	background: #efefef;
+	margin: 1rem 4px;
+	padding: 3px 5px;
+	border-radius: 3px;
+	font-size: 12px;
+}
+
+
+
+
+#dv-floating-button {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index: 2;
+	background: #ddd;
+	padding: .7rem 1rem;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	font-family: sans-serif;
+	font-size: 15px;
+}
+#dv-list {
+	position: fixed;
+	bottom: -100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+	transition: bottom .5s ease-in-out;
+}
+#dv-list.shown {
+	bottom: 0;
+}
+#dv-list div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+#dv-list span {
+	display: block;
+	background: white;
+	padding: .75rem 1.5rem;
+	font-size: 15px;
+}
+#dv-list span.active {
+	background: #efefef;
+	color: #999;
+}
+#dv-list span:nth-child(n+2) {
+	border-top: 1px solid #e8e5e0;
+}
+
+
+
+
+

@@ -51,7 +51,7 @@ getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && 
 getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1601'  ? true : false;
 
 if(fromEmail2) {
-    $('h1', '#dv-cta-wrapper').html('Free walk with code <span>WALKING20</span>');
+    $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FIRSTWALK</span>');
     $('body').addClass('has-promo-code');
     document.cookie = 'dv_ondemand_walking_promo=email2; expires=; path=/';
     showCta();
