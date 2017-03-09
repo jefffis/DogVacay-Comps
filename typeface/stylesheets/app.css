@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'intro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://static1.dogvacay.com/fonts/Intro.woff) format('woff');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;*/
+}
+@font-face {
+  font-family: 'intro';
+  font-style: normal;
+  font-weight: 700;
+  src: url(http://static1.dogvacay.com/fonts/IntroBold.woff) format('woff');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;*/
+}
+
+/*@font-face{font-family:'Graphik Web';src:url("https://alexpate.uk/static/fonts/Graphik/Graphik-Regular-Web.eot");src:url("https://alexpate.uk/static/fonts/Graphik/Graphik-Regular-Web.eot?#iefix") format("embedded-opentype"),url("https://alexpate.uk/static/fonts/Graphik/Graphik-Regular-Web.woff2") format("woff2"),url("https://alexpate.uk/static/fonts/Graphik/Graphik-Regular-Web.woff") format("woff");font-weight:400;font-style:normal;font-stretch:normal}@font-face{font-family:'Graphik Web';src:url("https://alexpate.uk/static/fonts/Graphik/Graphik-Medium-Web.eot");src:url("https://alexpate.uk/static/fonts/Graphik/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),url("https://alexpate.uk/static/fonts/Graphik/Graphik-Medium-Web.woff2") format("woff2"),url("https://alexpate.uk/static/fonts/Graphik/Graphik-Medium-Web.woff") format("woff");font-weight:500;font-style:normal;font-stretch:normal}*/
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -16,6 +35,9 @@ html {
 	color: #2a494b;
 	font: normal 100%/1.5 'usual', 'Helvetca Neue', Arial, sans-serif;
 }
+/*.graphik {
+	font-family: 'Graphik Web', 'Helvetca Neue', Arial, sans-serif;
+}*/
 .usual {
 	font-family: 'usual', 'Helvetca Neue', Arial, sans-serif;
 }
@@ -27,6 +49,29 @@ html {
 }
 .museo-sans {
 	font-family: 'museo-sans', 'Helvetca Neue', Arial, sans-serif;
+}
+.intro {
+	font-family: 'intro', 'Helvetca Neue', Arial, sans-serif;
+}
+.brandon {
+	font-family: 'brandon-grotesque', 'Helvetca Neue', Arial, sans-serif;
+}
+.cera {
+	font-family: 'Cera PRO Regular', 'Helvetca Neue', Arial, sans-serif;
+}
+.cera .strong {
+	font-family: 'Cera PRO Bold', 'Helvetca Neue', Arial, sans-serif;
+	font-weight: normal;
+}
+.slate {
+	font-family: 'Slate Std Regular', 'Helvetca Neue', Arial, sans-serif;
+}
+.slate .strong {
+	font-family: 'Slate Std Bold', 'Helvetca Neue', Arial, sans-serif;
+	font-weight: normal;
+}
+.proxima {
+	font-family: 'proxima-nova', 'Helvetca Neue', Arial, sans-serif;
 }
 .system {
 	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -163,34 +208,37 @@ hr {
 	border: 0;
 	border-radius: 3px;
 	cursor: pointer;
-	font-family: sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 15px;
 }
 #dv-list {
 	position: fixed;
 	bottom: -100%;
 	left: 0;
+	z-index: 10;
 	height: 100%;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	z-index: 10;
-	transition: bottom .5s ease-in-out;
+	background: white;
+	border-top: 5px solid;
+	transition: bottom .35s ease-in-out;
 }
 #dv-list.shown {
 	bottom: 0;
 }
-#dv-list div {
+/*#dv-list div {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-}
+}*/
 #dv-list span {
 	display: block;
 	background: white;
 	padding: .75rem 1.5rem;
+	cursor: pointer;
 	font-size: 15px;
 }
+#dv-list span:active,
 #dv-list span.active {
 	background: #efefef;
 	color: #999;

@@ -48,11 +48,11 @@
   </div> -->
 
   <div id="dv-about-host">
-    <h1>
+    <h1 class="strong">
       Jeff D.
     </h1>
     <hr />
-    <h2>
+    <h2 class="strong">
       Culver City, CA 90066
     </h2>
     <hr />
@@ -167,17 +167,46 @@
 
   <button type="button" id="dv-floating-button">Change</button>
   <div id="dv-list">
-    <div>
-      <span class="active usual">Usual</span>
-      <span class="tablet">Tablet Gothic</span>
-      <span class="news-gothic">News Gothic</span>
-      <span class="museo-sans">Museo Sans</span>
-      <span class="system">System</span>
-    </div>
+    <span class="active usual">Usual</span>
+    <!-- <span class="graphik">Graphik</span> -->
+    <span class="cera">Cera</span>
+    <span class="slate">Slate</span>
+    <span class="brandon">Brandon</span>
+    <span class="tablet">Tablet Gothic</span>
+    <span class="news-gothic">News Gothic</span>
+    <span class="museo-sans">Museo Sans</span>
+    <span class="intro">Intro</span>
+    <span class="proxima">Proxima Nova</span>
+    <span class="system">System</span>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="js/app.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=281221(font-family=Cera+PRO+Light)&sid=281223(font-family=Cera+PRO+Bold)&sid=281225(font-family=Cera+PRO+Medium)&sid=281227(font-family=Cera+PRO+Regular)&key=CdvUoGFENM',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+  </script>
+  <script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=212579(font-family=Slate+Std+Light)&sid=212583(font-family=Slate+Std+Regular)&sid=212585(font-family=Slate+Std+Medium)&sid=212587(font-family=Slate+Std+Bold)&key=5GWi2Pp0z7',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+  </script>
 
 </body>
 </html>
