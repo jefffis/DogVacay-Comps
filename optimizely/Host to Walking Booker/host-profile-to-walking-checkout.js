@@ -28,6 +28,11 @@ if(getCook('dv_ondemand_walking_promo') === 'email2') {
 	couponCodeText = 'FIRSTWALK';
 }
 
+// unbounce walk code
+if(getCook('dv_ondemand_walking_promo') === 'unbounce') {
+	couponCodeText = 'FIRSTWALK';
+}
+
 // modal walk code
 if(getCook('dv_ondemand_walking_promo') === 'modal') {
 	couponCodeText = 'WALK20';

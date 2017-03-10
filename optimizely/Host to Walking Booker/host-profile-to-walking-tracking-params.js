@@ -13,7 +13,14 @@ getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlPa
 getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '004' ||
 getUrlParameter('sid') === '711' && getUrlParameter('cid') === '003' && getUrlParameter('aid') === '001' ||
 getUrlParameter('sid') === '711' && getUrlParameter('cid') === '003' && getUrlParameter('aid') === '002' ||
-getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '005' ? true : false;
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '002' && getUrlParameter('aid') === '005' ||
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '001' || 
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '005' && getUrlParameter('aid') === '001' || 
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '006' && getUrlParameter('aid') === '001' || 
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '007' && getUrlParameter('aid') === '001' || 
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '008' && getUrlParameter('aid') === '001' || 
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '009' && getUrlParameter('aid') === '001' || 
+getUrlParameter('sid') === '711' && getUrlParameter('cid') === '010' && getUrlParameter('aid') === '001' ? true : false;
 
 if(fromFBAd) {
     $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FBWALK20</span>');
@@ -54,6 +61,15 @@ if(fromEmail2) {
     $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FIRSTWALK</span>');
     $('body').addClass('has-promo-code');
     document.cookie = 'dv_ondemand_walking_promo=email2; expires=; path=/';
+    showCta();
+}
+
+var fromUnbouce = getUrlParameter('ubc') === '310' ? true : false;
+
+if(fromUnbouce) {
+    $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FIRSTWALK</span>');
+    $('body').addClass('has-promo-code');
+    document.cookie = 'dv_ondemand_walking_promo=unbounce; expires=; path=/';
     showCta();
 }
 
