@@ -218,28 +218,37 @@ hr {
 	position: fixed;
 	top: 1rem;
 	right: 1rem;
-	z-index: 2;
-	background: #ddd;
+	z-index: 10000000000;
+	background: white;
 	padding: .7rem 1rem;
-	border: 0;
+	border: 1px solid #ddd;
 	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 15px;
+}
+.list-shown {
+	height: 100%;
+	background: #efefef;
 }
 #dv-list {
 	position: fixed;
 	bottom: -100%;
 	left: 0;
-	z-index: 10;
+	z-index: 100000000000;
 	height: 100%;
 	width: 100%;
-	background: white;
-	border-top: 5px solid;
+	/*border-top: 5px solid;*/
 	transition: bottom .35s ease-in-out;
 }
 #dv-list.shown {
 	bottom: 0;
+}
+#dv-list.rel {
+	position: relative;
+	width: calc(100% + 3rem);
+	margin: 0 -1.5rem;
 }
 /*#dv-list div {
 	position: absolute;
@@ -249,6 +258,7 @@ hr {
 }*/
 #dv-list span {
 	display: block;
+	position: relative;
 	background: white;
 	padding: .75rem 1.5rem;
 	cursor: pointer;
@@ -257,12 +267,62 @@ hr {
 #dv-list span:active,
 #dv-list span.active {
 	background: #efefef;
-	color: #999;
+	/*color: #999;*/
 }
-#dv-list span:nth-child(n+2) {
+/*#dv-list span.active {
+	color: #999;
+}*/
+/*#dv-list span.active:before {
+	display: block;
+	position: absolute;
+	top: -1px;
+	left: 0;
+	height: calc(100% + 2px);
+	width: 8px;
+	background: #e8e5e0;
+	content: "";
+}*/
+#dv-list span.active:after {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	height: 1.5rem;
+	width: 1.5rem;
+	background: url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/checkmark-24-128.png) no-repeat center;
+	background-size: 1rem;
+	margin-top: calc(-.75rem + 1px);
+	content: "";
+}
+#dv-list span:nth-of-type(n+3) {
 	border-top: 1px solid #e8e5e0;
 }
-
+#dv-list span:last-of-type {
+	border-bottom: 1px solid #e8e5e0;
+}
+#dv-list .close {
+	position: absolute;
+	bottom: .7rem;
+	right: 1rem;
+	z-index: 1000000000001;
+	width: auto;
+	background: white;
+	padding: .6rem 1rem;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	text-align: right;
+}
+#dv-list.rel .close {
+	position: fixed;
+	bottom: 1rem;
+}
+#dv-list hr {
+	height: 70px;
+}
 
 
 
