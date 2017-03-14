@@ -1,6 +1,7 @@
 $(function() {
 	var scrollPos,
-		narrow = $(window).innerWidth < 600;
+		narrow = $(window).width() < 600;
+		
 	$('#dv-floating-button').on('click', function() {
 		if(narrow) $(this).hide();
 		$(this).blur();

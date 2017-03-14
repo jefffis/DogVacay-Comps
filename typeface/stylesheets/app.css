@@ -175,11 +175,11 @@ hr {
 
 .dv-card {
 	margin: 0 -1.5rem;
-	padding: 1rem 1rem 0;
-	border-top: 8px solid #e8e5e0;
+	padding: 2rem 1rem 0;
+	border-top: 8px solid #efefef;
 }
 .dv-card:last-of-type {
-	border-bottom: 8px solid #e8e5e0;
+	border-bottom: 8px solid #efefef;
 }
 .dv-img {
 	float: left;
@@ -234,7 +234,7 @@ hr {
 	text-transform: uppercase;
 }
 .dv-tags {
-	margin: 0 -4px;
+	margin: 0 -4px 1rem;
 }
 .dv-tag {
 	display: inline-block;
@@ -310,6 +310,7 @@ button:active {
 .list-shown {
 	height: 100%;
 	background: #efefef;
+  padding: 0 1.5rem;
 }
 #dv-list {
 	position: fixed;
@@ -417,7 +418,7 @@ button:active {
     margin-top: 2rem;
   }
   .dv-card:last-of-type {
-    margin-bottom: 2rem;
+    /*margin-bottom: 2rem;*/
     border-bottom-width: 1px;
   }
   #dv-list {
