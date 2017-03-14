@@ -452,6 +452,6 @@ button:active {
 
 
 
-#mfPreviewBarShow {
+#mfPreviewBarShow, #mfPreviewBar {
   display: none !important;
 }
