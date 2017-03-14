@@ -52,157 +52,160 @@
 			</div>
 			<!--/ card -->
 
-			<!-- card -->
-			<div class="rr-card">
-				<h2 data-step="2" class="rr-header">
-					My Pets
-				</h2>
-				<div class="rr-half rr-name">
+			<div style="display: none;">
+				<!-- card -->
+				<div class="rr-card">
+					<h2 data-step="2" class="rr-header">
+						My Pets
+					</h2>
+					<div class="rr-half rr-name">
+						<label class="rr-label">
+							Name
+							<input type="text" class="rr-input" data-required autocorrect="off" />
+						</label>
+					</div>
+					<div class="rr-half rr-label rr-age">
+						<div>
+							Age
+						</div>
+						<div class="rr-faux-input cf">
+							<label data-annotate="yrs">
+								<input type="number" class="rr-input rr-yrs" data-required-faux data-faux-label data-validation="Please enter your pets age." />
+							</label>
+							<label data-annotate="ms">
+								<input type="number" class="rr-input rr-mos" data-required-faux data-faux-label data-validation="Please enter your pets age." />
+							</label>
+						</div>
+					</div>
+					<hr class="rr-hr" />
 					<label class="rr-label">
-						Name
-						<input type="text" class="rr-input" data-required autocorrect="off" />
+						Breed
+						<input type="text" class="rr-input" data-required />
 					</label>
-				</div>
-				<div class="rr-half rr-label rr-age">
-					<div>
-						Age
+					<hr class="rr-hr" />
+					<div class="rr-label">
+						Weight
+						<div class="rr-radio-tabs cf">
+							<label>
+								<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
+								<span class="rr-radio-tab rr-left-border">1-20</span>
+							</label>
+							<label>
+								<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
+								<span class="rr-radio-tab">1-20</span>
+							</label>
+							<label>
+								<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
+								<span class="rr-radio-tab">1-20</span>
+							</label>
+							<label>
+								<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
+								<span class="rr-radio-tab rr-right-border">1-20</span>
+							</label>
+						</div>
+						<small class="rr-small">
+							Pet weight in pounds (lbs)
+						</small>
 					</div>
-					<div class="rr-faux-input cf">
-						<label data-annotate="yrs">
-							<input type="number" class="rr-input rr-yrs" data-required-faux data-faux-label data-validation="Please enter your pets age." />
-						</label>
-						<label data-annotate="ms">
-							<input type="number" class="rr-input rr-mos" data-required-faux data-faux-label data-validation="Please enter your pets age." />
-						</label>
+					<hr class="rr-hr" />
+					<div class="rr-label">
+						Is your pet fixed (spayed or neutered)?
+						<div class="rr-radio-tabs cf">
+							<label>
+								<input type="radio" class="rr-input-radio" name="fixed" value="0" data-required />
+								<span class="rr-radio-tab rr-input-radio-three rr-left-border">Yes</span>
+							</label>
+							<label>
+								<input type="radio" class="rr-input-radio" name="fixed" value="1" data-required />
+								<span class="rr-radio-tab rr-input-radio-three">No</span>
+							</label>
+							<label>
+								<input type="radio" class="rr-input-radio" name="fixed" value="2" data-required />
+								<span class="rr-radio-tab rr-input-radio-three rr-right-border">Not sure</span>
+							</label>
+						</div>
+						<small class="rr-small">
+							Pet weight in pounds (lbs)
+						</small>
 					</div>
+					<!-- <hr class="rr-hr" />
+					<label class="rr-label">
+						<span class="rr-optional">
+							Description
+						</span>
+						<textarea class="rr-textarea"></textarea>
+						<small class="rr-small">
+							What is your pet like: easy-going, anxious, high-energy, housebroken, etc.
+						</small>
+					</label> -->
 				</div>
-				<hr class="rr-hr" />
-				<label class="rr-label">
-					Breed
-					<input type="text" class="rr-input" data-required />
-				</label>
-				<hr class="rr-hr" />
-				<div class="rr-label">
-					Weight
-					<div class="rr-radio-tabs cf">
-						<label>
-							<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
-							<span class="rr-radio-tab rr-left-border">1-20</span>
-						</label>
-						<label>
-							<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
-							<span class="rr-radio-tab">1-20</span>
-						</label>
-						<label>
-							<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
-							<span class="rr-radio-tab">1-20</span>
-						</label>
-						<label>
-							<input type="radio" class="rr-input-radio" name="weight" value="0" data-required />
-							<span class="rr-radio-tab rr-right-border">1-20</span>
-						</label>
-					</div>
-					<small class="rr-small">
-						Pet weight in pounds (lbs)
-					</small>
-				</div>
-				<hr class="rr-hr" />
-				<div class="rr-label">
-					Is your pet fixed (spayed or neutered)?
-					<div class="rr-radio-tabs cf">
-						<label>
-							<input type="radio" class="rr-input-radio" name="fixed" value="0" data-required />
-							<span class="rr-radio-tab rr-input-radio-three rr-left-border">Yes</span>
-						</label>
-						<label>
-							<input type="radio" class="rr-input-radio" name="fixed" value="1" data-required />
-							<span class="rr-radio-tab rr-input-radio-three">No</span>
-						</label>
-						<label>
-							<input type="radio" class="rr-input-radio" name="fixed" value="2" data-required />
-							<span class="rr-radio-tab rr-input-radio-three rr-right-border">Not sure</span>
-						</label>
-					</div>
-					<small class="rr-small">
-						Pet weight in pounds (lbs)
-					</small>
-				</div>
-				<!-- <hr class="rr-hr" />
-				<label class="rr-label">
-					<span class="rr-optional">
-						Description
-					</span>
-					<textarea class="rr-textarea"></textarea>
-					<small class="rr-small">
-						What is your pet like: easy-going, anxious, high-energy, housebroken, etc.
-					</small>
-				</label> -->
-			</div>
-			<!--/ card -->
+				<!--/ card -->
 
-			<!-- card -->
-			<div class="rr-card cf">
-				<h2 data-step="3" class="rr-header">
-					Drop-off &amp; Pick-up
-				</h2>
-				<h3 class="rr-faux-label rr-optional">
-					Preferred times
-				</h3>
-				<div class="rr-half">
-					<select class="rr-select rr-left-border" data-required>
-						<option value="">-- drop-off -- </option>
-						<option value="1">I&rsquo;m flexible</option>
-					</select>
+				<!-- card -->
+				<div class="rr-card cf">
+					<h2 data-step="3" class="rr-header">
+						Drop-off &amp; Pick-up
+					</h2>
+					<h3 class="rr-faux-label rr-optional">
+						Preferred times
+					</h3>
+					<div class="rr-half">
+						<select class="rr-select rr-left-border" data-required>
+							<option value="">-- drop-off -- </option>
+							<option value="1">I&rsquo;m flexible</option>
+						</select>
+					</div>
+					<div class="rr-half">
+						<select class="rr-select rr-right-border" data-required>
+							<option value="">-- pick-off -- </option>
+							<option value="1">I&rsquo;m flexible</option>
+						</select>
+					</div>
 				</div>
-				<div class="rr-half">
-					<select class="rr-select rr-right-border" data-required>
-						<option value="">-- pick-off -- </option>
-						<option value="1">I&rsquo;m flexible</option>
-					</select>
-				</div>
-			</div>
-			<!--/ card -->
+				<!--/ card -->
 
-			<!-- card -->
-			<div class="rr-card">
-				<h2 data-step="4" class="rr-header">
-					Payment Information
-				</h2>
-				<div class="rr-warning rr-card-neg-margin rr-padding">
-					Reminder: you will not be charged until Shelly confirms your reservation.
+				<!-- card -->
+				<div class="rr-card">
+					<h2 data-step="4" class="rr-header">
+						Payment Information
+					</h2>
+					<div class="rr-warning rr-card-neg-margin rr-padding">
+						Reminder: you will not be charged until Shelly confirms your reservation.
+					</div>
+					<hr class="rr-hr" />
+					<label>
+						<input type="radio" class="rr-input-radio" name="payment_type" value="0" />
+						<span class="rr-radio">PayPal</span>
+					</label>
+					<hr class="rr-hr" />
+					<label>
+						<input type="radio" class="rr-input-radio" checked name="payment_type" value="1" />
+						<span class="rr-radio">Credit/Debit Card</span>
+					</label>
+					<!-- <label class="rr-label">
+						Full Name
+						<input type="text" class="rr-input" />
+					</label>
+					<hr class="rr-hr" />
+					<label class="rr-label rr-label-top">
+						Phone Number
+						<input type="email" class="rr-input" />
+						<small class="rr-small">
+							This helps your Shelly contact you easier.
+						</small>
+					</label> -->
 				</div>
-				<hr class="rr-hr" />
-				<label>
-					<input type="radio" class="rr-input-radio" name="payment_type" value="0" />
-					<span class="rr-radio">PayPal</span>
-				</label>
-				<hr class="rr-hr" />
-				<label>
-					<input type="radio" class="rr-input-radio" checked name="payment_type" value="1" />
-					<span class="rr-radio">Credit/Debit Card</span>
-				</label>
-				<!-- <label class="rr-label">
-					Full Name
-					<input type="text" class="rr-input" />
-				</label>
-				<hr class="rr-hr" />
-				<label class="rr-label rr-label-top">
-					Phone Number
-					<input type="email" class="rr-input" />
-					<small class="rr-small">
-						This helps your Shelly contact you easier.
-					</small>
-				</label> -->
-			</div>
-			<!--/ card -->
+				<!--/ card -->
 
-			<!-- card -->
-			<div class="rr-card rr-host-card">
-				<h2 data-step="5" class="rr-header">
-					Host card
-				</h2>
+				<!-- card -->
+				<div class="rr-card rr-host-card">
+					<h2 data-step="5" class="rr-header">
+						Host card
+					</h2>
+				</div>
+				<!--/ card -->
+
 			</div>
-			<!--/ card -->
 
 			<div class="rr-card rr-last-card">
 				<button class="rr-button">Send Request</button>

@@ -23,61 +23,77 @@ getUrlParameter('sid') === '711' && getUrlParameter('cid') === '009' && getUrlPa
 getUrlParameter('sid') === '711' && getUrlParameter('cid') === '010' && getUrlParameter('aid') === '001' ? true : false;
 
 if(fromFBAd) {
-    $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FBWALK20</span>');
-    $('body').addClass('has-promo-code');
+    // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FBWALK20</span>');
+    // $('body').addClass('has-promo-code');
     document.cookie = 'dv_ondemand_walking_promo=fb; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo_code=FBWALK20; expires=; path=/';
     adjustCTAForCoupon();
 }
 
 // email walk code
-var fromEmail = getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1577' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1578' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1579' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1580' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1581' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1582' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1583' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1584' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1585' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1586' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1585' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1592' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1593' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1594' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1595'  ? true : false;
+var fromEmail = getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1577' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1578' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1579' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1580' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1581' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1582' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1583' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1584' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1585' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1586' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1585' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1592' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1593' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1594' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1595'  ? true : false;
 
 if(fromEmail) {
-    $('h1', '#dv-cta-wrapper').html('Free walk with code <span>DVWALK20</span>');
-    $('body').addClass('has-promo-code');
+    // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>DVWALK20</span>');
+    // $('body').addClass('has-promo-code');
     document.cookie = 'dv_ondemand_walking_promo=email; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo_code=DVWALK20; expires=; path=/';
     adjustCTAForCoupon();
 }
 
-var fromEmail2 = getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1599' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1600' ||
-getUrlParameter('utm_sid') === '300' && getUrlParameter('utm_cid') === '004' && getUrlParameter('utm_aid') === '1601'  ? true : false;
+var fromEmail2 = getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1599' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1600' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1601' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1610' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1611'  ? true : false;
 
 if(fromEmail2) {
-    $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FIRSTWALK</span>');
-    $('body').addClass('has-promo-code');
+    // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FIRSTWALK</span>');
+    // $('body').addClass('has-promo-code');
     document.cookie = 'dv_ondemand_walking_promo=email2; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo_code=FIRSTWALK; expires=; path=/';
     adjustCTAForCoupon();
 }
 
-var fromUnbouce = getUrlParameter('ubc') === '310' ? true : false;
+var fromUnbouce = getUrlParameter('ubc') === '310' || getUrlParameter('ubc') === 'G314' || getUrlParameter('ubc') === 'FB314' ? true : false;
 
 if(fromUnbouce) {
-    $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FIRSTWALK</span>');
-    $('body').addClass('has-promo-code');
+    // var code = 'FIRSTWALK';
+    // if(getUrlParameter('ubc') === 'G314') code = 'GWALK20';
+    // if(getUrlParameter('ubc') === 'FB314') code = 'FBWALK20';
+    // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>' + code + '</span>');
+    // $('body').addClass('has-promo-code');
     document.cookie = 'dv_ondemand_walking_promo=unbounce; expires=; path=/';
+    if(getUrlParameter('ubc') === 'G314') {
+        document.cookie = 'dv_ondemand_walking_promo_code=GWALK20; expires=; path=/';
+    } else if(getUrlParameter('ubc') === 'FB314') {
+        document.cookie = 'dv_ondemand_walking_promo_code=FBWALK20; expires=; path=/';
+    } else {
+        document.cookie = 'dv_ondemand_walking_promo_code=FIRSTWALK; expires=; path=/';
+    }
     adjustCTAForCoupon();
 }
 
 // SEM walk code
 if(getUrlParameter('sid') === '066' && getUrlParameter('cid') === '001' && getUrlParameter('aid') === '001') {
-    $('h1', '#dv-cta-wrapper').html('Free walk with code <span>GWALK20</span>');
-    $('body').addClass('has-promo-code');
+    // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>GWALK20</span>');
+    // $('body').addClass('has-promo-code');
     document.cookie = 'dv_ondemand_walking_promo=sem; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo_code=GWALK20; expires=; path=/';
     adjustCTAForCoupon();
 }
 
