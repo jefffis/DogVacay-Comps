@@ -1,10 +1,12 @@
 $(function() {
-	var scrollPos;
+	var scrollPos,
+		narrow = $(window).innerWidth < 600;
 	$('#dv-floating-button').on('click', function() {
-		$(this).hide();
+		if(narrow) $(this).hide();
+		$(this).blur();
 		$('#dv-list').addClass('shown');
 		scrollPos = $(window).scrollTop();
-		hideUi();
+		if(narrow) hideUi();
 	});
 	$('span', '#dv-list').on('click', function() {
 		if($(this).hasClass('active')) return;
@@ -18,13 +20,13 @@ $(function() {
 		$('span', '#dv-list').removeClass('active');
 		$(this).addClass('active');
 		$('html').removeAttr('class').addClass($(this).attr('class'));
-		$('#dv-list').removeClass('rel');
-		$('.hidable').show();
+		if(narrow) $('#dv-list').removeClass('rel');
+		if(narrow) $('.hidable').show();
 		showUi();
 	});
 	$('.close', '#dv-list').on('click', function() {
-		$('#dv-list').removeClass('rel');
-		$('.hidable').show();
+		if(narrow) $('#dv-list').removeClass('rel');
+		if(narrow) $('.hidable').show();
 		showUi();
 	});
 	function hideUi() {
@@ -35,13 +37,13 @@ $(function() {
 		}, 251);
 	}
 	function showUi() {
-		$('body').removeClass('list-shown');
+		if(narrow) $('body').removeClass('list-shown');
 		setTimeout(function() {
 			window.scroll(0, scrollPos);
 			$('#dv-list').removeClass('shown');
 		}, 0);
 		setTimeout(function() {
-			$('#dv-floating-button').show();
+			if(narrow) $('#dv-floating-button').show();
 		}, 251);
 	}
 });
