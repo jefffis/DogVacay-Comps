@@ -108,6 +108,9 @@ html:before {
 .source-sans {
   font-family: 'Source Sans Pro', 'Helvetca Neue', Arial, sans-serif;
 }
+.lato {
+  font-family: 'Lato', 'Helvetca Neue', Arial, sans-serif;
+}
 .system {
 	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
