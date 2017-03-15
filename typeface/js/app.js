@@ -12,6 +12,8 @@ $(function() {
 	$('span', '#dv-list').on('click', function() {
 		if($(this).hasClass('active')) return;
 
+		var thisName = $(this).text();
+
 		if($(this).hasClass('close')) {
 			$('#dv-list').removeClass('shown');
 			$('#dv-floating-button').show();
@@ -20,7 +22,7 @@ $(function() {
 		
 		$('span', '#dv-list').removeClass('active');
 		$(this).addClass('active');
-		$('html').removeAttr('class').addClass($(this).attr('class'));
+		$('html').removeAttr('class').addClass($(this).attr('class')).attr('data-typeface', thisName);
 		if(narrow) $('#dv-list').removeClass('rel');
 		if(narrow) $('.hidable').show();
 		showUi();
