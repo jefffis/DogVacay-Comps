@@ -98,13 +98,19 @@ html {
 	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body {
-	max-width: 600px;
+	max-width: 800px;
 	/*margin: auto;*/
 	padding: 1.5rem;
 }
 
 a {
 	color: #0f748c;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  opacity: .65;
 }
 
 header {
@@ -174,6 +180,7 @@ hr {
 }
 
 .dv-card {
+  max-width: 500px;
 	margin: 0 -1.5rem;
 	padding: 2rem 1rem 0;
 	border-top: 8px solid #efefef;
@@ -252,7 +259,14 @@ form {
 label {
   display: block;
   font-size: 15px;
-  /*font-weight: bold;*/
+  font-weight: bold;
+}
+label small {
+  display: block;
+  margin-top: 3px;
+  color: #777;
+  font-size: 13px;
+  font-weight: normal;
 }
 input {
   display: block;
@@ -411,6 +425,7 @@ button:active {
   }
   .dv-card {
     margin: 0;
+    padding: 1.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
@@ -419,7 +434,10 @@ button:active {
   }
   .dv-card:last-of-type {
     /*margin-bottom: 2rem;*/
-    border-bottom-width: 1px;
+    border-bottom: 1px solid #ccc;
+  }
+  .dv-tags {
+    margin-bottom: -1rem;
   }
   #dv-list {
     /*display: none;*/

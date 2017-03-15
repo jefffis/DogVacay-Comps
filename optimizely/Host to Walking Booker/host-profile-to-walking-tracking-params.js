@@ -25,8 +25,8 @@ getUrlParameter('sid') === '711' && getUrlParameter('cid') === '010' && getUrlPa
 if(fromFBAd) {
     // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FBWALK20</span>');
     // $('body').addClass('has-promo-code');
-    document.cookie = 'dv_ondemand_walking_promo=fb; expires=; path=/';
-    document.cookie = 'dv_ondemand_walking_promo_code=FBWALK20; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo=fb; expires=; domain=.dogvacay.com; path=/';
+    document.cookie = 'dv_ondemand_walking_promo_code=FBWALK20; expires=; domain=.dogvacay.com; path=/';
     adjustCTAForCoupon();
 }
 
@@ -50,8 +50,8 @@ getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlPa
 if(fromEmail) {
     // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>DVWALK20</span>');
     // $('body').addClass('has-promo-code');
-    document.cookie = 'dv_ondemand_walking_promo=email; expires=; path=/';
-    document.cookie = 'dv_ondemand_walking_promo_code=DVWALK20; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo=email; expires=; domain=.dogvacay.com; path=/';
+    document.cookie = 'dv_ondemand_walking_promo_code=DVWALK20; expires=; domain=.dogvacay.com; path=/';
     adjustCTAForCoupon();
 }
 
@@ -59,13 +59,15 @@ var fromEmail2 = getUrlParameter('sid') === '300' && getUrlParameter('cid') === 
 getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1600' ||
 getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1601' ||
 getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1610' ||
-getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1611'  ? true : false;
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1611' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1612' ||
+getUrlParameter('sid') === '300' && getUrlParameter('cid') === '004' && getUrlParameter('aid') === '1613'  ? true : false;
 
 if(fromEmail2) {
     // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>FIRSTWALK</span>');
     // $('body').addClass('has-promo-code');
-    document.cookie = 'dv_ondemand_walking_promo=email2; expires=; path=/';
-    document.cookie = 'dv_ondemand_walking_promo_code=FIRSTWALK; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo=email2; expires=; domain=.dogvacay.com; path=/';
+    document.cookie = 'dv_ondemand_walking_promo_code=FIRSTWALK; expires=; domain=.dogvacay.com; path=/';
     adjustCTAForCoupon();
 }
 
@@ -77,13 +79,13 @@ if(fromUnbouce) {
     // if(getUrlParameter('ubc') === 'FB314') code = 'FBWALK20';
     // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>' + code + '</span>');
     // $('body').addClass('has-promo-code');
-    document.cookie = 'dv_ondemand_walking_promo=unbounce; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo=unbounce; expires=; domain=.dogvacay.com; path=/';
     if(getUrlParameter('ubc') === 'G314') {
-        document.cookie = 'dv_ondemand_walking_promo_code=GWALK20; expires=; path=/';
+        document.cookie = 'dv_ondemand_walking_promo_code=GWALK20; expires=; domain=.dogvacay.com; path=/';
     } else if(getUrlParameter('ubc') === 'FB314') {
-        document.cookie = 'dv_ondemand_walking_promo_code=FBWALK20; expires=; path=/';
+        document.cookie = 'dv_ondemand_walking_promo_code=FBWALK20; expires=; domain=.dogvacay.com; path=/';
     } else {
-        document.cookie = 'dv_ondemand_walking_promo_code=FIRSTWALK; expires=; path=/';
+        document.cookie = 'dv_ondemand_walking_promo_code=FIRSTWALK; expires=; domain=.dogvacay.com; path=/';
     }
     adjustCTAForCoupon();
 }
@@ -92,8 +94,8 @@ if(fromUnbouce) {
 if(getUrlParameter('sid') === '066' && getUrlParameter('cid') === '001' && getUrlParameter('aid') === '001') {
     // $('h1', '#dv-cta-wrapper').html('Free walk with code <span>GWALK20</span>');
     // $('body').addClass('has-promo-code');
-    document.cookie = 'dv_ondemand_walking_promo=sem; expires=; path=/';
-    document.cookie = 'dv_ondemand_walking_promo_code=GWALK20; expires=; path=/';
+    document.cookie = 'dv_ondemand_walking_promo=sem; expires=; domain=.dogvacay.com; path=/';
+    document.cookie = 'dv_ondemand_walking_promo_code=GWALK20; expires=; domain=.dogvacay.com; path=/';
     adjustCTAForCoupon();
 }
 
