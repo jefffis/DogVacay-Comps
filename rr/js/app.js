@@ -97,7 +97,7 @@ $(function(){
 
 		var msg = el.data('validation') !== undefined ? el.data('validation') : 'Please enter a value.';
 
-		el.find('small.error').remove();
+		el.next('small.error').remove();
 		el.addClass('bad').removeClass('good');
 		el.after('<small class="rr-small error">' + msg + '</small>');
 	}

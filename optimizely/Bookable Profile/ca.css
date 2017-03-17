@@ -7,11 +7,10 @@
 #dv-checkable.complete:before {
 	top: 2px;
 	left: 20px;
-	background: url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/checkmark-24-128.png) no-repeat center;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAaCAMAAADsW95KAAABLFBMVEUAAAD///+AgIBVVVVAgIArVVVAYGA5VVUuXV07Tk4wUFAtS0srVVU2UVEzTU0uUVEsTk4xTk4uUlIxSlItS0ssUFArTk4uTk4tSk8rSlAvTk4tS0srTEwuS0srS04uTEwtS0srS0srSk4tTEwtSk0tSU0rTEwsSk0rS0sqTEwsS04rSk0rS0srS00rSUwsSk0rSkwsS00rS00rSUssSkwqSUsrSkwrSkwrS0wrSkwqSUwrSkwrSkwqSksqSkwqSksrSUwqSksrSkwqSkwrSUwrSksrSkwrSksqSUwqSUwrSksqSUwrSUwrSUwrSUsrSksqSksrSUwqSUwrSksrSkwrSUwqSkwrSkwqSUsqSkwrSUwrSUsqSUsqSUsrSkwrSUsrSkwqSkwqSUsqSUuERizbAAAAY3RSTlMAAQIDBAYICQsNEBESExQWFxocHyIjJCctMDEzNj1BQ0RHSEpPUFRWWFtcZGZqbG5ye4KEhouNlJqbnaGoqa+wsru9wsPFyczNztLU2Nvc3eDi5efo6evv8fLz9Pf4+fr8/f6GlcwcAAAA80lEQVR4AYXT5VpCQRjE8UEEBTvE7g5EERW7u8EOBeb+70EB53DQs8vv4/v899M+A7ux9IoPFc1myM0AKlhk3l4INlWrLDqph1lgizINo9A+ZaMaJs1nlGUfTDquFeUWYNRzr+prBo7RRC3cBl9UvQ3DEc3yuBElk5+qHvvgiPPHZRtkPqvqthPiT7Ig1YWiJcp5CxwxHZ/6C6/WKAdhlETudH4fB4I7lO0g3Fov+CszFz6kJP0oV3dESVHi+Kdml39ko/DgX2eZjwl4S9DleQAmsRwl3Q2zKf3QVTtshl6Zd9oEu94H7cMucqO12TWM+ODtG8sYcubjM866AAAAAElFTkSuQmCC) no-repeat center;
 	background-size: 100%;
 	height: 18px;
 	width: 18px;
-	opacity: .25;
 	content: "";
 }
 #dv-checkable-buttons {

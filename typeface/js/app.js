@@ -10,22 +10,24 @@ $(function() {
 		if(narrow) hideUi();
 	});
 	$('span', '#dv-list').on('click', function() {
-		if($(this).hasClass('active')) return;
+		if($(this).hasClass('active') && !$('#dv-list').hasClass('shown')) {
+			$('#dv-list').addClass('shown');
+		}else{
+			var thisName = $(this).text();
 
-		var thisName = $(this).text();
-
-		if($(this).hasClass('close')) {
-			$('#dv-list').removeClass('shown');
-			$('#dv-floating-button').show();
-			return;
+			if($(this).hasClass('close')) {
+				$('#dv-list').removeClass('shown');
+				$('#dv-floating-button').show();
+				return;
+			}
+			
+			$('span', '#dv-list').removeClass('active');
+			$(this).addClass('active');
+			$('html').removeAttr('class').addClass($(this).attr('class')).attr('data-typeface', thisName);
+			if(narrow) $('#dv-list').removeClass('rel');
+			if(narrow) $('.hidable').show();
+			showUi();
 		}
-		
-		$('span', '#dv-list').removeClass('active');
-		$(this).addClass('active');
-		$('html').removeAttr('class').addClass($(this).attr('class')).attr('data-typeface', thisName);
-		if(narrow) $('#dv-list').removeClass('rel');
-		if(narrow) $('.hidable').show();
-		showUi();
 	});
 	$('.close', '#dv-list').on('click', function() {
 		if(narrow) $('#dv-list').removeClass('rel');

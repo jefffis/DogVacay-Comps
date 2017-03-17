@@ -27,7 +27,7 @@
 :root{
 
 	--system: -apple-system, BlinkMacSystemFont, sans-serif;
-	--sans-serif: '_Intro', 'Ubuntu', 'Helvetica Neue', sans-serif;
+	--sans-serif: 'Intro', 'Helvetica Neue', sans-serif;
 
 	--white0: rgba(255, 255, 255, 0);
 	--white100: rgba(255, 255, 255, 1);
@@ -50,7 +50,15 @@
 
 	--error: #CC240C;
 
-	--padding: 15px;
+	--padding: 20px;
+	--inputMargin: 6px;
+
+	--header: 35px;
+	--subheader: 24px;
+	--terheader: 18px;
+	--body: 16px;
+	--label: 15px;
+	--micro: 13px;
 }
 * {
 	margin: 0;
@@ -60,11 +68,11 @@
 }
 html {
 	color: var(--darkgrey);
-	font: normal 100%/1.5 var(--sans-serif);
+	font: normal var(--body)/1.5 var(--sans-serif);
 }
 
 .rr-hr {
-	height: 1rem;
+	height: 25px;
 	clear: both;
 }
 
@@ -125,12 +133,12 @@ header a {
 }
 .rr-header {
 	position: relative;
-	margin: 0 0 15px;
-	padding-left: 2rem;
-	font-size: 18px;
-	color: var(--primary);
+	margin-bottom: var(--padding);
+	/*padding-left: 2rem;*/
+	font-size: var(--subheader);
+	/*color: var(--primary);*/
 }
-.rr-header:before,
+/*.rr-header:before,
 .rr-header:after {
 	display: block;
 	position: absolute;
@@ -138,27 +146,26 @@ header a {
 	left: 0;
 	height: 1.5rem;
 	width: 1.5rem;
-	content: "";
-}
+	content: attr(data-step);
+}*/
 
-.rr-header:before {
+/*.rr-header:before {
 	z-index: 1;
 	background: var(--primary);
 	border-radius: 100%;
-}
-.rr-header:after {
-	/*top: 0;*/
+}*/
+/*.rr-header:after {
 	z-index: 2;
 	color: white;
 	content: attr(data-step);
 	font-size: .95em;
 	text-align: center;
-}
+}*/
 
 .rr-label {
 	display: block;
 	position: relative;
-	font-size: 15px;
+	font-size: var(--label);
 	font-weight: bold;
 }
 /*.rr-label-top {
@@ -224,7 +231,7 @@ header a {
 	border-radius: 0 4px 4px 0;
 }
 .rr-faux-input {
-	margin-top: 2px;
+	margin-top: var(--inputMargin);
 	border: 1px solid #ccc;
 	border-radius: 0 4px 4px 0;
 	box-shadow: 0 3px 0 #efefef inset;
@@ -232,7 +239,7 @@ header a {
 
 .rr-faux-label {
 	margin: 0;
-	font-size: 15px;
+	font-size: var(--label);
 	font-weight: bold;
 }
 
@@ -244,7 +251,7 @@ header a {
 	width: 100%;
 	outline: none;
 	background: white;
-	margin-top: 2px;
+	margin-top: var(--inputMargin);
 	padding: .75rem;
 	border: 1px solid var(--border);
 	border-radius: 4px;
@@ -285,11 +292,12 @@ header a {
 	right: 0;
 	color: var(--lightgreyText);
 	content: "Optional";
-	font-size: 13px;
+	font-size: var(--micro);
 	font-weight: normal;
 }
 
 .rr-radio-tabs {
+	margin-top: var(--inputMargin);
 	text-align: center;
 }
 .rr-radio-tabs label:nth-child(n+2) .rr-radio-tab {
@@ -306,6 +314,7 @@ header a {
 	width: 25%;
 	padding: .25rem .25rem;
 	border: 1px solid #ccc;
+	box-shadow: 0 2px 0 #efefef;
 	font-family: var(--system);
 	font-weight: normal;
 }
@@ -361,9 +370,9 @@ header a {
 .rr-small {
 	display: block;
 	clear: both;
-	margin-top: 4px;
+	margin-top: calc(var(--inputMargin) + 1px);
 	color: var(--lightgreyText);
-	font-size: 13px;
+	font-size: var(--micro);
 	font-weight: normal;
 	line-height: 1.2;
 }
@@ -379,28 +388,29 @@ header a {
 	padding: .75rem 0;
 	border-radius: 4px;
 	color: white;
-	font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
 }
 
 form {
 	max-width: 400px;
-	margin: auto;
+	/*margin: auto;*/
 }
 
-@media screen and (min-width: 375px) and (max-width: 500px) {
+/*@media screen and (min-width: 375px) and (max-width: 500px) {
 
 	.rr-card {
 		padding: calc(var(--padding) * 2);
 	}
 
-}
+}*/
 
-@media screen and (min-width: 650px) and (orientation: portrait) {
+@media screen and (min-width: 650px) {
 	form {
-		max-width: 350px;
+		/*max-width: 350px;*/
 		float: left;
+		padding: 1.5rem;
 	}
 	.rr-card {
 		padding-bottom: calc(var(--padding) * 3);
