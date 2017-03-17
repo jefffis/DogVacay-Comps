@@ -61,6 +61,8 @@
 	--body: 16px;
 	--label: 15px;
 	--micro: 13px;
+
+	--labelWeight: 500;
 }
 * {
 	margin: 0;
@@ -168,7 +170,7 @@ header a {
 	display: block;
 	position: relative;
 	font-size: var(--label);
-	font-weight: bold;
+	font-weight: var(--labelWeight);
 }
 /*.rr-label-top {
 	margin-top: 1rem;
@@ -242,7 +244,7 @@ header a {
 .rr-faux-label {
 	margin: 0;
 	font-size: var(--label);
-	font-weight: bold;
+	font-weight: var(--labelWeight);
 }
 
 .rr-input,
