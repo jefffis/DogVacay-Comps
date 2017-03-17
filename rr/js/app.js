@@ -42,6 +42,10 @@ $(function(){
 		$(this).parents('.rr-faux-input').removeClass('focussed');
 	});
 
+	$('.rr-textarea').on('keyup', function() {
+		textAreaAdjust(this);
+	});
+
 	$('form').on('submit', function(e){
 		var valid = false,
 			bothInvalid = false;
@@ -100,6 +104,11 @@ $(function(){
 		el.next('small.error').remove();
 		el.addClass('bad').removeClass('good');
 		el.after('<small class="rr-small error">' + msg + '</small>');
+	}
+
+	function textAreaAdjust(o) {
+		o.style.height = "1px";
+		o.style.height = (1+o.scrollHeight)+"px";
 	}
 
 });
