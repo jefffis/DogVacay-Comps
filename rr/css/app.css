@@ -27,7 +27,7 @@
 :root{
 
 	--system: -apple-system, BlinkMacSystemFont, sans-serif;
-	--sans-serif: 'Intro', 'Helvetica Neue', sans-serif;
+	--sans-serif: '_Intro', 'Helvetica Neue', sans-serif;
 
 	--white0: rgba(255, 255, 255, 0);
 	--white100: rgba(255, 255, 255, 1);
@@ -38,6 +38,7 @@
 
 	--border: #ccc;
 
+	--uberLight: #F5F5F5;
 	--lightgrey: #E8E5E0;
 	--lightgreyText: #777;
 	--primary: #69bbc0;
@@ -51,7 +52,8 @@
 	--error: #CC240C;
 
 	--padding: 20px;
-	--inputMargin: 6px;
+	--inputMargin: 7px;
+	--inputMarginTop: calc(var(--inputMargin) - 3px);
 
 	--header: 35px;
 	--subheader: 24px;
@@ -231,10 +233,10 @@ header a {
 	border-radius: 0 4px 4px 0;
 }
 .rr-faux-input {
-	margin-top: var(--inputMargin);
+	margin-top: var(--inputMarginTop);
 	border: 1px solid #ccc;
 	border-radius: 0 4px 4px 0;
-	box-shadow: 0 3px 0 #efefef inset;
+	box-shadow: 0 3px 0 var(--uberLight) inset;
 }
 
 .rr-faux-label {
@@ -251,11 +253,11 @@ header a {
 	width: 100%;
 	outline: none;
 	background: white;
-	margin-top: var(--inputMargin);
+	margin-top: var(--inputMarginTop);
 	padding: .75rem;
 	border: 1px solid var(--border);
 	border-radius: 4px;
-	box-shadow: 0 3px 0 #efefef inset;
+	box-shadow: 0 3px 0 var(--uberLight) inset;
 	font-family: var(--system);
 	font-size: 16px;
 	-webkit-appearance: none;
@@ -297,7 +299,7 @@ header a {
 }
 
 .rr-radio-tabs {
-	margin-top: var(--inputMargin);
+	margin-top: var(--inputMarginTop);
 	text-align: center;
 }
 .rr-radio-tabs label:nth-child(n+2) .rr-radio-tab {
@@ -312,19 +314,23 @@ header a {
 	position: relative;
 	float: left;
 	width: 25%;
-	padding: .25rem .25rem;
+	padding: .3rem 0;
 	border: 1px solid #ccc;
-	box-shadow: 0 2px 0 #efefef;
+	box-shadow: 0 2px 0 var(--uberLight);
+	cursor: pointer;
 	font-family: var(--system);
 	font-weight: normal;
 }
+/*.rr-radio-tab:active {
+	-webkit-tap-highlight-color: red;
+}*/
 .rr-input-radio-three {
 	width: 33.3%;
 }
 .rr-input-radio:checked + .rr-radio-tab {
 	z-index: 1;
 	border-color: var(--primary);
-	box-shadow: 0 0 0 1px var(--primary) inset;
+	box-shadow: 0 0 0 1px var(--primary) inset, 0 2px 0 var(--uberLight);
 	font-weight: bold;
 }
 .rr-left-border {
@@ -370,7 +376,7 @@ header a {
 .rr-small {
 	display: block;
 	clear: both;
-	margin-top: calc(var(--inputMargin) + 1px);
+	margin-top: var(--inputMargin);
 	color: var(--lightgreyText);
 	font-size: var(--micro);
 	font-weight: normal;
@@ -388,9 +394,11 @@ header a {
 	padding: .75rem 0;
 	border-radius: 4px;
 	color: white;
-	font-family: 'Helvetica Neue', sans-serif;
+	cursor: pointer;
+	font-family: inherit;
 	font-size: 20px;
 	font-weight: bold;
+	line-height: 1.5;
 }
 
 form {
@@ -410,10 +418,11 @@ form {
 	form {
 		/*max-width: 350px;*/
 		float: left;
-		padding: 1.5rem;
 	}
 	.rr-card {
 		padding-bottom: calc(var(--padding) * 3);
+		padding-left: calc(var(--padding) * 2);
+		padding-right: 0;
 		border-bottom: 1px solid var(--lightgrey);
 	}
 	.rr-card:nth-child(n+2) {
