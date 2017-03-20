@@ -1,10 +1,31 @@
-var q1 = '<div class="dv-form-label dv-textarea-label">Tell guests about yourself</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-1" required="" data-title="About me"></textarea><small class="dv-microcopy-opt">Employment, pet care experience, your pets, other people in your home, etc. ' + minCharacters + '</small></div>',
-	q2 = '<div class="dv-form-label dv-textarea-label">Tell guests about your home &amp; the pet care services you offer</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-2" required="" data-title="About my home"></textarea><small class="dv-microcopy-opt">Apartment or home, outdoor space, safety and supervision, extra services and rates, etc. ' + minCharacters + '</small></div>',
-	q3 = '<div class="dv-form-label dv-textarea-label">Tell guests about your neighborhood</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-3" required="" data-title="About my neighborhood"></textarea><small class="dv-microcopy-opt">Nearby dog parks, river walks, busy streets, open land, etc. ' + minCharacters + '</small></div>',
-	q4 = '<div class="dv-form-label dv-textarea-label">What types of activities will a dog enjoy while staying with you?</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-4" required="" data-title="What to expect"></textarea><small class="dv-microcopy-opt">Cuddles, runs, long walks, where the dog will walk or play, etc. ' + minCharacters + '</small></div>',
-	q5 = '<div class="dv-form-label dv-textarea-label">Tell guests any special needs or preferences you have</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-5" required="" data-title="Special rules or requests"></textarea><small class="dv-microcopy-opt">Breed, size, behavioral limitations or needs, pick-up/drop-off instructions ' + minCharacters + '</small></div>',
+// Push optimizely variation data to internal tracking
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
+    }
+    return 0;
+}
+
+var dvPageName = "signup_host_listing_summary";
+var testName = "host_description_5_sections";
+var variantName = "test_host_description_5_sections";
+var pxlTrack = "/pxl/v1/3pd/opt?visitor_id=" + readCookie('visitorid') + "&user_id=" + readCookie('uid') + "&test_name=" + testName + "&variant_name=" + variantName + "&page_name=" + dvPageName;
+
+var img = new Image();  
+img.setAttribute("visibility", "hidden");
+img.setAttribute("position", "absolute");
+img.src = pxlTrack;
+
+var q1 = '<div class="dv-form-label dv-textarea-label">Tell guests about yourself</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-1" required="" data-title="About me"></textarea><small class="dv-microcopy-opt">Employment, pet care experience, your pets, other people in your home, etc. (min. 120 characters)</small></div>',
+	q2 = '<div class="dv-form-label dv-textarea-label">Tell guests about your home &amp; the pet care services you offer</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-2" required="" data-title="About my home/services"></textarea><small class="dv-microcopy-opt">Apartment or home, outdoor space, safety and supervision, extra services and rates, etc. (min. 120 characters)</small></div>',
+	q3 = '<div class="dv-form-label dv-textarea-label">Tell guests about your neighborhood</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-3" required="" data-title="About my neighborhood"></textarea><small class="dv-microcopy-opt">Nearby dog parks, river walks, busy streets, open land, etc. (min. 120 characters)</small></div>',
+	q4 = '<div class="dv-form-label dv-textarea-label">What types of activities will a dog enjoy while staying with you?</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-4" required="" data-title="What to expect"></textarea><small class="dv-microcopy-opt">Cuddles, runs, long walks, where the dog will walk or play, etc. (min. 120 characters)</small></div>',
+	q5 = '<div class="dv-form-label dv-textarea-label">Tell guests any special needs or preferences you have</div><div class="dv-input-field__input dv-tooltip-input dv-tooltip-input--bottom"><textarea style="height: auto;" class="dv-textarea dv-input" name="description-opt-5" required="" data-title="Special rules or requests"></textarea><small class="dv-microcopy-opt">Breed, size, behavioral limitations or needs, pick-up/drop-off instructions (min. 120 characters)</small></div>',
 	hr = '<div style="height: 15px;"></div>',
-	minCharacters = '(min. 120 characters)',
 	minCharacterLength = 120,
 	lsExists = window.localStorage ? true : false,
 	hasSeenUI = false;
@@ -12,17 +33,19 @@ var q1 = '<div class="dv-form-label dv-textarea-label">Tell guests about yoursel
 function setState() {
 	$('.dv-question-description', '#question-description').css('display', 'none');
 
-	// console.log($('.dv-textarea-label', 'body').length);
+	if(!localStorage.getItem('dv-description-optizations')) setApplicantBucket();
 
 	if($('.dv-textarea-label', 'body').length) return;
 
 	$('#question-description').append(q1 + hr + q2 + hr + q3 + hr + q4 + hr + q5);
 
-	// console.log($('.dv-textarea-label', 'body').length, hasSeenUI);
-
 	setTimeout(function() {
 		hasSeenUI = true;
 	}, 5000);
+}
+
+function setApplicantBucket() {
+	localStorage.setItem('dv-description-optizations', 1);
 }
 
 function setVal(el, name, val) {
@@ -30,8 +53,6 @@ function setVal(el, name, val) {
 
 	localStorage.setItem(name, val);
 	combineVals($('textarea.dv-textarea', 'body'));
-
-	// console.log('setVal fired');
 }
 function getVal(el, name) {
 	el.val(localStorage.getItem(name));
@@ -41,14 +62,21 @@ function getState(checkState) {
 		getVal($(this), $(this).attr('name'));
 		if(checkState) checkLength($(this), $(this).val());
 	});
-	// console.log('getState fired');
 }
 function updateState() {
-	$('body').on('blur', 'textarea.dv-textarea', function() {
+	$('textarea.dv-textarea', 'body').each(function() {
+		// console.log('scroll height: ' + $(this)[0].scrollHeight, 'height: ' + $(this).height());
+		if($(this)[0].scrollHeight <= 53) return;
+		$(this).height($(this)[0].scrollHeight - 12);
+	});
+	$('textarea.dv-textarea', 'body').blur(function() {
 		setVal($(this), $(this).attr('name'), $(this).val());
 		checkLength($(this), $(this).val());
 	});
-	// console.log('updateState fired');
+	$('textarea.dv-textarea', 'body').keyup(function() {
+		console.log('keyup');
+		textAreaAdjust(this);
+	});
 }
 function combineVals(el) {
 	description = '';
@@ -61,7 +89,6 @@ function combineVals(el) {
 
 		description += allContent;
 		$('textarea.dv-question-listing__input').val(description);
-		// console.log($('textarea.dv-question-listing__input').val());
 	});
 }
 function checkLength(el, val) {
@@ -83,9 +110,13 @@ function isSubmittable() {
 		$('.dv-button.dv-signup__save').removeClass('dv-disabled');
 	}
 }
+function textAreaAdjust(o) {
+	o.style.height = "1px";
+	o.style.height = (5+o.scrollHeight)+"px";
+}
 
 // set error CSS
-var css = '.dv-textarea-error { display: block; margin-top: -9px; color: #ec6350; } textarea.error { border-color: #ec6350; } .dv-microcopy-opt { display: block; margin-top: -4px; margin-bottom: 9px; color: #777; font-size: 14px; line-height: 1.3; }',
+var css = '.dv-textarea {min-height: 55px;}.dv-textarea-error { display: block; margin-top: -9px; color: #ec6350; } textarea.error { border-color: #ec6350; } .dv-microcopy-opt { display: block; margin-top: -4px; margin-bottom: 9px; color: #777; font-size: 14px; line-height: 1.3; }',
     head = document.head || document.getElementsByTagName('head')[0],
     style = document.createElement('style');
 
@@ -98,56 +129,46 @@ if (style.styleSheet){
 
 head.appendChild(style);
 
-$('.dv-button.dv-signup__save').on('click', function() {
+$('.dv-button.dv-signup__save').click(function() {
 	// if no localStorage then don't do this
-	if(!lsExists) return;
+	if(!lsExists || (window.location.pathname === '/account/profile' && !localStorage.getItem('dv-description-optizations'))) return;
 
 	setTimeout(function() {
 		setState();
-		getState(hasSeenUI);
+		getState(true);
 		updateState();
 	}, 0);
 });
 
 DV.Events.on('registration:page:save', function() {
 	// if no localStorage then don't do this
-	if(!lsExists) return;
+	if(!lsExists || (window.location.pathname === '/account/profile' && !localStorage.getItem('dv-description-optizations'))) return;
 
 	setTimeout(function() {
 		setState();
 		getState(hasSeenUI);
-		// console.log(hasSeenUI);
 		updateState();
 	}, 0);
 });
 
 // if SPA comes back to Description
-$(window).on('popstate', function() {
+$(window).bind('popstate', function() {
+	if(window.location.pathname === '/account/profile' && !localStorage.getItem('dv-description-optizations')) return;
+
 	if(window.location.hash !== '#/listing-description' || !lsExists) return;
 
-	setTimeout(function(){
+	setTimeout(function() {
 		setState();
 		getState(hasSeenUI);
-		// console.log(hasSeenUI);
 		updateState();
 	}, 0);
 });
 
-$('body').on('blur', 'textarea.dv-textarea', function() {
-	// if no localStorage then don't do this
-	if(!lsExists) return;
-
-	setVal($(this), $(this).attr('name'), $(this).val());
-	checkLength($(this), $(this).val());
-});
-
 setTimeout(function(){
 	// if no localStorage then don't do this
-	if(!lsExists) return;
+	if(!lsExists || (window.location.pathname === '/account/profile' && !localStorage.getItem('dv-description-optizations'))) return;
 
 	setState();
 	getState(hasSeenUI);
-	// console.log(hasSeenUI);
 	updateState();
-	console.log('THIS HAS STARTED, v11');
 }, 0);

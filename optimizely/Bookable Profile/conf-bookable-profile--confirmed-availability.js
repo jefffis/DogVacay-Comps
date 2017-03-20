@@ -98,7 +98,6 @@ var confirmForFriday = isThisWeek ? nextDayWithYear(5) : nextWeekWithYear(getNex
 	sunday = isThisWeek ? nextDayWithoutYear(5) : nextWeekWithoutYear(getNextSunday);
 
 function setConfirmedAvailability(startDateToConfirm, endDateToConfirm, confirmedStatus) {
-	// console.log(startDateToConfirm, endDateToConfirm, confirmedStatus);
 	setTimeout(function() {
 		$.ajax({
 			url: '/account/calendar/availability',
@@ -141,8 +140,8 @@ function readCookie(name) {
     return 0;
 }
 
-// var isPendingDashboard = window.location.pathname === '/account/dashboard' && $('.dv-panel-account-approval-status').length ? true : false,
-var isPendingDashboard = window.location.pathname === '/account/dashboard' ? true : false, // REVERT BACK TO ABOVE FOR LIVE
+var isPendingDashboard = window.location.pathname === '/account/dashboard' && $('.dv-panel-account-approval-status').length ? true : false,
+// var isPendingDashboard = window.location.pathname === '/account/dashboard' ? true : false, // REVERT BACK TO ABOVE FOR LIVE
 	isSignUpConf = window.location.pathname === '/signup/host' && window.location.hash === '#/confirmation' ? true : false,
 	isProfileConf = window.location.pathname === '/account/profile' && window.location.hash === '#/confirmation' ? true : false,
 	confHeaderText = isPendingDashboard ? 'Your profile is being reviewed now.' : 'Great job! Your profile is being reviewed now.',
@@ -165,6 +164,7 @@ function confUpdates(insertElement, isProfileConf) {
 	if(isProfileConf) $('#dv-header').next('div').hide();
 	$('.dv-registration').hide();
 	$('#dv-header').after(insertElement);
+	$('.dv-conf-next-steps:first').append(hasConfirmedAvailability ? nextStepsAfterConfirm : nextStepsBeforeConfirm);
 }
 
 function pendUpdates(insertElement, insertPendingElement) {
@@ -227,4 +227,4 @@ $(window).bind('popstate', function() {
 
 });
 
-console.log('this is running, v4');
+// console.log('this is running, v4');
