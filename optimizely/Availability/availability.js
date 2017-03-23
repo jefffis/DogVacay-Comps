@@ -89,4 +89,4 @@ $(window).bind('popstate', function() {
 	}, 0);
 });
 
-console.log('THIS IS RUNNING, v16');
+// console.log('THIS IS RUNNING, v16');

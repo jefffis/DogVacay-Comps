@@ -41,6 +41,11 @@ $('h3.grey').css({'float':'left','width':'250px'});
 $('#content > h3 > div > p').remove();
 $('.dashboardbluebox15').css({'padding':'0','font-size':'14px','border':'0','background':'none','box-shadow':'none'})
 
+$('#public-unlocked').remove();
+$('#unlocked-img').remove();
+$('#private-locked').remove();
+$('#locked-img').remove();
+
 $('[data-auto="review-rating-list"]').remove();
 $('br', 'label').remove();
 
@@ -96,4 +101,4 @@ $('button.submit').click(function() {
 	addPixel(submitPxl);
 });
 
-console.log('this is running, v7');
+//console.log('this is running, v7');

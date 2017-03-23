@@ -8,36 +8,6 @@ var couponCode = '<div id="dv-coupon">Use code <code id="dv-walk-code"></code> f
 	coupoCodeStyles = '#dv-coupon{padding:.5rem;text-align:center;background:#0f748c;color:#fff;font-size:16px}#dv-coupon code{text-transform:uppercase;font-weight:700;letter-spacing:1px;border-bottom:1px dotted;font-family:inherit}#dv-coupon small{color:#fff;font-size:11px;opacity:.75;display:block;max-width:320px;margin-left:auto;margin-right:auto}',
 	couponCodeText = '';
 
-// // FB walk code
-// if(getCook('dv_ondemand_walking_promo') === 'fb') {
-// 	couponCodeText = 'FBWALK20';
-// }
-
-// // SEM walk code
-// if(getCook('dv_ondemand_walking_promo') === 'sem') {
-// 	couponCodeText = 'GWALK20';
-// }
-
-// // email walk code
-// if(getCook('dv_ondemand_walking_promo') === 'email') {
-// 	couponCodeText = 'DVWALK20';
-// }
-
-// // email2 walk code
-// if(getCook('dv_ondemand_walking_promo') === 'email2') {
-// 	couponCodeText = 'FIRSTWALK';
-// }
-
-// // unbounce walk code
-// if(getCook('dv_ondemand_walking_promo') === 'unbounce') {
-// 	couponCodeText = 'FIRSTWALK';
-// }
-
-// // modal walk code
-// if(getCook('dv_ondemand_walking_promo') === 'modal') {
-// 	couponCodeText = 'WALK20';
-// }
-
 // if coupon exists
 if(getCook('dv_ondemand_walking_promo')) couponCodeText = getCook('dv_ondemand_walking_promo_code');
 
@@ -65,7 +35,7 @@ $('head').append('<style>' + styles + '</style>');
 $('head').append('<style>' + pikdayStyles + '</style>');
 $('.ck-textarea').attr('placeholder', 'Any notes or details you want to share about your dog(s) with your walker.');
 // main col
-$('.page-header').html('We&rsquo;re finding you a walker near you now');
+$('.page-header').html('We&rsquo;re finding you a walker now');
 $('.section-header', '[data-interaction-pet-view]').text('My Dogs');
 $('.section-header', '[data-interaction-message-view]').text('Walk Time & Dog Notes');
 $('.section-header').each(function(e) {

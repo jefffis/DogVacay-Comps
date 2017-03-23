@@ -1,0 +1,24 @@
+#search-filter-modal .dv-pet-budget-slider__slider__bar {
+	width: 100% !important;
+}
+#search-filter-modal .dv-column__slider {
+	padding-left: 0 !important;
+	padding-right: 5rem !important;
+}
+#search-filter-modal .dv-slider .noUi-connect {
+	background: #999 !important;
+	border: 0 !important;
+}
+#search-filter-modal .dv-pet-budget-slider .dv-slider .noUi-handle {
+	top: -12px !important;
+	border: 0 !important;
+	border-radius: 100% !important;
+}
+#search-filter-modal .noUi-origin.noUi-connect,
+#search-filter-modal .dv-column__slider-label--left {
+	display: none !important;
+}
+#search-filter-modal .dv-slider .noUi-target {
+	border: 0 !important;
+	border-radius: 2px !important;
+}

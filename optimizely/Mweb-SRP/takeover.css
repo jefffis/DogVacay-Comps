@@ -1,0 +1,90 @@
+.dv-hide-content > * {
+	display: none;
+}
+.dv-hide-content > #dv-takeover {
+	display: block;
+}
+#dv-takeover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10000;
+	background: url(https://s3.amazonaws.com/dogvacay-media/optimizely/beau.jpg) no-repeat center;
+	background-size: 100%;
+	padding: 2rem 1.5rem;
+}
+#dv-takeover.fade-out {
+	animation: fadeOut .35s ease-in-out;
+	top: -100vh;
+	/*left: -10vw;*/
+	opacity: 0;
+}
+#dv-takeover:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.45);
+	content: "";
+}
+#dv-takeover img {
+	display: block;
+	position: relative;
+	z-index: 1;
+	max-height: 30px;
+	margin: auto;
+}
+#dv-takeover-content {
+	position: relative;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+	color: white;
+	text-align: center;
+}
+#dv-takeover-content h1 {
+	font-size: 35px;
+	line-height: 1.2;
+}
+#dv-takeover-content p {
+	font-size: 13px;
+	font-weight: bold;
+}
+#dv-takeover-content button {
+	display: block;
+    position: relative;
+    width: 100%;
+    background: #EC6350;
+    margin: 1rem auto;
+    padding: .65rem 0;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+}
+#dv-takeover-content button:active {
+    background: #B13737;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		top: 0;
+		/*left: 0;*/
+	}
+	100% {
+		opacity: 0;
+		top: -100vh;
+		/*left: -10vw;*/
+	}
+}

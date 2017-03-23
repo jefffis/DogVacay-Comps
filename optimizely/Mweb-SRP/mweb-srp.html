@@ -1,0 +1,143 @@
+
+  <div class="dv-mweb-search-filter-modal__header">
+    <div class="dv-mweb-search-filter-modal__header__title">Search Filters</div>
+    <div class="dv-mweb-search-filter-modal__header__button">
+      <button class="dv-button dv-button--cta dv-mweb-search-filter-modal__button" data-name="done" data-filter-close="">Done</button>
+    </div>
+  </div>
+  <div class="dv-mweb-search-filter-modal__body">
+    
+
+
+
+
+    <div class="dv-pet-size-checkbox dv-mweb-search-filter__section">
+  <div class="dv-mweb-section__sub-header">
+    <span class="dv-mweb-section--bold-text">What size are your pets?</span>
+  </div>
+  <div class="dv-pet-size-checkbox__container">
+    <div class="dv-input-field__input">
+      <li class="dv-checkbox__image-tile__item">
+        <div class="dv-checkbox dv-checkbox__image-tile">
+          <input id="dv-mweb-search-size--small" type="checkbox" name="dog_size[]" value="1" class="dv-pet-size-checkbox__input" data-pet-size="">
+          <label class="dv-pet-size-checkbox__label" for="dv-mweb-search-size--small">
+            <svg class="dv-pet-size-checkbox__image">
+              <use xlink:href="#dog-size-small" class="dv-pet-size-checkbox__image"></use>
+            </svg>
+          </label>
+        </div>
+        <div class="dv-pet-size-checkbox__text">
+          1-20 lbs        </div>
+      </li>
+      <li class="dv-checkbox__image-tile__item">
+        <div class="dv-checkbox dv-checkbox__image-tile">
+          <input id="dv-mweb-search-size--medium" type="checkbox" name="dog_size[]" value="2" class="dv-pet-size-checkbox__input" data-pet-size="">
+          <label class="dv-pet-size-checkbox__label" for="dv-mweb-search-size--medium">
+            <svg class="dv-pet-size-checkbox__image">
+              <use xlink:href="#dog-size-medium" class="dv-pet-size-checkbox__image"></use>
+            </svg>
+          </label>
+        </div>
+        <div class="dv-pet-size-checkbox__text">
+          20-40 lbs        </div>
+      </li>
+      <li class="dv-checkbox__image-tile__item">
+        <div class="dv-checkbox dv-checkbox__image-tile">
+          <input id="dv-mweb-search-size--large" type="checkbox" name="dog_size[]" value="3" class="dv-pet-size-checkbox__input" data-pet-size="">
+          <label class="dv-pet-size-checkbox__label" for="dv-mweb-search-size--large">
+            <svg class="dv-pet-size-checkbox__image">
+              <use xlink:href="#dog-size-large" class="dv-pet-size-checkbox__image"></use>
+            </svg>
+          </label>
+        </div>
+        <div class="dv-pet-size-checkbox__text">
+          40-80 lbs        </div>
+      </li>
+      <li class="dv-checkbox__image-tile__item">
+        <div class="dv-checkbox dv-checkbox__image-tile">
+          <input id="dv-mweb-search-size--xlarge" type="checkbox" name="dog_size[]" value="4" class="dv-pet-size-checkbox__input" data-pet-size="">
+          <label class="dv-pet-size-checkbox__label" for="dv-mweb-search-size--xlarge">
+            <svg class="dv-pet-size-checkbox__image">
+              <use xlink:href="#dog-size-xlarge" class="dv-pet-size-checkbox__image"></use>
+            </svg>
+          </label>
+        </div>
+        <div class="dv-pet-size-checkbox__text">
+          80+ lbs        </div>
+      </li>
+    </div>
+  </div>
+
+</div>
+
+
+    
+
+
+    <div class="dv-pet-budget-slider">
+  <div class="dv-mweb-section__sub-header">
+    <span class="dv-mweb-section--bold-text">Max budget per dog</span>
+  </div>
+  
+	<div id="dv-slider-insert"></div>
+
+</div>
+
+<div class="dv-pet-more-options-checkbox dv-mweb-search-filter__section">
+<div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large dv-pet-more-options-checkbox__checkbox dv-hide--optimizely--ofat" style="display: block;">
+      <input id="only_pets" name="credentials" type="checkbox" value="21"><label for="only_pets" class="dv-pet-more-options-checkbox__label">Just your Pets (No Other Guest Dogs)</label>
+    </div>
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large dv-pet-more-options-checkbox__checkbox">
+      <input id="no_dogs" name="no_dogs" type="checkbox" value="true"><label for="no_dogs" class="dv-pet-more-options-checkbox__label">Doesn&rsquo;t own a dog</label>
+    </div>
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large">
+      <input id="out_all" name="has_outdoors" type="checkbox" value="true"><label for="out_all" class="dv-pet-more-options-checkbox__label">Has yard or outdoor area</label>
+    </div>
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large">
+      <input id="prop_house" name="property_type" type="checkbox" value="house"> <label for="prop_house" class="dv-pet-more-options-checkbox__label">House only (no apartments)</label>
+    </div>
+   </div>
+
+
+
+    <div class="dv-pet-more-options-checkbox dv-mweb-search-filter__section">
+  <div class="dv-mweb-section__sub-header">
+    <span class="dv-mweb-section--bold-text">About your Dog</span>
+  </div>
+  <div class="dv-pet-more-options-checkbox__body">
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large">
+      <input type="checkbox" name="dog_age" id="age_puppy" value="1" class="dv-button--toggle__input"> <label for="age_puppy" class="dv-pet-more-options-checkbox__label">My dog is less than 2 years old</label>
+    </div>
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large">
+      <input type="checkbox" name="dog_age" id="age_senior" value="3" class="dv-button--toggle__input"> <label for="age_senior" class="dv-pet-more-options-checkbox__label">My dog is a senior</label>
+    </div>
+  </div>
+</div>
+
+<div class="dv-pet-more-options-checkbox dv-mweb-search-filter__section">
+  <div class="dv-mweb-section__sub-header">
+    <span class="dv-mweb-section--bold-text">About the Sitter</span>
+  </div>
+  <div class="dv-pet-more-options-checkbox__body">
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large">
+      <input id="ex_cpr" name="extras" type="checkbox" value="cpr"> <label for="ex_cpr" class="dv-pet-more-options-checkbox__label">Pet CPR/First-Aid certified</label>
+    </div>
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large">
+      <input id="ex_omeds" name="extras" type="checkbox" value="omeds"> <label for="ex_omeds" class="dv-pet-more-options-checkbox__label">Can administer oral medication</label>
+    </div>
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large">
+      <input id="ex_imeds" name="extras" type="checkbox" value="imeds"> <label for="ex_imeds" class="dv-pet-more-options-checkbox__label">Can administer injected medication</label>
+    </div>
+    <div class="dv-checkbox dv-checkbox--clearfix dv-checkbox--large dv-pet-more-options-checkbox__checkbox">
+      <input id="instantbook" name="instantBook" type="checkbox" value="true"><label for="instantbook" class="dv-pet-more-options-checkbox__label dv-pet-more-options-checkbox__label--instant-book">Accepts Instant Book</label>
+    </div>
+  </div>
+</div>
+
+
+    <button class="dv-button dv-button--cta dv-mweb-search-filter-modal__button" data-name="refine_search" data-filter-close="">
+      <i class="dv-icon dv-icon__search"></i>
+      <span data-button-text="">Refine Search</span>
+      <i class="dv-loading-icon"></i>
+    </button>
+  </div>
