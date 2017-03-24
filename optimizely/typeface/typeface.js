@@ -25,10 +25,10 @@ if(readCookie('design_qa_testing')) {
     // Usual, via Typekit
     var typekit = '!function(a){var h,b={kitId:"giv8wkc",scriptTimeout:3e3,async:!0},c=a.documentElement,d=setTimeout(function(){c.className=c.className.replace(/\bwf-loading\b/g,"")+" wf-inactive"},b.scriptTimeout),e=a.createElement("script"),f=!1,g=a.getElementsByTagName("script")[0];c.className+=" wf-loading",e.src="https://use.typekit.net/"+b.kitId+".js",e.async=!0,e.onload=e.onreadystatechange=function(){if(h=this.readyState,!(f||h&&"complete"!=h&&"loaded"!=h)){f=!0,clearTimeout(d);try{Typekit.load(b)}catch(a){}}},g.parentNode.insertBefore(e,g)}(document);';
 
-    var proximaBody = '.proxima-body .dwcc *, .proxima-body *[class*="dv-input"], .proxima-body *[class*="dv-select"], .proxima-body *[class*="dv-profile"], .proxima-body *[class*="body"],.proxima-body *[class*="text"],.proxima-body *[class*="nav"],.proxima-body .dv-link, .proxima-body *[class*="button"],.proxima-body p,.proxima-body li,.proxima-body .dv-search-filter__content{font-family: "proxima-nova",sans-serif !important;}',
+    var proximaBody = '.proxima-body *[class*="dv-host"], .proxima-body .dwcc *, .proxima-body *[class*="dv-input"], .proxima-body *[class*="dv-select"], .proxima-body *[class*="dv-profile"], .proxima-body *[class*="body"],.proxima-body *[class*="text"],.proxima-body *[class*="nav"],.proxima-body .dv-link, .proxima-body *[class*="button"],.proxima-body p,.proxima-body li,.proxima-body .dv-search-filter__content{font-family: "proxima-nova",sans-serif !important;}',
     	proximaTitle = '.proxima-title *[class*="header"], .proxima-title *[class*="title"]{font-family: "proxima-nova",sans-serif !important;}';
 
-    var sourceSansBody = '.ss-body .dwcc *, .ss-body *[class*="dv-input"], .ss-body *[class*="dv-select"], .ss-body *[class*="dv-profile"], .ss-body *[class*="body"],.ss-body *[class*="text"],.ss-body *[class*="nav"],.ss-body .dv-link, .ss-body *[class*="button"],.s-body p,.ss-body li,.ss-body .dv-search-filter__content{font-family: "Source Sans Pro", sans-serif !important;}',
+    var sourceSansBody = '.ss-body *[class*="dv-host"], .ss-body .dwcc *, .ss-body *[class*="dv-input"], .ss-body *[class*="dv-select"], .ss-body *[class*="dv-profile"], .ss-body *[class*="body"],.ss-body *[class*="text"],.ss-body *[class*="nav"],.ss-body .dv-link, .ss-body *[class*="button"],.s-body p,.ss-body li,.ss-body .dv-search-filter__content{font-family: "Source Sans Pro", sans-serif !important;}',
     	sourceSansTitle = '.ss-title *[class*="header"], .ss-title *[class*="title"]{font-family: "Source Sans Pro",sans-serif !important;}';
 
     var montserratTitle = '.montserrat-title *[class*="header"], .montserrat-title *[class*="title"]{font-family: "Montserrat",sans-serif !important;font-weight:normal !important}';
@@ -125,4 +125,4 @@ if(getUrlParameter('add-design-qa-cookie')) {
     if(reloadPage) window.location.reload(true);
 }
 
-console.log('this is running, v7');
+console.log('this is running, v8');
