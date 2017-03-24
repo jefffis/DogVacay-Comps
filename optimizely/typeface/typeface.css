@@ -3,38 +3,61 @@
 	bottom: 1.5rem;
 	right: 1.5rem;
 	z-index: 100000000000;
+	overflow: hidden;
 	width: 10rem;
+	background: white;
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
+#dv-list.shown em,
 #dv-list.shown span {
   display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+#dv-list em,
 #dv-list span {
 	display: none;
 	position: relative;
 	background: white;
-	padding: .75rem 0;
+	padding: .75rem 1rem;
 	cursor: pointer;
 	font-size: 13px;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+#dv-list em {
+	background: #efefef;
+	padding: 1rem 1rem .5rem;
+	color: #999;
+	cursor: default;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+#dv-list em:nth-of-type(2) {
+	border-top: 1px solid #e8e5e0;
+}
+#dv-list span {
+	display: none;
+}
 #dv-list span:active {
 	background: #efefef;
 }
-#dv-list span:first-child {
+/*#dv-list span:first-child {
   border-radius: 3px 3px 0 0;
 }
 #dv-list span:last-child {
   border-radius: 0 0 3px 3px;
-}
+}*/
 #dv-list span.active {
   display: block;
   border-top-width: 0 !important;
-  border-radius: 3px;
+  border-left: 5px solid;
+  /*border-radius: 3px;*/
   color: #999;
+}
+#dv-list span.reset {
+	border-left: 0;
 }
 #dv-list.shown span.active {
   border-top-width: 1px !important;
@@ -43,7 +66,7 @@
 	border-top: 1px solid #e8e5e0;
 }
 
-@media screen and (max-width: 500px) {
+/*@media screen and (max-width: 500px) {
 	#dv-list.shown {
 		bottom: 0;
 		right: 0;
@@ -54,4 +77,4 @@
 	#dv-list.shown span {
 		padding: .6rem 0;
 	}
-}
+}*/
