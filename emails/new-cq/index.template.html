@@ -118,6 +118,14 @@
 	</head>
 	<body marginwidth="0" marginheight="0" bgcolor="#ffffff" leftmargin="0" topmargin="0" offset="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" >
 
+		<div itemscope itemtype="https://schema.org/EmailMessage" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" >
+			<div itemprop="action" itemscope itemtype="https://schema.org/ViewAction" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" >
+				<link itemprop="url" href="{message.url}?utm_source=Sailthru&utm_medium=email&utm_campaign=email_trans_{template}&utm_content=gmail_goto&sid=301&cid=007&aid=252"/>
+				<meta itemprop="name" content="View on DogVacay"/>
+			</div>
+			<meta itemprop="description" content="View full Custom Quote on DogVacay"/>
+		</div>
+
 		<!-- customize Gmail / iOS content begin -->
 		<table width="100%" cellspacing="0" cellpadding="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" ><tr><td style="font-size:0;height:0;display:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" >Here are all the details for your pet&rsquo;s upcoming booking with {host_name} and DogVacay. DogVacay connects pet parents, like you, with great sitters, like {host_name}.</td></tr></table>
 		<!-- customize Gmail / iOS content end -->
@@ -167,7 +175,7 @@
 						<span class="header" style="font-size:35px;font-weight:bold;line-height:40px;" >Hey {guest_name},</span>
 						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" ><tr><td height="30" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" ></td></tr></table>
 
-						<a href="https://dogvacay.com/" class="subtle" style="color:#2A494B;font-weight:normal;" >{host_name}</a> has sent you a quote. DogVacay connects pet parents, like you, with great sitters, like {host_name}. It&rsquo;s pet care everyone can feel good about.
+						<a href="https://dogvacay.com/" class="subtle" style="color:#2A494B;font-weight:normal;" >{host_name}</a> has sent you a quote. DogVacay connects pet parents, like you, with great sitters, like {host_name_first}. It&rsquo;s pet care everyone can feel good about.
 
 						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" ><tr><td height="30" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" ></td></tr></table>
 
@@ -379,5 +387,7 @@
 		</table>
 		<!-- footer -->
 	 
+
+	{beacon}
 	</body>
 </html>

@@ -16,11 +16,11 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
-var reloadPage = true;
+// var reloadPage = true;
 
-if(readCookie('design_qa_testing')) {
+// if(readCookie('design_qa_testing')) {
 
-    reloadPage = false;
+    // reloadPage = false;
 
     // Usual, via Typekit
     var typekit = '!function(a){var h,b={kitId:"giv8wkc",scriptTimeout:3e3,async:!0},c=a.documentElement,d=setTimeout(function(){c.className=c.className.replace(/\bwf-loading\b/g,"")+" wf-inactive"},b.scriptTimeout),e=a.createElement("script"),f=!1,g=a.getElementsByTagName("script")[0];c.className+=" wf-loading",e.src="https://use.typekit.net/"+b.kitId+".js",e.async=!0,e.onload=e.onreadystatechange=function(){if(h=this.readyState,!(f||h&&"complete"!=h&&"loaded"!=h)){f=!0,clearTimeout(d);try{Typekit.load(b)}catch(a){}}},g.parentNode.insertBefore(e,g)}(document);';
@@ -118,11 +118,11 @@ if(readCookie('design_qa_testing')) {
         });
     }
 
-}
+// }
 
-if(getUrlParameter('add-design-qa-cookie')) {
-    document.cookie = 'design_qa_testing=1; expires=; domain=.dogvacay.com; path=/';
-    if(reloadPage) window.location.reload(true);
-}
+// if(getUrlParameter('add-design-qa-cookie')) {
+//     document.cookie = 'design_qa_testing=1; expires=; domain=.dogvacay.com; path=/';
+//     if(reloadPage) window.location.reload(true);
+// }
 
-console.log('this is running, v8');
+console.log('this is running, v9');

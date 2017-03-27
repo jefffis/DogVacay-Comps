@@ -118,6 +118,14 @@
 	</head>
 	<body marginwidth="0" marginheight="0" bgcolor="#ffffff" leftmargin="0" topmargin="0" offset="0">
 
+		<div itemscope itemtype="https://schema.org/EmailMessage">
+			<div itemprop="action" itemscope itemtype="https://schema.org/ViewAction">
+				<link itemprop="url" href="{message.url}?utm_source=Sailthru&utm_medium=email&utm_campaign=email_trans_{template}&utm_content=gmail_goto&sid=301&cid=007&aid=252"/>
+				<meta itemprop="name" content="View on DogVacay"/>
+			</div>
+			<meta itemprop="description" content="View full Custom Quote on DogVacay"/>
+		</div>
+
 		<!-- customize Gmail / iOS content begin -->
 		<table width="100%" cellspacing="0" cellpadding="0"><tr><td style="font-size: 0; height: 0; display:none;">Here are all the details for your pet&rsquo;s upcoming booking with {host_name} and DogVacay. DogVacay connects pet parents, like you, with great sitters, like {host_name}.</td></tr></table>
 		<!-- customize Gmail / iOS content end -->
@@ -379,5 +387,7 @@
 		</table>
 		<!--\ footer -->
 	 
+
+	{beacon}
 	</body>
 </html>
