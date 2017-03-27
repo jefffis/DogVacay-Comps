@@ -13,6 +13,7 @@
 	top: -12px !important;
 	border: 0 !important;
 	border-radius: 100% !important;
+	box-shadow: 0 0 0 1px white !important;
 }
 #search-filter-modal .noUi-origin.noUi-connect,
 #search-filter-modal .dv-column__slider-label--left {
@@ -21,4 +22,16 @@
 #search-filter-modal .dv-slider .noUi-target {
 	border: 0 !important;
 	border-radius: 2px !important;
+}
+#search-filter-modal .dv-slider .noUi-origin {
+	border-radius: 2px !important;
+}
+#search-filter-modal .noUi-base {
+	max-width: 320px !important;
+}
+#dv-dog-info {
+	margin: 2rem 0 -.5rem;
+}
+#dv-sitter-info {
+	margin: 2rem 0 1rem;
 }
