@@ -35,4 +35,4 @@ var styles = '#search-filter-modal .dv-pet-budget-slider__slider__bar{width:100%
 
 $('head').append('<style id="dv-mweb-srp">' + styles + '</style>');
 
-console.log('this is running, v1');
+//console.log('this is running, v1');

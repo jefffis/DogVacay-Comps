@@ -37,4 +37,4 @@ window.$(document).ajaxComplete(function(event, xhr, settings) {
 	}
 });
 
-console.log('this is running, v8');
+//console.log('this is running, v8');
