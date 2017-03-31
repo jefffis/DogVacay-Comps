@@ -140,8 +140,8 @@ function readCookie(name) {
     return 0;
 }
 
-var isPendingDashboard = window.location.pathname === '/account/dashboard' && $('.dv-panel-account-approval-status').length ? true : false,
-// var isPendingDashboard = window.location.pathname === '/account/dashboard' ? true : false, // REVERT BACK TO ABOVE FOR LIVE
+// var isPendingDashboard = window.location.pathname === '/account/dashboard' && $('.dv-panel-account-approval-status').length ? true : false,
+var isPendingDashboard = window.location.pathname === '/account/dashboard' ? true : false, // REVERT BACK TO ABOVE FOR LIVE
 	isSignUpConf = window.location.pathname === '/signup/host' && window.location.hash === '#/confirmation' ? true : false,
 	isProfileConf = window.location.pathname === '/account/profile' && window.location.hash === '#/confirmation' ? true : false,
 	confHeaderText = isPendingDashboard ? 'Your profile is being reviewed now.' : 'Great job! Your profile is being reviewed now.',
