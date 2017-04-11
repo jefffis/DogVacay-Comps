@@ -1,0 +1,177 @@
+/* intro */
+@font-face {
+	font-family: 'intro';
+	font-style: normal;
+	font-weight: 400;
+	src: url(http://static1.dogvacay.com/fonts/Intro.woff) format('woff');
+}
+@font-face {
+	font-family: 'intro';
+	font-style: normal;
+	font-weight: 700;
+	src: url(http://static1.dogvacay.com/fonts/IntroBold.woff) format('woff');
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+
+html {
+	font: normal 100%/1.5 'Intro', 'Helvetica Neue', Arial, sans-serif;
+	color: #2A494B;
+}
+a {
+	color: #0F748C;
+}
+
+.dv-head {
+	position: relative;
+	color: white;
+	text-align: center;
+}
+.dv-head:before,
+.dv-head:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	content: "";
+}
+.dv-head:before {
+	z-index: 1;
+	background: #2A494B;
+	opacity: .8;
+}
+.dv-head:after {
+	z-index: 0;
+}
+.dv-headline {
+	position: relative;
+	z-index: 2;
+	padding: 15vh 0;
+	font-size: 30px;
+}
+.dv-rover-logo {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.dv-main {
+	padding: 0 30px;
+}
+.dv-main p:nth-of-type(n+2) {
+	margin-top: 1.25rem;
+}
+
+.dv-profile {
+	position: relative;
+	z-index: 3;
+	margin-top: -40px;
+	margin-bottom: 30px;
+}
+.dv-profile-image {
+	float: left;
+	width: 80px;
+	border-radius: 100%;
+	border: 2px solid white;
+}
+.dv-profile-info {
+	float: right;
+	width: calc(100% - 80px);
+	margin-top: .5rem;
+	padding-left: .5rem;
+	color: white;
+	font-size: 16px;
+	vertical-align: top;
+	/* ellipsis */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.dv-profile-stars {
+	float: right;
+	width: calc(100% - 80px);
+	margin-top: 1.25rem;
+	padding-left: .5rem;
+}
+.dv-profile-star {
+	display: inline-block;
+	height: 18px;
+}
+
+
+.dv-btn-wrapper {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 4;	
+	width: 100%;
+	background: white;
+	padding: 15px 20px;
+	border-top: 1px solid #ddd;
+}
+.dv-btn-wrapper:before {
+	display: block;
+	position: absolute;
+	top: calc(-1rem - 1px);
+	left: 0;
+	z-index: 5;
+	height: 1rem;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.025) 100%);
+	content: "";
+}
+.dv-btn--rover {
+	display: block;
+	background: #75C13B;
+	padding: .5rem 0;
+	border-radius: 4px;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+
+.dv-close-webview {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 3;
+	height: 20px;
+	width: 20px;
+	background: none;
+}
+.dv-close-webview img {
+	display: block;
+	width: 100%;
+}
+
+/* small phones */
+@media screen and (max-height: 600px) {
+	/*.dv-headline {
+		padding: 13vh 0;
+	}*/
+	.dv-main {
+		padding-bottom: calc(1.5rem + 78px)
+	}
+}
+
+/* large phones */
+@media screen and (min-height: 650px) {
+	.dv-headline {
+		padding: 20vh 0;
+	}
+}
