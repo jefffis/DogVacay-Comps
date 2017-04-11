@@ -65,14 +65,19 @@ a {
 }
 .dv-rover-logo {
 	display: inline-block;
+	position: relative;
+	top: .125rem;
 	vertical-align: middle;
 }
 
 .dv-main {
-	padding: 0 30px;
+	padding: 0 9.5vw calc(1.5rem + 78px);
 }
 .dv-main p:nth-of-type(n+2) {
 	margin-top: 1.25rem;
+}
+.dv-main p:nth-of-type(1) {
+	font-size: 17px;
 }
 
 .dv-profile {
@@ -90,10 +95,10 @@ a {
 .dv-profile-info {
 	float: right;
 	width: calc(100% - 80px);
-	margin-top: .5rem;
+	margin-top: .25rem;
 	padding-left: .5rem;
 	color: white;
-	font-size: 16px;
+	font-size: 17px;
 	vertical-align: top;
 	/* ellipsis */
 	overflow: hidden;
@@ -103,8 +108,8 @@ a {
 .dv-profile-stars {
 	float: right;
 	width: calc(100% - 80px);
-	margin-top: 1.25rem;
-	padding-left: .5rem;
+	margin-top: 1.5rem;
+	padding-left: .45rem;
 }
 .dv-profile-star {
 	display: inline-block;
@@ -152,26 +157,17 @@ a {
 	z-index: 3;
 	height: 20px;
 	width: 20px;
-	background: none;
+	background: url(close.png) no-repeat center;
+	background-size: 100%;
+	outline: none;
 }
-.dv-close-webview img {
-	display: block;
-	width: 100%;
-}
-
-/* small phones */
-@media screen and (max-height: 600px) {
-	/*.dv-headline {
-		padding: 13vh 0;
-	}*/
-	.dv-main {
-		padding-bottom: calc(1.5rem + 78px)
-	}
+.dv-close-webview:active {
+	opacity: .65;
 }
 
 /* large phones */
 @media screen and (min-height: 650px) {
 	.dv-headline {
-		padding: 20vh 0;
+		padding: 18vh 0;
 	}
 }
