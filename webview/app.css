@@ -66,12 +66,12 @@ a {
 .dv-rover-logo {
 	display: inline-block;
 	position: relative;
-	top: .125rem;
+	top: .2rem;
 	vertical-align: middle;
 }
 
 .dv-main {
-	padding: 0 9.5vw calc(1.5rem + 78px);
+	padding: 0 9.5vw calc(1.5rem + 5rem);
 }
 .dv-main p:nth-of-type(n+2) {
 	margin-top: 1.25rem;
@@ -96,7 +96,7 @@ a {
 	float: right;
 	width: calc(100% - 80px);
 	margin-top: .25rem;
-	padding-left: .5rem;
+	padding-left: .6rem;
 	color: white;
 	font-size: 17px;
 	vertical-align: top;
@@ -109,7 +109,7 @@ a {
 	float: right;
 	width: calc(100% - 80px);
 	margin-top: 1.5rem;
-	padding-left: .45rem;
+	padding-left: .55rem;
 }
 .dv-profile-star {
 	display: inline-block;
