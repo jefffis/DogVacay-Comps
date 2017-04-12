@@ -100,6 +100,7 @@ a {
 	color: white;
 	font-size: 17px;
 	vertical-align: top;
+	
 	/* ellipsis */
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -148,21 +149,6 @@ a {
 	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
-}
-
-.dv-close-webview {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	z-index: 3;
-	height: 20px;
-	width: 20px;
-	background: url(close.png) no-repeat center;
-	background-size: 100%;
-	outline: none;
-}
-.dv-close-webview:active {
-	opacity: .65;
 }
 
 /* large phones */
