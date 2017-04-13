@@ -89,6 +89,8 @@ a {
 }
 .dv-head {
 	position: relative;
+	max-width: 1200px;
+	margin: auto;
 	padding: 10rem 0;
 	color: white;
 	text-align: center;
@@ -146,7 +148,8 @@ a {
 	text-decoration: none;
 }
 .dv-btn--rover:active {
-	opacity: .75;
+	background: #039C5D;
+	color: rgba(255,255,255,0.75);
 }
 .dv-btn--rover:after {
 	display: block;
@@ -160,6 +163,9 @@ a {
 	margin-top: -.75rem;
 	content: "";
 }
+.dv-btn--rover:active:after {
+	opacity: .75;
+}
 .dv-micro {
 	margin-top: 30px;
 	padding-top: 30px;
@@ -169,12 +175,23 @@ a {
 }
 .dv-micro-link {
 	color: #777;
+	cursor: pointer;
 	text-decoration: underline;
+}
+.dv-normal a:active,
+.dv-micro-link:active {
+	opacity: .75;
 }
 
 
+@media screen and (min-width: 1201px) {
+	.dv-head {
+		overflow: hidden;
+		margin-top: 2rem;
+		border-radius: 4px;
+	}
+}
 @media screen and (max-width: 600px) {
-
 	.dv-head {
 		padding: 7rem 0;
 		line-height: 1.4;
@@ -203,5 +220,4 @@ a {
 		margin-right: -30px;
 		border-top-width: 8px;
 	}
-
 }

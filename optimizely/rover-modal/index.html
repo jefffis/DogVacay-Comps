@@ -48,20 +48,36 @@
 				modalBack = document.getElementById('dv-first-time-modal-wrapper-background'),
 				dvContinue = document.getElementById('dv-continue');
 
-			setTimeout(function() {
-				modal.classList.add('shown');
-				modalBack.classList.add('shown');
-			}, 1000);
-			setTimeout(function() {
-				body.classList.add('modal-shown');
-				modal.classList.add('static');
-				modalBack.classList.add('hide');
-			}, 1500);
+			function uIFadeIn() {
+				setTimeout(function() {
+					modal.classList.add('shown');
+					modalBack.classList.add('shown');
+				}, 1000);
+				setTimeout(function() {
+					body.classList.add('modal-shown');
+					modal.classList.add('static');
+					modalBack.classList.add('hide');
+				}, 1500);
+			}
+
+			function startFadeOut() {
+				body.classList.remove('modal-shown');
+				modal.classList.remove('static','shown');
+				modalBack.classList.remove('hide','shown');
+				window.scroll(0,0);
+			}
+			function finishFadeOut() {
+				setTimeout(function() {
+					modal.classList.add('hide');
+					modalBack.classList.add('hide');
+				}, 1500);
+			}
+
+			uIFadeIn();
 
 			dvContinue.onclick = function() {
-				body.classList.remove('modal-shown');
-				modal.classList.add('hide');
-				window.scroll(0,0);
+				startFadeOut();
+				finishFadeOut();
 			}
 		</script>
 	</body>
