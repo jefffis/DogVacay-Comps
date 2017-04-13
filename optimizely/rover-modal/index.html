@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>iOS/Android webview</title>
+		<link rel="stylesheet" href="app.css" />
+		<!-- <style>
+		
+		</style> -->
+	</head>
+	<body>
+		
+		<header id="dv-header"></header>
+		<div id="dv-main"></div>
+		
+		<div id="dv-first-time-modal-wrapper">
+			<div class="dv-head">
+				<h1 class="dv-headline">
+					DogVacay &amp; Rover are joining forces
+				</h1>
+			</div>
+			<div class="dv-main" id="dv-first-time-modal-main">
+				<p class="dv-body">
+					United around a common mission–to make life better for dogs and the people who love them–we are going to make an even bigger impact together.
+				</p>
+				<p class="dv-body">
+					Come join the nation’s largest, most trusted network of 5-star sitters on Rover.
+				</p>
+				<p class="dv-body">
+					<a href="###" class="dv-btn--rover">
+						Join Rover Now
+					</a>
+				</p>
+				<p class="dv-normal">
+					Already have an account? <a href="###">Log In</a>
+				</p>
+				<p class="dv-micro">
+					<a class="dv-micro-link" id="dv-continue">No thanks, not yet</a>
+				</p>
+			</div>
+		</div>
+		<div id="dv-first-time-modal-wrapper-background"></div>
+		<script>
+			var body = document.getElementsByTagName('body')[0],
+				modal = document.getElementById('dv-first-time-modal-wrapper'),
+				modalBack = document.getElementById('dv-first-time-modal-wrapper-background'),
+				dvContinue = document.getElementById('dv-continue');
+
+			setTimeout(function() {
+				modal.classList.add('shown');
+				modalBack.classList.add('shown');
+			}, 1000);
+			setTimeout(function() {
+				body.classList.add('modal-shown');
+				modal.classList.add('static');
+				modalBack.classList.add('hide');
+			}, 1500);
+
+			dvContinue.onclick = function() {
+				body.classList.remove('modal-shown');
+				modal.classList.add('hide');
+				window.scroll(0,0);
+			}
+		</script>
+	</body>
+</html>
