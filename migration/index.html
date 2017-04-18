@@ -617,7 +617,7 @@
 					e.preventDefault();
 					document.querySelector('.dv-sub-tab.active-subtab').classList.remove('active-subtab');
 					this.classList.add('active-subtab');
-					window.scroll(0, document.getElementById(el.href.split('#')[1]).offsetTop - 100);
+					window.scrollTo(0, document.getElementById(el.href.split('#')[1]).offsetTop - 100);
 				}
 			});
 
@@ -655,7 +655,12 @@
 			}
 
 			// show a Q open on load
-			if(getUrlParameter('show-q-open')) document.getElementById(getUrlParameter('show-q-open')).classList.add('shown');
+			if(getUrlParameter('show-q-open')) {
+				document.getElementById(getUrlParameter('show-q-open')).classList.add('shown');
+				setTimeout(function() {
+					window.scrollTo(0, document.getElementById(getUrlParameter('show-q-open')).parentElement.offsetTop - 100);
+				}, 0);
+			}
 		</script>
 	</body>
 </html>

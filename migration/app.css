@@ -198,6 +198,7 @@ a {
 	margin-bottom: 1.5rem;
 }
 #dv-tab-containers li {
+	display: block;
 	position: relative;
 	padding: 1.25rem 0;
 	border-top: 1px solid #dfe5e5;
