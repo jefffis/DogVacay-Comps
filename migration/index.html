@@ -637,11 +637,11 @@
 
 			window.onscroll = function() {
 				if(document.getElementById('dv-guests').classList.contains('open')) return;
-				var scrollTop = document.body.scrollTop;
+				var scrollTop = window.pageYOffset;
 				if(scrollTop > subTabsOffset){
 					subTabs.classList.add('sticky');
 					sub.style.paddingTop = subTabsHeight + 'px';
-				} else if (scrollTop <= subTabsOffset) {
+				} else if (scrollTop <= (subTabsOffset - subTabsHeight - 50)) {
 					subTabs.classList.remove('sticky');
 					sub.style.paddingTop = 0;
 				}
