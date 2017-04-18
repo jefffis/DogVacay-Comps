@@ -73,13 +73,16 @@ a {
 #dv-tabs {
 	position: relative;
 	z-index: 3;
-	margin: -2.85rem auto 0;
+	margin: -3.35rem auto 0;
+	padding: 0 1.5rem;
 	text-align: center;
 }
 .dv-tab-link {
-	display: inline-block;
+	display: block;
+	float: left;
+	width: 50%;
 	background: #dfe5e5;
-	padding: .8rem 2.5rem .7rem;
+	padding: 1rem 0;
 	color: #2A494B;
 	font-weight: bold;
 	line-height: 1.25;
@@ -286,6 +289,7 @@ a {
 @media screen and (min-width: 500px) {
 	#dv-tabs {
 		max-width: 420px;
+		padding: 0;
 	}
 	.dv-tab-link {
 		display: block;
