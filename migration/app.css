@@ -33,6 +33,9 @@ html {
 a {
 	color: #0F748C;
 }
+.dv-margin-top {
+	margin-top: 2rem;
+}
 
 #dv-header {
 	position: relative;
@@ -55,8 +58,8 @@ a {
 	z-index: 2;
 	height: 250px;
 	width: 100%;
-	background: #2A494B;
-	opacity: .5;
+	background: rgba(0, 0, 0, 0.35) url(img/dogvacay-plus-rover.png) no-repeat center;
+	background-size: 240px auto;
 }
 #dv-header:after {
 	position: relative;
@@ -70,7 +73,7 @@ a {
 #dv-tabs {
 	position: relative;
 	z-index: 3;
-	margin: -2.85rem auto 1rem;
+	margin: -2.85rem auto 0;
 	text-align: center;
 }
 .dv-tab-link {
@@ -94,20 +97,66 @@ a {
 	border-radius: 0 4px 0 0;
 }
 
+#dv-sub-tabs {
+	background: white;
+	margin: 0 -1.5rem 2rem;
+	text-align: center;
+}
+#dv-sub-tabs.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	width: 100%;
+	margin: 0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.dv-sub-tab {
+	display: block;
+	float: left;
+	width: 50%;
+	position: relative;
+	padding: 1rem 0 .8rem;
+	border-bottom: 2px solid #dfe5e5;
+	color: #2A494B;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1.25;
+	text-decoration: none;
+}
+.dv-sub-tab:active {
+	opacity: .65;
+}
+.active-subtab {
+	font-weight: bold;
+}
+.active-subtab:after {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 2;
+	height: 2px;
+	width: 100%;
+	background: #2A494B;
+	content: "";
+}
+
 #dv-tab-containers {
-	max-width: 30rem;
+	max-width: 420px;
 	margin: auto;
-	padding: 1.5rem;
+	padding: 0 1.5rem 1.5rem;
 }
 #dv-tab-containers h1 {
 	margin-bottom: 1.5rem;
 	color: #68b9be;
 	font-size: 24px;
+	line-height: 1.2;
 	text-align: center;
 }
 #dv-tab-containers h2 {
 	margin-bottom: .5rem;
-	/*color: #7F9294;*/
+	color: #68b9be;
 	font-size: 20px;
 	font-weight: normal;
 }
@@ -116,7 +165,7 @@ a {
 }
 #dv-tab-containers h3 {
 	position: relative;
-	padding-right: 1.25rem;
+	padding-right: 2rem;
 	cursor: pointer;
 	font-size: 1rem;
 }
@@ -180,13 +229,15 @@ a {
 	display: block;
 }
 
-#dv-footer {
-	padding: 1.5rem 0;
+.dv-cta {
+	margin: 0 -1.5rem;
+	padding: .5rem 1.5rem 1.5rem;
+	border-bottom: 1px solid #dfe5e5;
 	text-align: center;
 }
-#dv-footer h4 {
+.dv-cta h4 {
 	margin-bottom: 1rem;
-	font-size: 24px;
+	font-size: 20px;
 }
 .dv-btn--rover {
 	display: block;
@@ -195,19 +246,66 @@ a {
 	padding: .5rem 0;
 	border-radius: 4px;
 	color: white;
-	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
 }
-#dv-footer small {
+.dv-cta small {
 	font-size: 1rem;
+}
+
+#dv-footer {
+	padding: 1.5rem 0 0;
+	text-align: center;
+}
+#dv-footer img {
+	display: inline-block;
+	max-height: 23px;
+	vertical-align: middle;
+}
+#dv-footer h5 {
+	margin-top: 1rem;
+	color: #7F9294;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+@media screen and (min-width: 420px) {
+	#dv-sub-tabs {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	#dv-tabs {
+		max-width: 420px;
+	}
+	.dv-tab-link {
+		display: block;
+		float: left;
+		width: 50%;
+	}
+	.dv-sub-tab {
+		font-size: 1rem;
+	}
+	#dv-sub-tab-wrapper {
+		max-width: 420px;
+		margin: auto;
+	}
+	#dv-tab-containers {
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
 @media screen and (min-width: 600px) and (min-height: 700px) {
 	#dv-header:before,
 	#dv-header:after {
 		height: 420px;
+	}
+	#dv-header:before {
+		background-size: 340px auto;
 	}
 }
 
