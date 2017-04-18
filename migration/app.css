@@ -157,12 +157,12 @@ a {
 	line-height: 1.2;
 	text-align: center;
 }
-#dv-tab-containers h2 {
+/*#dv-tab-containers h2 {
 	margin-bottom: .5rem;
 	color: #68b9be;
 	font-size: 20px;
 	font-weight: normal;
-}
+}*/
 #dv-tab-containers p {
 	margin-bottom: 1.5rem;
 }
