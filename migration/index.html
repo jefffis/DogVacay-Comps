@@ -362,12 +362,12 @@
 				tabToShow.classList.add('open');
 			}
 
-			if(window.location.hash) {
+			// default to guests
+			if(window.location.hash === '#dv-guests') {
 				showActiveTab(window.location.hash.substr(1), true);
 				document.querySelector('.dv-tab-link.active').classList.remove('active');
 				document.getElementById('dv-guest').classList.add('active');
 			}
-			
 		</script>
 	</body>
 </html>
