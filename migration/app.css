@@ -76,7 +76,7 @@ a {
 .dv-tab-link {
 	display: inline-block;
 	background: #dfe5e5;
-	padding: .75rem 2.5rem;
+	padding: .8rem 2.5rem .7rem;
 	color: #2A494B;
 	font-weight: bold;
 	line-height: 1.25;
@@ -202,6 +202,13 @@ a {
 }
 #dv-footer small {
 	font-size: 1rem;
+}
+
+@media screen and (min-width: 600px) and (min-height: 700px) {
+	#dv-header:before,
+	#dv-header:after {
+		height: 420px;
+	}
 }
 
 @keyframes fade-in {
