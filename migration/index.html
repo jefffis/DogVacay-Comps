@@ -592,8 +592,7 @@
 				subTabs = document.getElementById('dv-sub-tabs'),
 				subTabsHeight = subTabs.clientHeight,
 				subTabsOffset = document.getElementById('dv-sub-tabs').offsetTop + subTabsHeight + 50,
-				subTabLinks = document.querySelectorAll('.dv-sub-tab'),
-				roverlapContentTop = document.getElementById('dv-roverlap').offsetTop - 50;
+				subTabLinks = document.querySelectorAll('.dv-sub-tab');
 
 			// faq links
 			Array.prototype.forEach.call(faqs, function(el, i){
@@ -638,7 +637,8 @@
 
 			window.onscroll = function() {
 				if(document.getElementById('dv-guests').classList.contains('open')) return;
-				var scrollTop = window.pageYOffset;
+				var scrollTop = window.pageYOffset,
+					roverlapContentTop = document.getElementById('dv-roverlap').offsetTop - 50;
 				
 				// sticky or not
 				if(scrollTop > subTabsOffset){
