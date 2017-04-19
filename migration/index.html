@@ -19,8 +19,8 @@
 			<div class="dv-tab open" id="dv-sitters">
 				<div id="dv-sub-tabs" class="cf">
 					<div id="dv-sub-tab-wrapper">
-						<a href="#dv-no-roverlap" class="dv-sub-tab active-subtab">New to Rover</a>
-						<a href="#dv-roverlap" class="dv-sub-tab">Existing on Rover</a>
+						<a href="#dv-no-roverlap" class="dv-sub-tab active-subtab" id="dv-noroverlap-link">New to Rover</a>
+						<a href="#dv-roverlap" class="dv-sub-tab" id="dv-roverlap-link">Existing on Rover</a>
 					</div>
 				</div>
 				<div id="dv-no-roverlap">
@@ -467,7 +467,7 @@
 				</div>
 			</div>
 			<div class="dv-tab" id="dv-guests">
-				<h1 class="dv-margin-top">
+				<h1>
 					Rover migration FAQ for guests
 				</h1>
 				<p>
@@ -592,7 +592,8 @@
 				subTabs = document.getElementById('dv-sub-tabs'),
 				subTabsHeight = subTabs.clientHeight,
 				subTabsOffset = document.getElementById('dv-sub-tabs').offsetTop + subTabsHeight + 50,
-				subTabLinks = document.querySelectorAll('.dv-sub-tab');
+				subTabLinks = document.querySelectorAll('.dv-sub-tab'),
+				roverlapContentTop = document.getElementById('dv-roverlap').offsetTop - 50;
 
 			// faq links
 			Array.prototype.forEach.call(faqs, function(el, i){
@@ -638,12 +639,23 @@
 			window.onscroll = function() {
 				if(document.getElementById('dv-guests').classList.contains('open')) return;
 				var scrollTop = window.pageYOffset;
+				
+				// sticky or not
 				if(scrollTop > subTabsOffset){
 					subTabs.classList.add('sticky');
 					sub.style.paddingTop = subTabsHeight + 'px';
-				} else if (scrollTop <= (subTabsOffset - subTabsHeight - 50)) {
+				} else if(scrollTop <= (subTabsOffset - subTabsHeight - 50)) {
 					subTabs.classList.remove('sticky');
 					sub.style.paddingTop = 0;
+				}
+
+				// viewing roverlap or not
+				if(scrollTop >= roverlapContentTop) {
+					document.getElementById('dv-noroverlap-link').classList.remove('active-subtab');
+					document.getElementById('dv-roverlap-link').classList.add('active-subtab');
+				} else if(roverlapContentTop > scrollTop + 200) {
+					document.getElementById('dv-noroverlap-link').classList.add('active-subtab');
+					document.getElementById('dv-roverlap-link').classList.remove('active-subtab');
 				}
 			}
 

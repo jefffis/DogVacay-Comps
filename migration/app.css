@@ -33,9 +33,9 @@ html {
 a {
 	color: #0F748C;
 }
-.dv-margin-top {
+/*.dv-margin-top {
 	margin-top: 2rem;
-}
+}*/
 
 #dv-header {
 	position: relative;
@@ -73,8 +73,12 @@ a {
 #dv-tabs {
 	position: relative;
 	z-index: 3;
+	background: white;
+	overflow: hidden;
+	width: calc(100% - 3rem);
 	margin: -3.35rem auto 0;
-	padding: 0 1.5rem;
+	/*padding: 0 1.5rem;*/
+	border-radius: 4px 4px 0 0;
 	text-align: center;
 }
 .dv-tab-link {
@@ -88,21 +92,28 @@ a {
 	line-height: 1.25;
 	text-decoration: none;
 }
+.dv-tab-link:active {
+	opacity: .65;
+}
 .active {
 	background: white;
 	color: #68b9be;
+	cursor: default;
 }
-.dv-tab-link:nth-of-type(1) {
+.active:active {
+	opacity: 1;
+}
+/*.dv-tab-link:nth-of-type(1) {
 	border-radius: 4px 0 0 0;
 }
 .dv-tab-link:nth-of-type(2) {
 	margin-left: -5px;
 	border-radius: 0 4px 0 0;
-}
+}*/
 
 #dv-sub-tabs {
 	background: white;
-	margin: 0 -1.5rem 2rem;
+	margin: auto -1.5rem;
 	text-align: center;
 }
 #dv-sub-tabs.sticky {
@@ -133,6 +144,9 @@ a {
 .active-subtab {
 	font-weight: bold;
 }
+.active-subtab:active {
+	opacity: 1;
+}
 .active-subtab:after {
 	display: block;
 	position: absolute;
@@ -151,6 +165,7 @@ a {
 	padding: 0 1.5rem 1.5rem;
 }
 #dv-tab-containers h1 {
+	margin-top: 2.5rem;
 	margin-bottom: 1.5rem;
 	color: #68b9be;
 	font-size: 24px;
@@ -247,12 +262,16 @@ a {
 	display: block;
 	background: #00BD70;
 	margin-bottom: 1rem;
-	padding: .5rem 0;
+	padding: .6rem 0 .5rem;
 	border-radius: 4px;
 	color: white;
 	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
+}
+.dv-btn--rover:active {
+	background: #03A664;
+	color: rgba(255, 255, 255, 0.75);
 }
 .dv-cta small {
 	font-size: 1rem;
