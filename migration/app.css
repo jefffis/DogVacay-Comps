@@ -253,8 +253,10 @@ a {
 	margin-bottom: 2rem;
 	padding: 1.5rem;
 }
-#dv-tab-containers .dv-no-roverlap-intro p:last-child {
-	margin-bottom: 0;
+.dv-no-roverlap-intro small {
+	display: block;
+	font-size: 13px;
+	font-style: italic;
 }
 
 .dv-cta {
