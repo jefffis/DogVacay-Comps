@@ -73,7 +73,7 @@ window.onscroll = function() {
 }
 
 // default to guests
-if(window.location.hash === '#dv-guests') {
+if(window.location.hash === '#dv-guests' || window.location.hash === '#dv-guest') {
 	showActiveTab(window.location.hash.substr(1), true);
 	document.querySelector('.dv-tab-link.active').classList.remove('active');
 	document.getElementById('dv-guest').classList.add('active');
