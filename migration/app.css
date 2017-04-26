@@ -250,11 +250,15 @@ a {
 
 .dv-no-roverlap-intro {
 	background: #FEF8E7;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 	padding: 1.5rem;
 }
-.dv-no-roverlap-intro small {
+#dv-tab-containers .dv-no-roverlap-intro p {
+	margin-bottom: 0;
+}
+.dv-no-roverlap-intro-micro {
 	display: block;
+	margin-bottom: 2rem;
 	font-size: 13px;
 	font-style: italic;
 }
