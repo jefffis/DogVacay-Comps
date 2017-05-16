@@ -254,6 +254,31 @@ a:active {
 	display: block;
 }
 
+/*** video ***/
+.dv-iframe-title {
+	margin: 3rem 0 .75rem;
+	font-size: 18px;
+}
+.dv-no-top {
+	margin-top: 0;
+}
+.dv-iframe-title span {
+	display: block;
+	font-size: 14px;
+	font-weight: normal;
+}
+.dv-iframe-wrapper {
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+	padding: 0;
+	border-radius: 0;
+}
+.dv-iframe {
+	display: block;
+	min-height: 300px;
+	width: 100%;
+}
+
 /*** ordered lists ***/
 #dv-tab-containers ol {
 	margin-top: -1rem;
@@ -349,6 +374,12 @@ a:active {
 	#dv-sub-tabs {
 		margin-left: 0;
 		margin-right: 0;
+	}
+	.dv-iframe-wrapper {
+		background: #ccc;
+		margin-bottom: 3rem;
+		padding: 1px;
+		border-radius: 3px;
 	}
 }
 
